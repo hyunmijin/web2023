@@ -1,5 +1,9 @@
-# Welcome to GitHub Desktop!
+# web2023
+수업시간 예제
 
-This is your README. READMEs are where you can communicate what your project is and how to use it.
+# HTML
+블록구조/ 인라인구조
+시멘틱 태그
 
-Write your name on line 6, save it, and then head back to GitHub Desktop.
+# JAVASCRIPT
+변수, 상수, 배열, 객체
