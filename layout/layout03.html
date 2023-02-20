@@ -4,59 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>레이아웃3 - float 방식</title>
     <style>
         * {
-            padding: 0;
             margin: 0;
+            padding: 0;
         }
         body {
-            background-color: #b12020;
+            background-color: #E1F5FE;
         }
         #wrap {
             width: 1200px;
-            height: 1080px;
             margin: 0 auto;
         }
         #header {
             width: 1200px;
             height: 100px;
-            background-color: #d84e4e;
+            background-color: #B3E5FC;
         }
-        #nav {
+        #nav{
             width: 1200px;
             height: 100px;
-            background-color: #e77979;
+            background-color: #81D4FA;
+        }
+        #main {
+            width: 1200px;
+            overflow: hidden;
         }
         #aside {
-            width: 400px;
+            width: 300px;
             height: 780px;
-            background-color: #130c0c;
+            background-color: #4FC3F7;
             float: left;
         }
-        #aside2 {
-            width: 400px;
-            height: 390px;
-            background-color: #e27474;
+        #article1 {
+            width: 900px;
+            height: 260px;
+            background-color: #29B6F6;
             float: left;
+
         }
-        #content {
-            width: 800px;
-            height: 780px;
-            background-color: #241a1a;
+        #article2 {
+            width: 900px;
+            height: 260px;
+            background-color: #03A9F4;
             float: left;
+
         }
-        #content2 {
-            width: 800px;
-            height: 390px;
-            background-color: #3b0303;
+        #article3 {
+            width: 900px;
+            height: 260px;
+            background-color: #039BE5;
             float: left;
+
         }
         #footer {
             width: 1200px;
             height: 100px;
-            background-color: #961010;
-            clear: both;
+            background-color: #0288D1;
         }
     </style>
 </head>
@@ -64,13 +69,14 @@
     <div id="wrap">
         <div id="header"></div>
         <div id="nav"></div>
-        <div id="aside">
-            <div id="aside2"></div>
-        </div>
-        <div id="content">
-            <div id="content2"></div>
+        <div id="main">
+            <div id="aside"></div>
+            <div id="article1"></div>
+            <div id="article2"></div>
+            <div id="article3"></div>
         </div>
         <div id="footer"></div>
     </div>
+    
 </body>
 </html>
