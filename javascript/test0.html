@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table border="1">
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+        <tr>
+            <td>1</td>
+            <td>2</td>
+            <td>3</td>
+            <td>4</td>
+            <td>5</td>
+        </tr>
+    </table>
+
+    <script>
+        // let table = "<table border='1'>";
+
+            // table += "<tr>";
+            // for(let i=1; i<=5; i++) {
+            //     table += "<td>1</td>";        //table 5번 작성해야할것을 줄여줌
+            // }
+            // table += "<td>1</td>"
+            // table += "<td>1</td>"
+            // table += "<td>1</td>"
+            // table += "<td>1</td>"
+            // table += "<td>1</td>"
+            // table += "<td>1</td>"
+            // table += "</tr>";
+
+            // table += "<tr>";
+            // for(let i=1; i<=5; i++) {
+            //     table += "<td>1</td>";        //5번 써야함 어떻게? 중첩for문으로
+            // }
+            // table += "</tr>";
+
+            // for(let i=1; i<=10; i++) {
+            //     table += "<tr>";
+            //
+            //     for(let j=1; j<=10; j++) {
+            //         table += "<td>"+j+"</td>";
+            //     }
+            //     table += "</tr>";
+            // }
+
+        //     table += "</table>";
+
+        // document.write(table);
+
+
+        let table = "<table border='1'>";
+
+            for(let i=1; i<=10; i++) {
+                 table += "<tr>";
+
+                 for(let j=1; j<=10; j++) {
+                     table += "<td>"+j+"</td>";
+                 }
+             }
+
+        document.write(table);    
+    </script>
+</body>
+</html>

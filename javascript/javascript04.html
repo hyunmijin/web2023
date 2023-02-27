@@ -7,6 +7,8 @@
     <title>Javascript : 데이터 제어하기</title>
 
     <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/default.min.css">
+
     <link rel="shortcut icon" href="assets/ico/favicon.ico">
     <link rel="apple-touch-icon" sizes="180x180" href="assets/ico/android-icon-192x192.png">
     <link rel="icon" type="image/png" sizes="192x192"  href="assets/ico/android-icon-192x192.png">
@@ -30,20 +32,290 @@
                 <li><a href="javascript10.html">요소 객체</a></li>
                 <li><a href="javascript11.html">이벤트 객체</a></li>
             </ul>
+            <ul class="last">
+                <li><a href="javascript12.html">데이터 효과</a></li>
+                <li><a href="javascript13.html">검색 효과</a></li>
+                <li><a href="javascript14.html">퀴즈 효과</a></li>
+                <li><a href="javascript15.html">마우스 효과</a></li>
+                <li><a href="javascript16.html">슬라이드 효과</a></li>
+                <li><a href="javascript17.html">패럴랙스 효과</a></li>
+                <li><a href="javascript18.html">게임 효과</a></li>
+            </ul>
         </nav>
     </header>
     <!-- //header -->
 
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <main id="main">
         <div class="container">
             <div class="main__menu">
                 <ul>
-                    <li><a href="#">01. 변수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 상수 : 데이터 저장</a></li>
-                    <li><a href="#">01. 배열 : 데이터 저장</a></li>
-                    <li><a href="#">01. 객체 : 데이터 저장</a></li>
+                    <li><a href="#">01. if문</a></li>
+                    <li><a href="#">02. if문 생략</a></li>
+                    <li><a href="#">03. 삼항 연산자</a></li>
+                    <li><a href="#">04. 다중 if(else if)</a></li>
+                    <li><a href="#">05. 중첩 if</a></li>
+
+                    <li><a href="#">06. swtich문</a></li>
+                    <li><a href="#">07. while문</a></li>
+                    <li><a href="#">08. do while문</a></li>
+
+                    <li><a href="#">09. for문</a></li>
+                    <li><a href="#">10. 중첩 for문</a></li>
+
+                    <li><a href="#">11. break문</a></li>
+                    <li><a href="#">12. continue문</a></li>
                 </ul>
             </div>
+
+            <div class="main__sample">
+            <div id="sample01" class="sample">
+                <h3>01. if문</h3>
+                <p>조건문은 프로그래밍에서 가장 기본적인 구문 중하나입니다. <br>조건문을 사용하면 프로그램이 특정 조건에 따라서 다른 동작을 하도록 할 수 있습니다. </p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    //false : 0 (숫자 0만 false), null(값이없는것), undefined,  false, ""(빈문자열)   // 5가지가 전부 **중요
+    //ture : 1, 2, 3, "0", "1", "ABC"(숫자,문자는 ture), [](배열), {}(객체), true
+
+    if(1){
+        document.write("실행되었습니다.(ture)");
+    } else {
+        document.write("실행되었습니다.(false)");
+    }
+
+    if(0){
+        document.write("실행되었습니다.(ture)");
+    } else {
+        document.write("실행되었습니다.(false)");
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(ture)
+                            실행되었습니다.(false)
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample01 -->
+
+            <div id="sample02" class="sample">
+                <h3>02. if문 생략</h3>
+                <p>if문이나 else 문에서 명령이 한줄이면 { }를 생략해서 좀 더 간단하게 작성할 수 있습니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    const num = 100;
+
+        if(num){
+            document.write("실행되었습니다.(true)");
+         } else {
+            document.write("실행되었습니다.(false)");
+         }
+
+         if(num) document.write("실행되었습니다.(true)");         //위와같다.
+         else document.write("실행되었습니다.(false)");
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(ture)
+                            실행되었습니다.(ture)
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample02 -->
+
+            <div id="sample03" class="sample">
+                <h3>03. 삼항 연산자(조건 연산자)</h3>
+                <p>삼항 연산자는 else if문 대신에 간단한 조건식을 사용할 수 있게 해줍니다.<br>조건이 참인 경우에 처음에 나오는 값을 반환하고, 거짓인 경우에 두번재 값을 반환합니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    const num = 100;
+
+        if(num == 100){
+            document.write("true");
+        } else {
+            document.write("false");                            //원본, 두가지 다 읽음
+        } 
+
+    (num == 100) ? document.write("true") : document.write("false");    //한가지만 읽음 효율적
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            ture
+                            ture
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample03 -->
+
+            <div id="sample04" class="sample">
+                <h3>04. 다중 if(else if)</h3>
+                <p>if문 이후에 여러 개의 조건을 검사해여 할 경우 사용합니다.<br> 여러 개의 조건 중 하나가 참인 경우 해당하는 값을 실행하고 전체 if문을 종료합니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    const num = 100;
+    
+    if(num == 90){
+        document.write("실행되었습니다(num == 90)");
+    } else if(num == 100){
+        document.write("실행되었습니다(num == 100)");
+    } else if(num == 110){
+        document.write("실행되었습니다.(num == 110)");
+    } else if(num == 120){
+        document.write("실행되었습니다(num == 120)");
+    } else {
+        document.write("실행되었습니다.");
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다(num = 100)
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample04 -->
+
+            <div id="sample05" class="sample">
+                <h3>05. 중첩 if문</h3>
+                <p>중첩 if문은 if문 안에 if문을 추가하는 것입니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    const num = 100;
+
+    if(num == 100){
+        document.write("실행되었습니다.(1)");
+        if(num == 100){
+            document.write("실행되었습니다.(2)");
+            if(num == 100){
+                document.write("실행되었습니다.(3)");
+            }
+        }
+    } else {
+        document.write("실행되었습니다.(4)")
+    }   
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            실행되었습니다.(1)
+                            실행되었습니다.(2)
+                            실행되었습니다.(3)
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample05 -->
+
+            <div id="sample09" class="sample">
+                <h3>09. for문</h3>
+                <p>for 문과 if문을 사용해 배열에 있는 값 1부터 9까지 구하고, 짝수는 빨간색, 홀수는 파란색으로 실행하는 방법입니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    const arr = [1,2,3,4,5,6,7,8,9]
+
+    for(let i=1; i&gt;=arr.length; i++){
+        if(i % 2 == 0){
+            document.write("&lt;span style='color:red'&gt; "+ i +" &lt;/span&gt;");
+        } else {
+            document.write(`&lt;span style='color:blue'&gt;${i}&lt;/span&gt;`);
+        }
+    }
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            <script>
+                                const arr = [1,2,3,4,5,6,7,8,9]
+
+                                for(let i=1; i<=arr.length; i++){
+                                    if(i % 2 == 0){
+                                        document.write("<span style='color:red'>" + i + "</span>");
+                                    } else {
+                                        document.write(`<span style='color:blue'>${i}</span>`);
+                                    }
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample09 -->
+
+            <div id="sample10" class="sample">
+                <h3>10. 중첩 for문(table)</h3>
+                <p>중첩 for문을 이용해 table을 만드는 방법입니다.</p>  
+                <div class="script">
+<pre><code code class="language-js">{
+    let table = "&lt;table border='1'&gt;";
+
+    for(let i=0; i&lt;5; i++){
+        table +="&lt;tr&gt;";
+        for(j=0; j&lt;5; j++){
+            table += "&lt;td&gt;" +j+ "&lt;/td&gt;";
+        }
+        table +="&lt;/tr&gt;";
+    }
+
+    table += "&lt;/table&gt;";
+
+    document.write(table);
+}
+</code></pre>
+                </div>
+                <div class="result">
+                    <details>
+                        <summary>결과 확인하기</summary>
+                        <div>
+                            <script>
+                                {
+                                     let table = "<table border='1'>";
+
+                                        for(let i=0; i<5; i++){
+                                            table +="<tr>";
+                                            for(j=0; j<5; j++){
+                                                table += "<td>" +j+ "</td>";
+                                            }
+                                            table += "</tr>";
+                                        }
+
+                                    table += "</table>";
+
+                                    document.write(table);
+                                }
+                            </script>
+                        </div>
+                    </details>
+                </div>
+            </div>
+            <!-- sample10 -->
+            
+
         </div>
     </main>
     <!-- //main -->
@@ -53,9 +325,151 @@
     </footer>
     <!-- //footer -->
 
-    
+    <script src="assets/js/highlight.min.js"></script>
+    <script>hljs.highlightAll();</script>
     <script>
+        
+        // 테이블 기본
+        // let table = "<table border='1'>"
 
+        //     for(let i=1; i<=5; i++){
+        //         table += "<tr>"
+                    
+        //             for(let j=1; j<=5; j++){
+        //                 table += "<td>" + j + "</td>"
+        //             }
+        //     }
+        //     table += "</table>"
+        //     document.write(table)
+        
+        // 테이블 1~25까지 숫자
+        // let num = 1
+        // let table = "<table border='1'>"
+
+        // for(let i=1; i<=5; i++){
+        //     table += "<tr>"
+                
+        //     for(let j=1; j<=5; j++){
+        //         table += "<td>" + num + "</td>"
+        //         num++;
+        //     }
+        //     table += "</tr>"
+        // }
+        // table += "</table>"
+
+        // document.write(table)
+
+
+        // 테이블 1~25까지 숫자에 짝수홀수컬러 (1번째 시도 테이블 위에 따로 표시)
+        // let num = 1
+        // let table = "<table border='1'>"
+
+        // for(let i=1; i<=5; i++){
+        //     table += "<tr>"
+                
+        //     for(let j=1; j<=5; j++){
+        //         table += "<td>" + num + "</td>"
+        //         num++;
+
+        //         if(num % 2 == 0){
+        //             document.write("<span style='color:red'>" + num + "</span>");
+        //         } else {
+        //             document.write("<span style='color:blue'>" + num + "</span>")
+        //         }
+        //     }
+        //     table += "</tr>"
+        // }
+        // table += "</table>"
+
+        // document.write(table)
+
+        // 테이블 1~25까지 숫자에 짝수홀수컬러 (2번째 시도 xx)
+        // let num = 1
+        // let table = "<table border='1'>"
+
+        // for(let i=1; i<=5; i++){
+        //     table += "<tr>"
+
+        //         for(let j=1; j<=5; j++)
+        //         if(num % 2 == 0){
+        //             table += "<td>" + ("<span style='color:red'>" + num + "</span>") + "</td>"
+        //             ("<span style='color:blue'>" + num + "</span>")
+        //         }
+        //     table += "</tr>"
+        // }
+        // table += "</table>"
+
+        // document.write(table)
+
+
+        // 테이블 1~25까지 숫자에 짝수홀수컬러 (1번째 시도 테이블 위에 따로 표시)
+        // let num = 1
+        // let table = "<table border='1'>"
+
+        // for(let i=1; i<=5; i++){
+        //     table += "<tr>"
+
+        //     for(let j=1; j<=5; j++){
+        //         table += "<td>" + num + "</td>"
+        //         num++;
+
+        // if(num % 2 == 0){
+        //     document.write("<span style='color:red'>" + num + "</span>");
+        // } else {
+        //     document.write("<span style='color:blue'>" + num + "</span>")
+        // }
+        //     }
+        //     table += "</tr>"
+        // }
+        // table += "</table>"
+
+        // document.write(table)
+
+        //다른 방식 테이블 (색넣는것만 성공)
+        // var num = 1;
+        // var t = "<table border=1>";
+        // for (var i=1; i<=5; i++){
+            
+        //     t += "<tr>";
+
+        //     for(var j=1; j<=5; j++){
+        //         t += "<td>" + num + "</td>";
+        //         num++;
+        //         if(num % 2 == 0){
+        //             document.write(num + "<span style='color:red'>")
+        //         } else {
+        //             document.write("<span style='color:blue'>")
+        //         }
+        //     }
+        //     t += "</tr>";
+        // }
+
+        // t += "</table>";
+        // console.log(t);
+        // document.write(t);
+
+
+        var num = 1;
+        var t = "<table border=1>";
+        for (var i=1; i<=5; i++){
+            
+            t += "<tr>";
+
+            for(var j=1; j<=5; j++){
+                t += "<td>" + num + "</td>";
+                num++;
+                if(num % 2 == 0){
+                    document.write("<span style='color:red'>")
+                } else if(num % 1 ==0) { 
+                    document.write("<span style='color:blue'>")
+                }
+            }
+            t += "</tr>";
+        }
+
+        t += "</table>";
+        console.log(t);
+        document.write(t);
     </script>
 
 </body>
