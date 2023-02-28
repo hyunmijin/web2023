@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -16,8 +16,6 @@
         #wrap {
             width: 1200px;
             margin: 0 auto;
-            display: flex;
-            flex-wrap: wrap;
         }
         #header {
             width: 100%;
@@ -33,29 +31,27 @@
             width: 100%;
             height: 780px;
             display: flex;
-        }
-        #aside {
-            width: 300px;
-            height: 780px;
-            background-color: #4FC3F7;
-            display: flex;
-        }
-        #section {
-            width: 900px;
-            display: flex;
             flex-wrap: wrap;
         }
-        #article1 {
+        .aside {
+            width: 30%;
+            height: 780px;
+            background-color: #4FC3F7;
+        }
+        .section {
+            width: 70%;
+        }
+        .article1 {
             width: 100%;
             height: 260px;
             background-color: #29B6F6;
         }
-        #article2 {
+        .article2 {
             width: 100%;
             height: 260px;
             background-color: #03A9F4;
         }
-        #article3 {
+        .article3 {
             width: 100%;
             height: 260px;
             background-color: #039BE5;
@@ -65,61 +61,70 @@
             height: 100px;
             background-color: #0288D1;
         }
-        @media (max-width: 1220px) {
+        @media (max-width: 1220px){
             #wrap {
                 width: 96%;
             }
+            .section {
+                display: flex;
+                flex-wrap: wrap;
+            }
+            .article2 {
+                width: 50%;
+                height: 520px;
+            }
+            .article3 {
+                width: 50%;
+                height: 520px;
+            }
         }
-        @media (max-width: 768px) {
+        @media (max-width: 768px){
             #wrap {
                 width: 100%;
-                display: flex;
             }
-            #article1 {
+            .article1 {
                 height: 390px;
             }
-            #article2 {
+            .article2 {
+                width: 100%;
                 height: 390px;
             }
-            #article3 {
+            .article3 {
                 display: none;
             }
         }
-        @media (max-width: 480px) {
-            #main {
-                display: block;
-            }
-            #aside {
+        @media (max-width: 480px){
+            .aside {
                 width: 100%;
                 height: 200px;
             }
-            #article1 {
+            .section {
+                width: 100%;
+            }
+            .article1 {
                 width: 100%;
                 height: 430px;
             }
-            #article2 {
+            .article2 {
                 width: 100%;
                 height: 150px;
-            }
-            #article3 {
-                display: none;
             }
         }
     </style>
 </head>
 <body>
     <div id="wrap">
-        <div id="header"></div>
-        <div id="nav"></div>
-        <div id="main">
-            <div id="aside"></div>
-            <div id="section">
-                <div id="article1"></div>
-                <div id="article2"></div>
-                <div id="article3"></div>
-            </div>
-        </div>
-        <div id="footer"></div>
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <main id="main">
+            <aside class="aside"></aside>
+            <section class="section">
+                <article class="article1"></article>
+                <article class="article2"></article>
+                <article class="article3"></article>
+            </section>
+        </main>
+        <footer id="footer"></footer>
     </div>
 </body>
 </html>
