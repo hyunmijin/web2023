@@ -66,6 +66,50 @@
         //      if(i % 2 == 1){
                 
         //      }
+
+    {
+        let table = "<table border='1'>"
+        let count = 0;
+
+            for(let i=0; i<5; i++){
+                
+            table += "<tr>";
+                for(let j=0; j<5; j++){
+                    count++;
+                    if(count % 3 == 0){
+                        table += "<td style='color:red'>" + count + "</td>";
+                    } else {
+                        table += "<td style  ='color:blue'>" + count + "</td>"
+                    } if( count % 5 == 0){
+                        table += "<td style  ='color:blue'>" + count + "</td>"
+                    }
+                }
+            table += "</tr>";
+            }
+        table += "</table>"
+        document.write(table)
+    }
+
+    {
+        let table = "<table border='1'>"
+        let count = 0;
+
+            for(let i=0; i<5; i++){
+                
+            table += "<tr>";
+                for(let j=0; j<5; j++){
+                    count++;
+                    if(count % 3 == 0){
+                        table += "<td style='color:red'>" + count + "</td>";
+                    } else if(count % 5 == 0){
+                        table += "<td style  ='color:blue'>" + count + "</td>"
+                    }
+                }
+            table += "</tr>";
+            }
+        table += "</table>"
+        document.write(table)
+    }
     </script>
 
     
