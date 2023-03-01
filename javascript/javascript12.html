@@ -209,15 +209,15 @@ document.write(table);
             <div id="sample09" class="sample">
                 <h3>09. 데이터 이펙트 : 테이블 25칸(3의 배수(5의배수는 빨간색))</h3>
                 <p></p>
-<pre class="line-numbers"><code class="language-js">let table = "<table border='1'>"
-for(let i=1; i<=5; i++){
-    table += "<tr>";
-    for(let j=1; j<=5; i++){
-        table += "<td></td>"
+<pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;"
+for(let i=1; i&lt;=5; i++){
+    table += "&lt;tr&gt;";
+    for(let j=1; j&lt;=5; i++){
+        table += "&lt;td&gt;&lt;/td&gt;"
     }
-    table += "</tr>"
+    table += "&lt;/tr&gt;"
 }
-table += "</table>"
+table += "&lt;/table&gt;"
 document.write(table)
 </code></pre>
             </div>

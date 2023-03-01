@@ -248,6 +248,33 @@
                     </div>
                 </div>
                 <!-- sample06 -->
+
+            <div class="main__sample">
+                <div id="sample07" class="sample">
+                    <h3>07. 배열 : 데이터 불러오기 : 중첩 for()문</h3>
+                    <p>여러개의 배열된 데이터를 for문을 이용해 불러오는 방법입니다.<br>for문안에 새로운 for문이 들어가 있는 것입니다.</p>
+                    <div class="script">
+<pre class="line-numbers"><code class="language-js">{
+    for( let i=1; i&lt;=10; i++ ) {           //let 생략 가능은 하지만 되도록 써줌
+        console.log("i : " + i);          //문자열과 변수를 결합
+        for( let j=1; j&lt;=10; j++ ){
+            console.log("j : " + j);
+        }
+    }
+}
+</code></pre>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                i:1 ~ i;10<br>
+                                j;1 ~ j;10
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample07 -->
+
         </div>
     </main>
     <!-- //main -->
