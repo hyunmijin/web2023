@@ -210,13 +210,23 @@ document.write(table);
                 <h3>09. 데이터 이펙트 : 테이블 25칸(3의 배수(5의배수는 빨간색))</h3>
                 <p></p>
 <pre class="line-numbers"><code class="language-js">let table = "&lt;table border='1'&gt;"
-for(let i=1; i&lt;=5; i++){
+let count = 0;
+
+    for(let i=0; i&lt;5; i++){
+        
     table += "&lt;tr&gt;";
-    for(let j=1; j&lt;=5; i++){
-        table += "&lt;td&gt;&lt;/td&gt;"
+        for(let j=0; j&lt;5; j++){
+            count++;
+            if(count % 3 == 0){
+                table += "&lt;td style='color:red'&gt;" + count + "&lt;/td&gt;";
+            } else if(count % 5 == 0){
+                table += "&lt;td style  ='color:blue'&gt;" + count + "&lt;/td&gt;"
+            } else {
+                table += "&lt;td style  ='color:'&gt;" + count + "&lt;/td&gt;"
+            }
+        }
+    table += "&lt;/tr&gt;";
     }
-    table += "&lt;/tr&gt;"
-}
 table += "&lt;/table&gt;"
 document.write(table)
 </code></pre>
