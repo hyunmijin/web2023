@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평가문항 2</title>
+    <style>
+        *
+        {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #eaf7f8;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas:
+            "header header header"
+            "nav nav nav"
+            "section1 section2 section4"
+            "section1 section3 section4"
+            "footer footer footer"
+            ;
+
+            grid-template-columns: 300px 600px 300px;
+            grid-template-rows: 100px 100px 350px 350px 100px;
+        }
+        #header {
+            background-color: #98e0e4;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #7fc6ca;
+            grid-area: nav;
+        }
+        #footer {
+            background-color: #6cafb3;
+            grid-area: footer;
+        }
+        #section1 {
+            background-color: #569b9e;
+            grid-area: section1;
+        }
+        #section2 {
+            background-color: #4d8b8f;
+            grid-area: section2;
+        }
+        #section3 {
+            background-color: #417e81;
+            grid-area: section3;
+        }
+        #section4 {
+            background-color: #2f9196;
+            grid-area: section4;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <header id="header"></header>
+        <nav id="nav"></nav>
+        <section1 id="section1"></section1>
+        <section2 id="section2"></section2>
+        <section3 id="section3"></section3>
+        <section4 id="section4"></section4>
+        <footer id="footer"></footer>
+    </div>
+</body>
+</html>

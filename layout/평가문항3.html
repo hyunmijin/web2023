@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #dbfcd2;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-areas: 
+            "header header header"
+            "nav nav nav"
+            "aside section1 section2"
+            "aside section3 section3"
+            "aside section4 section4"
+            "footer footer footer"
+            ;
+            grid-template-columns: 300px 450px 450px;
+            grid-template-rows: 100px 100px 250px 250px 250px 100px;
+        }
+        #header {
+            background-color: #c1eeb5;
+            grid-area: header;
+        }
+        #nav {
+            background-color: #a3d694;
+            grid-area: nav;
+        }
+        #aside {
+            background-color: #6c9e5b;
+            grid-area: aside;
+        }
+        #section1 {
+            background-color: #80af71;
+            grid-area: section1;
+        }
+        #section2 {
+            background-color: #6b9b5b;
+            grid-area: section2;
+        }
+        #section3 {
+            background-color: #568547;
+            grid-area: section3;
+        }
+        #section4 {
+            background-color: #5fa547;
+            grid-area: section4;
+        }
+        #footer {
+            background-color: #4c9135;
+            grid-area: footer;
+        }
+
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"></div>
+        <div id="aside"></div>
+        <div id="section1"></div>
+        <div id="section2"></div>
+        <div id="section3"></div>
+        <div id="section4"></div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>

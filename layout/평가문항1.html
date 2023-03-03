@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>평가문항 1</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            width: 100%;
+            background-color: #cfbbcb;
+        }
+        #wrap {
+            width: 1200PX;
+            margin: 0 auto;
+        }
+        #header {
+            height: 100px;
+            background-color: #caabc4;
+        }
+        #nav {
+            height: 100px;
+            background-color: #b68dae;
+        }
+        #main {
+            height: 700px;
+            display: grid;
+            grid-template-areas: 
+            "aside section1"
+            "aside section2"
+            ;
+            grid-template-columns: 30%;
+        }
+        #footer {
+            height: 100px;
+            background-color: #a7789d;
+        }
+        .aside {
+            grid-area: aside;
+            background-color: #946289;
+        }
+        .section1 {
+            grid-area: section1;
+            background-color: #88537c;
+        }
+        .section2 {
+            grid-area: section2;
+            background-color: #7a416d;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header"></div>
+        <div id="nav"> </div>
+        <div id="main">
+            <div class="aside"></div>
+            <div class="section1"></div>
+            <div class="section2"></div>
+        </div>
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
