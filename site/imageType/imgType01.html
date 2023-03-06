@@ -8,19 +8,23 @@
 
     <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
     <style>
+        /* reset */
         * {
             margin: 0;
             padding: 0;
         }
         a {
             text-decoration: none;
+            color: #000;
         }
         h1, h2, h3, h4, h5, h6 {
             font-weight: normal;
         }
         img {
             vertical-align: top;
+            width: 100%;
         }
+        /* common */
         .container {
             width: 1160px;
             margin: 0 auto;
@@ -31,9 +35,11 @@
             font-family: 'NexonLv1Gothic';
             font-weight: 400;
         }
+        .section.center {
+            text-align: center;
+        }
         .section {
             padding: 120px 0;
-            text-align: center;
         }
         .section__h2 {
             font-size: 50px;
@@ -46,8 +52,9 @@
             color: #666;
             margin-bottom: 70px;
             font-weight: 300;
+            line-height: 1.5;
         }
-        /* image__wrap */
+        /* image__type */
         .image__inner {
             display: flex;
             justify-content: space-between;
@@ -85,13 +92,13 @@
     </style>
 </head>
 <body>
-    <section class="image__wrap section nexon">
+    <section class="image__wrap section center nexon">
         <div class="container">
             <h2 class="section__h2">맛있는 커피를 찾아서</h2>
             <p class="section__desc">여러 카페들을 가본 후 보기에도 예쁘고 맛있는 찐 커피맛집들을 찾아서</p>
             <div class="image__inner">
                 <article class="image">
-                <figure xlass="image__header">
+                <figure class="image__header">
                     <img src="../asset/img/imageType01_01.jpg" alt="커피란 무엇인가">
                 </figure>
                 <div class="image__body">
@@ -101,7 +108,7 @@
                 </div>
                 </article>
                 <article class="image">
-                <figure xlass="image__header">
+                <figure class="image__header">
                     <img src="../asset/img/imageType01_02.jpg" alt="커피의 종류">
                 </figure>
                 <div class="image__body">
