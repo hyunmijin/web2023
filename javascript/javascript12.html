@@ -60,7 +60,8 @@
                     <li><a href="#">08. 데이터 이펙트 : 테이블 25칸(짝수:빨, 홀:파)</a></li>
                     <li><a href="#">09. 데이터 이펙트 : 테이블 25칸(3의 배수(5의배수는 빨간색))</a></li>
                     
-                    <li><a href="#">10. 배열 데이터에서 10보다 큰 수 찾기</a></li>
+                    <li><a href="#">10. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</a></li>
+                    <li><a href="#">11. 데이터 이펙트 : 1부터 100까지 합 구하기</a></li>
                 </ul>
             </div>
             <div class="main__sample">
@@ -236,6 +237,36 @@ document.write(table)
 </code></pre>
             </div>
             <!-- //sample09 -->
+
+            <div id="sample10" class="sample">
+                <h3>10. 데이터 이펙트 : 배열 데이터에서 10보다 큰 수 찾기</h3>
+                <p></p>
+<pre class="line-numbers"><code class="language-js">const arr = [1, 3, 5, 7, 9, 11, 13, 15, 17, 19]
+
+for(let i=0; &lt;=arr.length; i++){	
+    if(arr [i] &gt; 10){						
+    document.write(arr[i] + ",");	
+    }									   
+}
+
+// 결과값: 11,13,15,17,19
+</code></pre>
+            </div>
+            <!-- //sample10 -->
+
+            <div id="sample11" class="sample">
+                <h3>11. 데이터 이펙트 : 1부터 100까지 합 구하기</h3>
+                <p></p>
+<pre class="line-numbers"><code class="language-js">let num = 0;
+for(i=1; i&lt;=100; i++){
+    num += i;
+}
+document.write(num);
+
+// 결과값: 5050
+</code></pre>
+            </div>
+            <!-- //sample11 -->
 
             </div>
         </div>

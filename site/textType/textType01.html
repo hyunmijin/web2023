@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>텍스트 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+         /* reset */
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section.center {
+            text-align: center; 
+        }
+        .section__small {
+            font-style: 14px;
+            border-radius: 50px;
+            background-color: #85CEBA;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-style: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* text-wrap */
+        .text__wrap {
+        }
+        .text__inner {
+            text-align: left;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+        }
+        .text__inner .text {
+            width: 32.3333%;
+            border: 1px solid #f5f5f5;
+            border-radius: 10px;
+            padding: 90px 20px 20px 20px;
+            box-sizing: border-box;
+            margin-bottom: 20px;
+            transform: all 0.3s;
+            cursor: pointer;
+            position: relative;
+        }
+        .text__inner .text:hover {
+            background-color: #f5f5f5;
+        }
+        .text__inner .text::before {
+            content: '';
+            width: 60px;
+            height: 60px;
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_01.svg);
+            background-repeat: no-repeat;
+            background-position: center;
+            position: absolute;
+            left: 20px;
+            top: 20px;
+            border-radius: 50%;
+        }
+        .text__inner .text.t2::before {
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_02.svg);
+        }
+        .text__inner .text.t3::before {
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_03.svg);
+        }
+        .text__inner .text.t4::before {
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_04.svg);
+        }
+        .text__inner .text.t5::before {
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_05.svg);
+        }
+        .text__inner .text.t6::before {
+            background-color: #CE7182;
+            background-image: url(../asset/img/textType01_06.svg);
+        }
+        .text__title {
+            font-style: 24px;
+            margin-bottom: 10px;
+        }
+        .text__desc {
+            font-style: 16px;
+            color: #666;
+            margin-bottom: 15px;
+            line-height: 1.5;
+        }
+        .text__btn {
+            float: right;
+            position: relative;
+            padding-right: 20px;
+        }
+        .text__btn::before {
+            content: '';
+            position: absolute;
+            right: 0;
+            bottom: 2px;
+            width: 15px;
+            height: 15px;
+            background-image: url(../asset/img/icon_plus.svg);
+            transition: all 0.3s;
+        }
+        .text__btn:hover::before {
+            transform: rotate(360deg);
+        }
+    </style> 
+</head>
+<body>
+    <section class="text-wrap section center nexon">
+        <div class="container">
+            <span class="section__small">notice</span>
+            <h2 class="section__h2 mb70">커피 맛집 찾기</h2>
+            <div class="text__inner">
+                <div class="text t1">
+                    <h3 class="text__title">요즘 유행하는 커피</h3>
+                    <p class="text__desc">콜드 브루 커피, 네이트로 커피, 핸드 드립 커피, 라떼 아트, 샷 브루 커피, 캡슐 커피 등 여러가지 커피가 있습니다. 요즘은 달달한 크림이 올라간 커피도 유행이고 쓴 에스프레소도 유행입니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t2">
+                    <h3 class="text__title">커피 맛있는 카페</h3>
+                    <p class="text__desc">네이버 블로그나 인스타그램, 근처 카페 찾기 등과같은 검색 기능으로 카페를 찾을 수 있습니다. 전문적인 로스팅카페를 원한다면 로스팅하는카페를 검색해보면됩니다.</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t3">
+                    <h3 class="text__title">1일 2카페</h3>
+                    <p class="text__desc">맛있고 예쁜 카페를 하나 가면 근처에 또 좋은 카페 없나 둘러보게 됩니다. 그렇게 1일 2카페를 가서 둘다 성공하면 그날은 기분 UP! 바로 블로그나 인스타 포스팅을 해야겠죠?</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t4">
+                    <h3 class="text__title">분위기 좋은 카페</h3>
+                    <p class="text__desc">카페를 갈때는 맛도 중요하지만 분위기도 많이 봅니다. 인테리어가 예쁜 카페는 일단 들어가보곤하는데요. 이런 예쁜 카페들이 맛도 좋은면 더 좋겠죠?</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t5">
+                    <h3 class="text__title">디저트 맛있는 카페</h3>
+                    <p class="text__desc">요즘은 베이커리 카페가 정말 많아졌습니다. 커피도 커피지만 같이 먹을 디저트까지 맛있다면 정말 좋겠죠? 디저트 맛집이 있다면 알려줘~ 좋은 곳은 다같이 공유하자구요!~</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+                <div class="text t6">
+                    <h3 class="text__title">편안한 카페</h3>
+                    <p class="text__desc">카페를 놀러갈때 가기도 하지만 공부하러 가거나 작업하러 갈때는 편안하고 시끄럽지 않은 카페를 찾게됩니다. 이런 편안한 카페들도 따로 알아두면 좋겠죠?</p>
+                    <a class="text__btn" href="#">더보기</a>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
