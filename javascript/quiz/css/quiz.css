@@ -450,10 +450,6 @@
 .tail {
     animation: movetail 0.1s linear infinite alternate forwards;
 }
-
-
-
-
 .dislike {
     background: #363636;
 }
