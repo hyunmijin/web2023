@@ -9,7 +9,7 @@
 데이터 제어하기 : https://hyunmijin.github.io/web2023/javascript/javascript04.html   
 퀴즈 게임 01 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect01.html   
 
-#사이트
+# 사이트
 이미지 유형01 : https://hyunmijin.github.io/web2023/site/imageType/imgType01.html   
 카드 유형01 : https://hyunmijin.github.io/web2023/site/cardType/cardType01.html   
 텍스트 유형01 : https://hyunmijin.github.io/web2023/site/textType/textType01.html   
