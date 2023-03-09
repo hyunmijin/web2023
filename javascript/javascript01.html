@@ -658,7 +658,7 @@
                             ++연산자는 먼저 값을 사용한 후, 그 값을 증가시킨다.
                         </p>
                     </div>
-
+                    <p>예제1</p>
                     <div class="script">
 <pre><code code class="language-js">{
     var score = 10;
@@ -676,8 +676,7 @@
                         <details>
                             <summary>결과 확인하기</summary>
                                 <div>
-                                    11<br>
-                                    12
+                                    11,12
                                 </div>
                         </details>
                     </div>
@@ -799,8 +798,6 @@
                             시프트 연산자(<<,>>) 등이 있습니다.
                         </p>
                     </div>
-
-                    <p>예제</p>
                     <div class="script">
 <pre><code code class="language-js">{
     let a = 9;
@@ -825,7 +822,7 @@
                             <summary>결과 확인하기</summary>
                                 <div>
                                     2<br>
-                                    /
+                                    /<br>
                                     64
                                 </div>
                         </details>
@@ -849,8 +846,42 @@
                         </p>
                     </div>
                     <div class="script">
-<pre><code code class="language-js">
+<pre><code code class="language-js">{
+    let x = 100, y = "200", z;
+    const func = function(){}
+
+    document.write(x);
+    document.write(typeof(x));
+    document.write(y);
+
+    y = "200";
+    document.write(typeof(y));
+
+    y = Number(y);
+    document.write(typeof(y));
+
+    document.write(z);
+    document.write(typeof(z));
+    document.write(func);
+    document.write(typeof(func));       
+}
 </code></pre>
+                    </div>
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                                <div>
+                                    100<br>
+                                    number<br>
+                                    200<br>
+                                    string<br>
+                                    number<br>
+                                    undefined<br>
+                                    undefined<br>
+                                    function(){}<br>
+                                    function
+                                </div>
+                        </details>
                     </div>
                 </div>
                 <!--// sample20 -->
@@ -883,29 +914,29 @@
 
         // }
         //04. 지역 변수 + 전역 변수 (금요일 시험)
-        {
-            let x = 100; //전역 변수
-            let y = 200; //변수
+        // {
+        //     let x = 100; //전역 변수
+        //     let y = 200; //변수
 
-            // let x = 300;
-            // let y = 400;   적용불가
+        //     // let x = 300;
+        //     // let y = 400;   적용불가
 
-            function func(){//함수를 써서 값이 나옴
-                // let x = 300;
-                x = 400;    //변수값을 지우면 전역변수로(전역변수변경가능)
-                let y = 400; //함수 안에 변수는 지역변수(원래는 에러지만 함수 안에 들어와서 적용가능)
-                z = "javascript"; //틀린값 let이 없어서 알아서 맞춰준거 위에걸 생략했다치고 나오는값
+        //     function func(){//함수를 써서 값이 나옴
+        //         // let x = 300;
+        //         x = 400;    //변수값을 지우면 전역변수로(전역변수변경가능)
+        //         let y = 400; //함수 안에 변수는 지역변수(원래는 에러지만 함수 안에 들어와서 적용가능)
+        //         z = "javascript"; //틀린값 let이 없어서 알아서 맞춰준거 위에걸 생략했다치고 나오는값
 
-                console.log("함수안"+x);//400
-                console.log("함수안"+y);//400
-                console.log("함수안"+z);//400
-            }
-            func();
+        //         console.log("함수안"+x);//400
+        //         console.log("함수안"+y);//400
+        //         console.log("함수안"+z);//400
+        //     }
+        //     func();
 
-            console.log("함수밖"+x);//100
-            console.log("함수밖"+y);//200
-            console.log("함수밖"+z);//200
-        }
+        //     console.log("함수밖"+x);//100
+        //     console.log("함수밖"+y);//200
+        //     console.log("함수밖"+z);//200
+        // }
 
         //비트연산자
         // {
@@ -916,21 +947,21 @@
         //     console.log(a+b);//55
         //     console.log(a);//16
         // }
-        {
-            let a = 9;
-            let b = 11;
-            let c = a ^ b;
+        // {
+        //     let a = 9;
+        //     let b = 11;
+        //     let c = a ^ b;
 
-            console.log(c)
-        }
-        {
-            let num1 = 16, num2 = 80;
-            let result;
+        //     console.log(c)
+        // }
+        // {
+        //     let num1 = 16, num2 = 80;
+        //     let result;
 
-            result = num1 > num2 ? num1 & num2 : num1 ^ num2;
+        //     result = num1 > num2 ? num1 & num2 : num1 ^ num2;
         
-            document.write(result)
-        }
+        //     document.write(result)
+        // }
     </script>
 </body>
 </html>
