@@ -66,7 +66,7 @@
                     <li><a href="#">15. 객체 : 데이터 저장(키와값) : 표현방법6</a></li>
                     <li><a href="#">16. 객체 : 데이터 저장(키와값) : 표현방법7</a></li>
                     <li><a href="#">17. 객체 : 데이터 저장(키와값) : 표현방법8</a></li>
-                    <li><a href="#">++ 식별자, 예약자(알아서정리)</a></li>
+                    <li><a href="#">++ 식별자, 예약자</a></li>
                     <li><a href="#">++ 연산자(전치, 후치), 비트 연산자</a></li>
                     <li><a href="#">++ 형변환, typeof()</a></li>
                 </ul>
@@ -803,16 +803,19 @@
                     <p>예제</p>
                     <div class="script">
 <pre><code code class="language-js">{
-    let = a,b,c,result;
-    a = 20, b = 30, c = 30;
+    let a = 9;
+    let b = 11;
+    let c = a ^ b;
 
-    result = a < b ? b++ : --c;     //b++ 보다 =이 우선순위가 더 높아서 b++가 실행되지 않음
+    console.log(c)
+}
+{
+    let num1 = 16, num2 = 80;
+    let result;
 
-    console.log(result);
-    console.log(a);
-    console.log(b);
-    console.log(a + c);
-    console.log(c);
+    result = num1 > num2 ? num1 & num2 : num1 ^ num2;
+
+    document.write(result)
 }
 </code></pre>
                     </div>
@@ -821,11 +824,9 @@
                         <details>
                             <summary>결과 확인하기</summary>
                                 <div>
-                                    30<br>
-                                    20<br>
-                                    31<br>
-                                    50<br>
-                                    30
+                                    2<br>
+                                    /
+                                    64
                                 </div>
                         </details>
                     </div>
@@ -848,21 +849,7 @@
                         </p>
                     </div>
                     <div class="script">
-<pre><code code class="language-js">        {
-    let a = 9;
-    let b = 11;
-    let c = a ^ b;
-
-    console.log(c)
-}
-{
-    let num1 = 16, num2 = 80;
-    let result;
-
-    result = num1 > num2 ? num1 & num2 : num1 ^ num2;
-
-    document.write(result)
-}
+<pre><code code class="language-js">
 </code></pre>
                     </div>
                 </div>
