@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>헤더 유형01</title>
+
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+        /* reset */
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        li {
+            list-style: none;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .blind {
+            position:absolute;
+            clip:rect(0 0 0 0);
+            width:1px;
+            height:1px;
+            margin:-1px;
+            overflow:hidden;
+        }
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section.center {
+            text-align: center;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-style: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+        /* header__wrap */
+        .header__wrap {}
+        .header__inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 16px 20px;
+            border-bottom: 1px solid #ccc;
+            /* background-color: #5a5a5a; */
+        }
+        .header__logo {
+            width: 20%;
+        }
+        .header__menu {
+            width: 60%;
+            text-align: center;
+        }
+        .header__menu li {
+            display: inline-block;
+        }
+        .header__menu li a {
+            display: inline-block;
+            padding: 10px 30px;
+            /* background-color: #adadad; */
+        }
+        .header__member {
+            width: 20%;
+        }
+        .header__member a {
+            border: 1px solid #000;
+            padding: 10px 30px;
+            border-radius: 50px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+<body>
+    <header class="header__wrap nexon">
+        <div class="header__inner">
+            <h1 class="header__logo">coffee</h1>
+            <nav class="header__menu">
+                <ul>
+                    <li><a href="#">소개</a></li>
+                    <li><a href="#">커피에대해</a></li>
+                    <li><a href="#">커피맛집</a></li>
+                    <li><a href="#">카페</a></li>
+                    <li><a href="#">용품</a></li>
+                    <li><a href="#">커피이야기</a></li>
+                </ul>
+            </nav>
+            <div class="header__member">
+                <a href="#">로그인</a>
+            </div>
+        </div>
+    </header>
+</body>
+</html>

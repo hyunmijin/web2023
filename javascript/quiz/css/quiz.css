@@ -9,6 +9,8 @@
     padding: 10px;
     width: 100%;
     z-index: 1000;
+    display: flex;
+    justify-content: space-between;
 }
 #header::before {
     content: '';
@@ -21,7 +23,7 @@
 }
 #header h1 {
     font-size: 28px;
-    padding: 0px 5px 5px 10px;
+    padding: 5px 5px 5px 10px;
     font-family: 'DungGeunMo';
     z-index: 10;
     position: relative;
@@ -32,6 +34,27 @@
 #header h1 em {
     font-size: 0.5em;
 }
+#header li {
+    display: inline;
+    z-index: 10;
+    position: relative;
+}
+#header ul {
+    padding: 5px;
+}
+#header li a {
+    color: #fff;
+    font-size: 'DungGeunMo';
+    border: 1px dashed #fff;
+    display: inline-block;
+    padding: 5px;
+}
+#header li.active a,
+#header li a:hover {
+    background-color: #fff;
+    color: #000;
+}
+
 /* footer */
 #footer {
     position: fixed;
@@ -69,7 +92,7 @@
     padding-top: 100px; 
 }
 .quiz__wrap .quiz {
-    max-width: 500px; 
+    width: 500px; 
     background-color: #ffffff;
     border: 8px ridge #cacaca;
 }
@@ -123,9 +146,32 @@
     font-size: 22px;
     /* display: none; */
 }
+.quiz__answer .input {
+    background-color: #fff;
+    border: 6px ridge #cacaca;
+    width: 100%;
+    font-family: 'EF_Diary';
+    padding: 10px 20px;
+    font-size: 22px;
+    margin-bottom: 10px;
+}
 .quiz__view {
     border-bottom: 6px ridge #cacaca;
     overflow: hidden;
+}
+.quiz__footer {
+    border-top: 6px ridge #cacaca;
+    padding: 20px;
+    font-family: 'EF_Diary';
+    background-color: #e4e4e4;
+}
+.quiz__footer::before {
+    content: "✨Tip";
+    color: #F5534F;
+    font-weight: bold;
+}
+.quiz__desc {
+    padding-top: 5px;
 }
 /* dog__wrap */
 .dog .tail, 
