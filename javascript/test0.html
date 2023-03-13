@@ -5,147 +5,141 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .box {
+            border: 5px solid #4564;
+            height: 100px;
+        }
+    </style>
 </head>
 <body>
+    <div class="box"></div>
+    <div class="box"></div>
+    
     <script>
-        //01 1-50까지 for문으로 출력
-        {
-            for(let i=1; i<=50; i++){
-            document.write(i)
-            }
-        }
-        document.write("<br>")
-        //02 1-50까지 while문으로 출력
-        {
-            let num = 1;
-            while(num<=50){
-                document.write(num)
-                num++;
-            }
-        }
-        document.write("<br>")
-        //03 1-100까지 짝수로 출력(if문 사용X)
-        {
-            for(let i=2; i<=100; i+=2){
-            document.write(i)
-            }
-        }
-        document.write("<br>")
-        //04 1-100까지 홀수로 출력(if문 사용)
-        {
-            for(let i=1; i<=100; i++){
-                if(i % 2 == 1){
-                    document.write(i)
-                }
-            }
-        }
-        document.write("<br>")
-        //05 테이블 50칸 출력(1-50숫자 출력)
-        {
-            let table = "<table border ='1'>"
-            let num = 1;
 
-            for(let i=1; i<=5; i++){
-                table += "<tr>"
-                
-                for(let j=1; j<=10; j++){
-                    table += "<td>" + num + "</td>"
-                    num++;
-                }
-            }
-            table += "</table>"
-            document.write(table)
-        }
-        document.write("<br>")
-        //06 1-10까지 합 출력
-        {
-            let num = 1;
-            for(i=1; i<=10; i++){
-                num++;
-            }
-            document.write(i)
-        }
-        document.write("<br>")
-        //07 구구단 출력
-        {
-            for(let i=9; i<=9; i++){
-                document.write(i + "단", "<br>")
 
-                for(let j=1; j<=9; j++){
-                    document.write(i + "*" + j + "=" + i*j + "<br>")
-                }
+        const num = [
+            {
+                a:"1",
+                b:"2",
+                c:"3",
             }
-        }
-        document.write("<br>")
-        //08 함수 유형 4가지 작성
-        {
-            //선언적함수
-            function func(){
-                document.write("선언적함수<br>")
-            }
-            func();
-        }
-        document.write("<br>")
-        {
-            //익명함수
-            const func = function(){
-                document.write("익명함수<br>")
-            }
-            func();
-        }
-        document.write("<br>")
-        {
-            //매개변수 함수
-            function func(str){
-                document.write(str)
-            }
-            func("매개변수함수<br>");
-        }
-        document.write("<br>")
-        {
-            //리턴함수
-            function func(){
-                const str = "리턴<br>"
-                return str; 
-            }
-            document.write(func());
-        }
-        document.write("<br>")
-        //09 화살표 함수유형 4가지 작성
-        {
-            //선언적 함수
-            func = () => {
-                document.write("선언적함수 화살표유형<br>")
-            }
-            func();
-        }
-        document.write("<br>")
-        {
-            //익명함수
-            const func = () => {
-                document.write("익명함수 화살표유형<br>")
-            }
-            func();
-        }
-        document.write("<br>")
-        {
-            //매개변수 함수
-            func = (str) => {
-                document.write(str)
-            }
-            func("매개변수 화살표유형<br>");
-        }
-        document.write("<br>")
-        {
-            //리턴함수
-            func = () => {
-                const str = "리턴함수 화살표유형<br>"
-                return str; 
-            }
-            document.write(func());
-        }
-        //10 스크립트하면서 제일 어려운 부분과 이해 안되는 부분 서술
-        
+        ];
+        document.querySelector(".box").innerText = num[0].b;
+
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerText = num[0].a
+        });
+
+        1
+        document.querySelector(".box").innerHTML = num[0].b;
+
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].a
+        });
+
+        2
+        document.querySelector(".box").innerHTML = num[0].b;
+
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].a;
+        });
+        3
+        document.querySelector(".box").innerHTML = num[0].a;
+
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].a;
+        });
+        4
+        document.querySelector(".box").innerHTML = num[0].a;
+
+        document.querySelectorAll('.box').forEach(function(el){
+            el.innerHTML = num[0].a;
+        });
+
+        5
+        document.querySelector(".box").innerHTML = num[0].a;
+
+        document.querySelectorAll(".box").forEach(function(el){
+            el.innerHTML = num[0].a;
+        });
+
+
+
+
+
+
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelectorAll(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+
+        // //1
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelectorAll(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //2
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelectorAll(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //3
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //4
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+
+        // //5
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //6
+        // document.querySelector(".box").style.display = "none";
+
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //7
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+
+        // //8
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //9
+        // document.querySelector("box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+        // //10
+        // document.querySelector(".box").style.display = "none";
+
+        // document.querySelector(".box").forEach(function(el){
+        //     el.style.display = "none";
+        // });
+
     </script>
 </body>
 </html>
