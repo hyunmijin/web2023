@@ -17,6 +17,7 @@
             <li><a href="quizEffect01.html">1</a></li>
             <li><a href="quizEffect02.html">2</a></li>
             <li class="active"><a href="quizEffect03.html">3</a></li>
+            <li><a href="quizEffect04.html">4</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -170,7 +171,7 @@
         const quizAnswerResult = quizWrap.querySelectorAll(".quiz__answer .result");  //문제 정답
         const quizAnswerInput = quizWrap.querySelectorAll(".quiz__answer .input");    //사용자 정답
         const quizAnswerConfirm = quizWrap.querySelectorAll(".quiz__answer .confirm");  //정답 버튼
-        const dogwrap = quizWrap.querySelectorAll(".dog__wrap");
+        const dogwrap = quizWrap.querySelector(".dog__wrap");
 
         //문제정보
         const quizInfo = [
