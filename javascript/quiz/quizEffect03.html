@@ -198,8 +198,8 @@
                 infoDesc: "교착상태(Deadlock)는 2개 이상의 프로세스들이 서로 다른 프로세스가 차지하고 있는 자원을 무한정 기다려 시스템이 멈춘 것처럼 보이는 것이다."
             }
         ];
-        //문제 출력
-        //#1 //문제 종류
+        // //#1
+        // //문제 출력
         // quizTitle[0].textContent = quizInfo[0].infoType;
         // quizTitle[1].textContent = quizInfo[1].infoType;
         // quizTitle[2].textContent = quizInfo[2].infoType;
@@ -235,22 +235,13 @@
         // quizTitle[1].innerHTML = quizInfo[1].infoType + " " + quizInfo[1].infoTime;
         // quizTitle[2].innerHTML = quizInfo[2].infoType + " " + quizInfo[2].infoTime;
 
-
-        // quizQuestionNum[0].textContent = quizInfo[0].infoNumber;
-        // quizQuestionNum[1].textContent = quizInfo[1].infoNumber;
-        // quizQuestionNum[2].textContent = quizInfo[2].infoNumber;
-
-        // quizQuestion[0].textContent = quizInfo[0].infoQuestion;
-        // quizQuestion[1].textContent = quizInfo[1].infoQuestion;
-        // quizQuestion[2].textContent = quizInfo[2].infoQuestion;
-
-        // for(let i=0; i<quizInfo.length; i++){
-        //     quizTitle[i].innerHTML = quizInfo[i].infoType + " " + quizInfo[i].infoTime;
-        //     quizQuestionNum[i].textContent = quizInfo[i].infoNumber;
-        //     quizQuestion[i].textContent = quizInfo[i].infoQuestion;
-        //     quizAnswerResult[i].textContent = quizInfo[i].infoAnswer;
-        //     quizDesc[i].textContent = quizInfo[i].infoDesc;
-        // }
+        for(let i=0; i<quizInfo.length; i++){
+            quizTitle[i].innerHTML = quizInfo[i].infoType + " " + quizInfo[i].infoTime;
+            quizQuestionNum[i].textContent = quizInfo[i].infoNumber;
+            quizQuestion[i].textContent = quizInfo[i].infoQuestion;
+            quizAnswerResult[i].textContent = quizInfo[i].infoAnswer;
+            quizDesc[i].textContent = quizInfo[i].infoDesc;
+        }
 
         quizInfo.forEach(function(e, i){
             quizTitle[i].innerHTML = quizInfo[i].infoType + " " + quizInfo[i].infoTime;
@@ -270,10 +261,10 @@
         // quizDesc[2].style.display = "none";
 
         //for
-        // for(let i=0; i<=quizInfo.length; i++){
-        //     quizAnswerResult[i].style.display = "none";
-        //     quizDesc[i].style.display = "none";
-        // }
+        for(let i=0; i<=quizInfo.length; i++){
+            quizAnswerResult[i].style.display = "none";
+            quizDesc[i].style.display = "none";
+        }
 
         //forEach
         quizInfo.forEach(function(e, i){
