@@ -111,7 +111,7 @@
                     3: "누산기(Accumulator);",
                     4: "메모리 레지스터(Memory register);"
                 },
-                infoAnswer: "3",
+                infoAnswer: "2",
                 infoDesc: "MAR:번지(주소)기억<br>MBR:버퍼(임시기억)<br>IR:명령어레지스터(명령어를 읽어서 저장)<br>PC:프로그램카운터(다음수행 명령번지 기억)<br>명령어해독기:IR 내용 해독<br>ACC:누산기(연산결과 일시(임시)저장)<br>데이터레지스터:데이터 임시저장<br>상태 레지스터:CPU상태 저장(PSW)<br>보수기:보수로 바꾸는 장치"
             }, {
                 infoType: "정보처리 기능사",
@@ -124,7 +124,7 @@
                     3: "10",
                     4: "11"
                 },
-                infoAnswer: "3",
+                infoAnswer: "1",
                 infoDesc: "반가산기는 XOR(합)+AND(자리올림)으로 구성합은?(=XOR회로)를 이야기하므로, XOR은 입력신호가 서로 다를때(1,0 또는 0,1) 1이고, 같을때(0,0 또는 1,1)는 0이다..그래서 결과는(두개의 입력 비트가 모두1) 0"
             }, {
                 infoType: "정보처리 기능사",
@@ -171,12 +171,12 @@
                 infoNumber: "20090106",
                 infoQuestion: "2진수 '101111110'을 8진수로 변환하면?",
                 infoChoice: {
-                    1: "(576)8!!!숫자변경",
-                    2: "(567)8",
-                    3: "(558)8",
-                    4: "(557)8"
+                    1: "(576)₈",
+                    2: "(567)₈",
+                    3: "(558)₈",
+                    4: "(557)₈"
                 },
-                infoAnswer: "3",
+                infoAnswer: "1",
                 infoDesc: "2^3은 8이므로 2진수를 8진수로 변환시 3자리씩 끊어서 계산해 줍니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -189,7 +189,7 @@
                     3: "NOR 게이트",
                     4: "NAND 게이트"
                 },
-                infoAnswer: "1",
+                infoAnswer: "4",
                 infoDesc: "출력 결과를 1,1,1,0 이 아닌 반대로 0,0,0,1로 생각해보면AND의 반대임을 알수 있습니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -202,7 +202,7 @@
                     3: "OR",
                     4: "XOR"
                 },
-                infoAnswer: "1",
+                infoAnswer: "3",
                 infoDesc: "둘다 1이 입력되어야 1인 것은 AND 이며 둘중 하나라도 1이면 1인것은 OR입니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -215,18 +215,18 @@
                     3: "데이터의 종류",
                     4: "데이터가 있는 주소를 구하는데 필요한 정보"
                 },
-                infoAnswer: "1",
+                infoAnswer: "3",
                 infoDesc: "주소부분은 데이터의 종류와는 아무런 관련이 없습니다."
             }, {
                 infoType: "정보처리 기능사",
                 infoTime: "2009년 1회",
                 infoNumber: "20090110",
-                infoQuestion: "그림과 같은 논리회로에서 출력 X에 알맞은 식은?(단, A,B,C 는 입력임)",
+                infoQuestion: "그림과 같은 논리회로에서 출력 X에 알맞은 식은?(단, A,B,C 는 입력임)<br><img style='width300px' src='../quiz/assets/img/Q10.jpg'>",
                 infoChoice: {
-                    1: "Ā • (B+C)다시!",
-                    2: "Ā • (B+C)",
-                    3: "Ā + ",
-                    4: "Ā • B • C"
+                    1: "<p style='text-decoration: overline;'>A</p>•(B+C)",
+                    2: "<p style='text-decoration: overline;'>A</p>•<p style='text-decoration: overline;'>(B+C)</p>",
+                    3: "<p style='text-decoration: overline;'>A</p>•B•C",
+                    4: "<p style='text-decoration: overline;'>A</p> + <p style='text-decoration: overline;'>B+C</p>"
                 },
                 infoAnswer: "1",
                 infoDesc: "주소부분은 데이터의 종류와는 아무런 관련이 없습니다."
@@ -247,9 +247,9 @@
                 infoType: "정보처리 기능사",
                 infoTime: "2009년 1회",
                 infoNumber: "20090112",
-                infoQuestion: "다음 보기의 연산은?",
+                infoQuestion: "다음 보기의 연산은?<br><img style='width300px' src='../quiz/assets/img/Q12.jpg'>",
                 infoChoice: {
-                    1: "AND 연산 사진!!!!",
+                    1: "AND 연산",
                     2: "OR 연산",
                     3: "MOVE 연산",
                     4: "Complement 연산"
@@ -293,7 +293,7 @@
                     3: "④→②→①→③",
                     4: "①→③→④→②"
                 },
-                infoAnswer: "1",
+                infoAnswer: "3",
                 infoDesc: "프로그램 카운터 : 다음 실행할 번지의 값을 기억<br>명령 레지스터 : 현재 실행할 번지의 값을 기억"
             }, {
                 infoType: "정보처리 기능사",
@@ -306,7 +306,7 @@
                     3: "간접 주기(indirect cycle)",
                     4: "실행 주기(execute cycle)"
                 },
-                infoAnswer: "1",
+                infoAnswer: "2",
                 infoDesc: "명령어 실행 사이클 : 인출, 간접, 실행, 인터럽트"
             }, {
                 infoType: "정보처리 기능사",
@@ -319,7 +319,7 @@
                     3: "프로그램과 데이터를 저장하는 기능 수행",
                     4: "원시프로그램을 목적프로그램으로 변환하는 기능 수행"
                 },
-                infoAnswer: "1",
+                infoAnswer: "4",
                 infoDesc: "중앙처리장치의 구성<br>제어장치, 연산장치, 레지스터로 구성되죠!<br>컴파일러 : 원시프로그램을 목적 프로그램으로 변환"
             }, {
                 infoType: "정보처리 기능사",
@@ -332,7 +332,7 @@
                     3: "1로 Set됨",
                     4: "불능(Not Allowed)"
                 },
-                infoAnswer: "1",
+                infoAnswer: "4",
                 infoDesc: "RS 플립플롭의 특징중 한가지는 두쪽의 입력이 모두 1이면 불능상태가 됩니다..이러한점을 개선하기 위해서 RS플리플롭을 개량한 JK플리플롭에서는 두 입력이 모두 1이며 토글(반전)이 되도록 설계되어 있습니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -358,7 +358,7 @@
                     3: "minute istruction per second",
                     4: " medium istruction per second"
                 },
-                infoAnswer: "1",
+                infoAnswer: "2",
                 infoDesc: "MIPS : Million Instruction Per Second 의 약자라써 초당 몇백만개의 명령어를 수행하는가를 나타내는 수치 입니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -371,7 +371,7 @@
                     3: "DELETE FROM 사원 WHERE 사원번호 = 200;",
                     4: "DROP TABLE 사원 WHERE 사원번호 = 200;"
                 },
-                infoAnswer: "1",
+                infoAnswer: "3",
                 infoDesc: "삭제 명령어는 2가지 입니다. Drop : 데이터베이스, 테이블 삭제 명령어<br>Delete : 튜플(레코드) 삭제 명령어<br>따라서 여기서는 튜플 삭제 명령어를 찾기 때문에 Delete 입니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -384,7 +384,7 @@
                     3: "SELECT",
                     4: "DELETE"
                 },
-                infoAnswer: "1",
+                infoAnswer: "2",
                 infoDesc: "DDL(데이터 베이스 정의 언어)<br>CREATE : DB 테이블, 뷰 생성<br>ALTER : 테이블 변경<br>DROP : 데이터베이스, 테이블, 제거"
             }, {
                 infoType: "정보처리 기능사",
@@ -496,10 +496,10 @@
                 infoNumber: "20090131",
                 infoQuestion: "'윈도 98'에서 여러 개의 활성화 된 창을 순차적으로 전환 할 때 사용하는 단축키는?",
                 infoChoice: {
-                    1: "<Alt> + <Tab>",
-                    2: "<Alt> + <Esc>",
-                    3: "<Ctrl> + <Tab>",
-                    4: "<Shift> + <Tab>"
+                    1: "&lt;Alt&gt; + &lt;Tab&gt;",
+                    2: "&lt;Alt&gt; + &lt;Esc&gt;",
+                    3: "&lt;Ctrl&gt; + &lt;Tab&gt;",
+                    4: "&lt;Shift&gt; + &lt;Tab&gt;"
                 },
                 infoAnswer: "2",
                 infoDesc: "작업창 전환<br>순차 : Alt + Esc<br>직접 : Alt + Tab"
@@ -579,7 +579,7 @@
                     3: "DIR",
                     4: "DIR *.*"
                 },
-                infoAnswer: "4",
+                infoAnswer: "1",
                 infoDesc: "/W는 Wide의 약자로 한줄에 5개의 파일명을 보여 주므로 한 화면에 가장 많은 파일 목록을 볼수 있습니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -605,7 +605,7 @@
                     3: "가장 최근에 저장된 파일 하나만을 저장할 수 있다.",
                     4: "클립보드에 현재 화면 전체를 복사하는 기능키는 Print Screen 이다."
                 },
-                infoAnswer: "1",
+                infoAnswer: "2",
                 infoDesc: "- 윈도우내의 임시기억장소를 클립보드라합니다.<br> - 임시기억장소는 일시적으로 보관됨<br>- 클립보드에 보관된 내용은 원하는곳에 Ctrl+V(붙이기) 넣을수 있음<br>- 제일 마지막으로 복사나 잘라내기한 내용 하나만 기억하고 있음<br>- 전체화면은 복사는 Print Screen - 활성화(현재 사용중인)창을 복사는 Alt+Print Screen"
             }, {
                 infoType: "정보처리 기능사",
@@ -618,7 +618,7 @@
                     3: "작업 관리 프로그램",
                     4: "언어 처리 프로그램"
                 },
-                infoAnswer: "1",
+                infoAnswer: "3",
                 infoDesc: "제어프로그램 종류 3가지<br>1. 감시프로그램<br>2. 작업관리프로그램<br>3. 데이터관리프로그램<br>요약해서 감작데 라고 외웁니다."
             },{
                 infoType: "정보처리 기능사",
@@ -657,7 +657,7 @@
                     3: "CHKDSK",
                     4: "LABEL"
                 },
-                infoAnswer: "4",
+                infoAnswer: "2",
                 infoDesc: "내부명령어 : 일반적으로 4자 이하이며 COMMAND.COM에서 지원해주는 명령어로 별도의 실행파일이 필요 없습니다.(Prompt는 예외)"
             }, {
                 infoType: "정보처리 기능사",
@@ -670,7 +670,7 @@
                     3: "내게 필요한 옵션",
                     4: "시스템"
                 },
-                infoAnswer: "4",
+                infoAnswer: "2",
                 infoDesc: "멀티미디어 : 원도우98에서 작업표시줄의 볼륨 조절 표시 아이콘을 생성할수 있는 제어판의 아이콘<br>사운드    : 효과음을 나타냄, 원도우 시작 종료할때의 소리"
             }, {
                 infoType: "정보처리 기능사",
@@ -774,7 +774,7 @@
                     3: "부호화",
                     4: "표본화"
                 },
-                infoAnswer: "2",
+                infoAnswer: "1",
                 infoDesc: "표본화-양자화-부호화-복호화-여과의 단계를 거치며<br>표본화-양자화-부호화는 송신측에서 일어나며<br>복호화-여과는 수신측에서 일어나는 작업 입니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -800,7 +800,7 @@
                     3: "28회선",
                     4: "42회선"
                 },
-                infoAnswer: "4",
+                infoAnswer: "3",
                 infoDesc: "8개를 성형으로 연결하면 8-1 즉 7이 답이며 망형으로 연결할경우 7+6+5+4+3+2+1 이 답입니다.<br>문제에서 주어진 8을 N이라고 하면 N-1 에서부터 1까지 더해주면 됩니다.<br>더하기가 힘들기 때문에 공식을 활용하면 n(n-1)/2 입니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -813,7 +813,7 @@
                     3: "Teletext",
                     4: "CATV"
                 },
-                infoAnswer: "4",
+                infoAnswer: "3",
                 infoDesc: "TV와 귀선시간이라는 단어를 통해서 텔레텍스트임을 알수 있습니다. "
             }, {
                 infoType: "정보처리 기능사",
@@ -865,7 +865,7 @@
                     3: "상호변조 잡음",
                     4: "위상 왜곡"
                 },
-                infoAnswer: "4",
+                infoAnswer: "1",
                 infoDesc: "충격성 잡음은 순간적으로 일어났다가 사라 집니다."
             }, {
                 infoType: "정보처리 기능사",
@@ -878,7 +878,7 @@
                     3: "오프라인(off-line) 시스템",
                     4: "멀티 프로세싱(multi-processing) 시스템"
                 },
-                infoAnswer: "4",
+                infoAnswer: "2",
                 infoDesc: "예약업무등은 모아서 처리 할것이 아니라 예약이 이루어 지는 즉시 처리 해야 합니다.실시간 처리가 적합하며 온라인 리얼타임이라고 합니다."
             }
         ];

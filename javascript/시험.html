@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //선언적 함수
+    //함수가 실행되었습니다.1
+    {
+        function func(){
+            document.write("함수가 실행되었습니다.1<br>")
+        }
+        func();
+    }
+    //익명함수
+    //함수가 실행되었습니다.2
+    {
+        const func = function(){
+            document.write("함수가 실행되었습니다.2<br>")
+        }
+        func();
+    }
+    //매개변수 함수
+    //함수가 실행되었습니다.3
+    {
+        function func(str){
+            document.write(str)
+        }
+        func("함수가 실행되었습니다.3<br>");
+    }
+    //리턴값 함수
+    //함수가 실행되었습니다.4
+    {
+        function func(){
+            const str = "함수가 실행되었습니다.4<br>";
+            return str;
+        }
+        document.write(func());
+    }
+    //선언적 함수(화살표함수)
+    //함수가 실행되었습니다.5
+    {
+        func = () => {
+            document.write("함수가 실행되었습니다.5<br>")
+        }
+        func();
+    }
+    //익명함수(화살표함수)
+    //함수가 실행되었습니다.6
+    {
+        const func = () => {
+            document.write("함수가 실행되었습니다.6<br>")
+        }
+        func();
+    }
+    //매개변수 함수(화살표함수)
+    //함수가 실행되었습니다.7
+    {
+        func = (str) => {
+            document.write(str)
+        }
+        func("함수가 실행되었습니다.7<br>");
+    }
+    //리턴값 함수(화살표함수)
+    //함수가 실행되었습니다.8
+    {
+        func = () => {
+            const str = "함수가 실행되었습니다.8<br>";
+            return str;
+        }
+        document.write(func());
+    }
+    //익명함수 + 매개변수 + 리턴값(화살표함수)
+    //함수가 실행되었습니다.9
+    {
+        const func = (str) => {
+            return str;
+        }
+        document.write(func("함수가 실행되었습니다.9<br>"));
+    }
+    //익명함수 + 매개변수 + 리턴값 + 괄호 생략(화살표함수)
+    //함수가 실행되었습니다.10
+    {
+        const func = str => {
+            return str;
+        }
+        document.write(func("함수가 실행되었습니다.10<br>"));
+    }
+    //익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략(화살표함수)
+    //함수가 실행되었습니다.11
+    {
+        const func = str => str;
+
+        document.write(func("함수가 실행되었습니다.11<br>"));
+    }
+    //선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략(화살표함수)
+    //함수가 실행되었습니다.12
+    {
+        func = str => str;
+        
+        document.write(func("함수가 실행되었습니다.12<br>"));
+    }
+    //
+    {
+        function func(num, str1, str2){
+            document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+        }
+        func("1","함수","실행");
+        func("2","자바스크립트","실행");
+        func("3","리액트","실행");
+    }
+        //함수 유형 : 함수와 매개변수를 이용한 형태
+        {
+            function func(num, str1, str2){
+                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+            }
+            func("1","함수","실행");
+            func("2","자바스크립트","실행");
+            func("3","리액트","실행");
+        }
+        //함수 유형 : 함수와 변수를 이용한 형태
+        {
+            const youName1 = 1;
+            const youName2 = 2;
+            const youName3 = 3;
+            const youStr1 = "함수";
+            const youStr2 = "자바스크립트";
+            const youStr3 = "리액트";
+            const youCom4 = "실행";
+
+            function func(num, str1, str2){
+                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+            }
+            func(youName1, youStr1, youCom);
+            func(youName2, youStr2, youCom);
+            func(youName3, youStr3, youCom);
+        }
+        //함수 유형 : 함수와 배열, 객체를 이용한 형태
+        {
+            const info = [
+                {
+                    num: "1",
+                    name: "함수",
+                    com: "실행"
+                },{
+                    num: "2",
+                    mame: "자바스크립트",
+                    com: "실행"
+                },{
+                    num: "3",
+                    mame: "리액트",
+                    com: "실행"
+                },
+            ];
+                function func(num, str1, str2){
+                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+            }
+            func(info[0].num, info[0].name, info[0].com);
+            func(info[1].num, info[1].name, info[0].com);
+            func(info[2].num, info[2].name, info[0].com);
+        }
+    </script>
+</body>
+</html>
