@@ -8,160 +8,64 @@
 </head>
 <body>
     <script>
-    //선언적 함수
-    //함수가 실행되었습니다.1
-    {
-        function func(){
-            document.write("함수가 실행되었습니다.1<br>")
+        //1~10까지 for문
+        {
+            for(let i=1; i<=10; i++){
+                document.write(i)
+            }
         }
-        func();
-    }
-    //익명함수
-    //함수가 실행되었습니다.2
-    {
-        const func = function(){
-            document.write("함수가 실행되었습니다.2<br>")
-        }
-        func();
-    }
-    //매개변수 함수
-    //함수가 실행되었습니다.3
-    {
-        function func(str){
-            document.write(str)
-        }
-        func("함수가 실행되었습니다.3<br>");
-    }
-    //리턴값 함수
-    //함수가 실행되었습니다.4
-    {
-        function func(){
-            const str = "함수가 실행되었습니다.4<br>";
-            return str;
-        }
-        document.write(func());
-    }
-    //선언적 함수(화살표함수)
-    //함수가 실행되었습니다.5
-    {
-        func = () => {
-            document.write("함수가 실행되었습니다.5<br>")
-        }
-        func();
-    }
-    //익명함수(화살표함수)
-    //함수가 실행되었습니다.6
-    {
-        const func = () => {
-            document.write("함수가 실행되었습니다.6<br>")
-        }
-        func();
-    }
-    //매개변수 함수(화살표함수)
-    //함수가 실행되었습니다.7
-    {
-        func = (str) => {
-            document.write(str)
-        }
-        func("함수가 실행되었습니다.7<br>");
-    }
-    //리턴값 함수(화살표함수)
-    //함수가 실행되었습니다.8
-    {
-        func = () => {
-            const str = "함수가 실행되었습니다.8<br>";
-            return str;
-        }
-        document.write(func());
-    }
-    //익명함수 + 매개변수 + 리턴값(화살표함수)
-    //함수가 실행되었습니다.9
-    {
-        const func = (str) => {
-            return str;
-        }
-        document.write(func("함수가 실행되었습니다.9<br>"));
-    }
-    //익명함수 + 매개변수 + 리턴값 + 괄호 생략(화살표함수)
-    //함수가 실행되었습니다.10
-    {
-        const func = str => {
-            return str;
-        }
-        document.write(func("함수가 실행되었습니다.10<br>"));
-    }
-    //익명함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략(화살표함수)
-    //함수가 실행되었습니다.11
-    {
-        const func = str => str;
+        document.write("<br>")
+        //1~10까지 짝수
+        {
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write(i)
+                }
+            }
+        }document.write("<br>")
+        //1~10 색상
+        {
+            for(let i=1; i<=10; i++){
+                if(i % 2 == 0){
+                    document.write("<span style='color:red'>" + i + "</span>")
+                } else {
+                    document.write("<span style='color:blue'>" + i + "</span>")
+                }
+            }
+        }document.write("<br>")
+        //num변수 배열  100-900
+        {
+            const num = [100,200,300,400,500,600,700,800,900];
 
-        document.write(func("함수가 실행되었습니다.11<br>"));
-    }
-    //선언적 함수 + 매개변수 + 리턴값 + 괄호 생략 + 리턴 생략(화살표함수)
-    //함수가 실행되었습니다.12
-    {
-        func = str => str;
-        
-        document.write(func("함수가 실행되었습니다.12<br>"));
-    }
-    //
-    {
-        function func(num, str1, str2){
-            document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
-        }
-        func("1","함수","실행");
-        func("2","자바스크립트","실행");
-        func("3","리액트","실행");
-    }
-        //함수 유형 : 함수와 매개변수를 이용한 형태
-        {
-            function func(num, str1, str2){
-                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+            for(let i=0; i<num.length; i++){
+                document.write(num[i]);
             }
-            func("1","함수","실행");
-            func("2","자바스크립트","실행");
-            func("3","리액트","실행");
         }
-        //함수 유형 : 함수와 변수를 이용한 형태
+        document.write("<br>")
         {
-            const youName1 = 1;
-            const youName2 = 2;
-            const youName3 = 3;
-            const youStr1 = "함수";
-            const youStr2 = "자바스크립트";
-            const youStr3 = "리액트";
-            const youCom4 = "실행";
+            const num = [100,200,300,400,500,600,700,800,900];
 
-            function func(num, str1, str2){
-                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
-            }
-            func(youName1, youStr1, youCom);
-            func(youName2, youStr2, youCom);
-            func(youName3, youStr3, youCom);
+            num.forEach(function(el){
+                document.write(el)
+            });
         }
-        //함수 유형 : 함수와 배열, 객체를 이용한 형태
+        document.write("<br>")
+        //for in 문 
         {
-            const info = [
-                {
-                    num: "1",
-                    name: "함수",
-                    com: "실행"
-                },{
-                    num: "2",
-                    mame: "자바스크립트",
-                    com: "실행"
-                },{
-                    num: "3",
-                    mame: "리액트",
-                    com: "실행"
-                },
-            ];
-                function func(num, str1, str2){
-                document.write(`${num}. ${str1}가 ${str2}되었습니다.<br>`);
+            const num = [100,200,300,400,500,600,700,800,900];
+
+            for(let i in num){
+                document.write(num[i])
             }
-            func(info[0].num, info[0].name, info[0].com);
-            func(info[1].num, info[1].name, info[0].com);
-            func(info[2].num, info[2].name, info[0].com);
+        }
+        document.write("<br>")
+        //for of문
+        {
+            const num = [100,200,300,400,500,600,700,800,900];
+
+            for(let i of num){
+                document.write(i)
+            }
         }
     </script>
 </body>
