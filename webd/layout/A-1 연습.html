@@ -4,73 +4,65 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>레이아웃 타입(B-1)</title>
+    <title>레이아웃 연습</title>
     <style>
         * {
-            margin: 0;
             padding: 0;
+            margin: 0;
         }
-        #header {
-            width: 100%;
+        #header .container{
             height: 100px;
-        }
-        #header .container {
             display: flex;
+            color: #fff;
+            background-color: #ca0a0a;
         }
         #header .container .logo {
             width: 20%;
-            height: 100px;
-            background-color: #E574BC;
+            height: 100%;
+            background-color: #0e0a0a;
         }
-        #header .container .nav {
-            width: 80%;
-            height: 100px;
-            background-color: #EA84C9;
-        }
-        #slider .container {
+        #slider .container{
             height: 300px;
-            background-color: #EF94D5;
+            background-color: #913838;
         }
-        #contents .container {
+        #contents .container{
+            height: 200px;
             display: flex;
+            background-color: #733e3e;
         }
         #contents .container .cont1 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #F9B4ED;
+            width: 33.333%;
+            background-color: #240505;
         }
         #contents .container .cont2 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #EABAF6;
+            width: 33.333%;
+            background-color: #582929;
         }
         #contents .container .cont3 {
-            width: 33.3333%;
-            height: 200px;
-            background-color: #DABFFF;
+            width: 33.333%;
+            background-color: #927676;
         }
-        #footer .container {
+        #footer .container{
             height: 100px;
             display: flex;
+            background-color: #6c6262;
         }
         #footer .container .foot1 {
             width: 20%;
-            height: 100px;
-            background-color: #ADCFFF;
+            background-color: #db1717;
         }
         #footer .container .foot2 {
             width: 60%;
-            height: 100px;
-            background-color: #96D7FF;
+            background-color: #503838;
         }
         #footer .container .foot3 {
             width: 20%;
-            height: 100px;
-            background-color: #7FDEFF;
+            background-color: #6e2222;
         }
         .container {
             width: 1200px;
-            margin: 0 auto; 
+            margin: 0 auto;
+            background-color: #000;
         }
     </style>
 </head>
@@ -81,14 +73,12 @@
             <nav class="nav">메뉴</nav>
         </div>
     </header>
-    <!-- header -->
 
     <article id="slider">
         <div class="container">
             이미지 슬라이드
         </div>
     </article>
-    <!-- slider -->
 
     <section id="contents">
         <div class="container">
@@ -97,7 +87,6 @@
             <article class="cont3">바로가기</article>
         </div>
     </section>
-    <!-- contents -->
 
     <footer id="footer">
         <div class="container">
@@ -106,6 +95,5 @@
             <div class="foot3">카피라이터</div>
         </div>
     </footer>
-    <!-- footer -->
 </body>
 </html>
