@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>레이아웃30 - grid 유형 - 반응형</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        #header {
+            height: 100px;
+            background-color: #EEEBE9;
+        }
+        #nav {
+            height: 100px;
+            background-color: #B9AAA5;
+        }
+        #section {
+            height: 780px;
+            background-color: #886F65;
+        }
+        #footer {
+            height: 100px;
+            background-color: #4E342E;
+        }
+        .container {
+            width: 1200px;
+            margin: 0 auto;
+            height: inherit;
+            background-color: rgba(0, 0, 0, 0.2);
+        }
+        #section .container {
+            display: grid;
+            grid-template-areas:
+            "section1 section1"
+            "section2 section2"
+            "section3 section4"
+            ;
+
+            grid-template-columns:
+            600px 600px;
+            grid-template-rows:
+            100px 200px 480px;
+        }
+        .section1 {
+            grid-area: section1;
+            background-color: #74574A;
+        }
+        .section2 {
+            grid-area: section2;
+            background-color: #684D43;
+        }
+        .section3 {
+            grid-area: section3;
+            background-color: #4A352F;
+        }
+        .section4 {
+            grid-area: section4;
+            background-color: #2c1c18;
+        }
+        @media (max-width: 1220px){
+            #section .container {
+                width: 96%;
+                grid-template-areas:
+                "section1 section2 section2"
+                "section1 section3 section4"
+                ;
+
+                grid-template-columns:
+                400px 400px 400px;
+                grid-template-rows:
+                390px 390px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <div class="container"></div>
+        </div>
+        <div id="nav">
+            <div class="container"></div>
+        </div>
+        <div id="section">
+            <div class="container">
+                <div class="section1"></div>
+                <div class="section2"></div>
+                <div class="section3"></div>
+                <div class="section4"></div>
+            </div>
+        </div>
+        <div id="footer">
+            <div class="container"></div>
+        </div>
+    </div>
+</body>
+</html>
