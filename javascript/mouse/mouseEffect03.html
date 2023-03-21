@@ -8,6 +8,39 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+    <style>
+        .mouse__wrap {
+            cursor: none;
+        }
+        .mouse__text {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+            overflow: hidden;
+            z-index: 10;
+        }
+        .mouse__text p{
+            /* flex: 3vw; */ 
+            line-height: 1.5;
+        }
+        .mouse__cursor {
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            border: 5px solid #fff;
+            background-color: rgba(255,255,255,0.5);
+            background-image: url(img/mouseEffect03-min.jpg);
+            background-size: cover;
+            background-position: center center;
+            background-attachment: fixed;
+        }
+    </style>
 </head>
 <body class="img03 bg07 font09">
     <header id="header">
@@ -25,7 +58,13 @@
     <!-- header -->
 
     <main id="main">
-        
+        <div class="mouse__wrap">
+            <div class="mouse__cursor"></div>
+            <div class="mouse__text">
+                <p>Success is where preparation and opportunity meet.</p>
+                <p>성공은 잘 준비된 기회와 만난다.</p>
+            </div>
+        </div>
     </main>
     <!-- main -->
 
@@ -33,5 +72,45 @@
         <a href="mailto:hunmi961119@gmail.com">hunmi961119@gmail.com</a> 
     </footer>
     <!-- footer -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        //선택자
+        const cursor = document.querySelector(".mouse__cursor");
+
+        // console.log(cursor.clientWidth);   //190
+        // console.log(cursor.clientHeight);  //190
+        // console.log(cursor.offsetWidth);   //200
+        // console.log(cursor.offsetHeight);  //200
+
+        console.log(cursor.getBoundingClientRect());
+
+        const circle = cursor.getBoundingClientRect();
+
+        // const DOMRect = {
+        //     bottom: 200,
+        //     height: 200,
+        //     left:0,
+        //     right: 200,
+        //     top: 0,
+        //     width: 200,
+        //     x: 0,
+        //     y: 0
+        // }
+
+        // window.addEventListener("mousemove", e => {
+        //     gsap.to(cursor, {
+        //         duration: 0.5, 
+        //         left: e.pageX -cursor.offsetWidth/2, 
+        //         top: e.pageY -cursor.offsetHeight/2
+        //     });
+        // });
+        window.addEventListener("mousemove", e => {
+            gsap.to(cursor, {
+                duration: 0.5, 
+                left: e.pageX -circle.width/2, 
+                top: e.pageY -circle.height/2
+            });
+        });
+    </script>
 </body>
 </html>
