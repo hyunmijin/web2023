@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>사이트 만들기 footer</title>
+    <link href="https://webfontworld.github.io/NexonLv1Gothic/NexonLv1Gothic.css" rel="stylesheet">
+    <style>
+         /* reset */
+         * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        h1, h2, h3, h4, h5, h6 {
+            font-weight: normal;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        li {
+            list-style: none;
+        }
+        .blind {
+            position: absolute;
+            clip: rect(0 0 0 0);
+            width: 1px;
+            height: 1px;
+            margin: -1px;
+            overflow: hidden;
+        }
+        .mt10 {margin-top: 10px !important;}
+        .mt20 {margin-top: 20px !important;}
+        .mt30 {margin-top: 30px !important;}
+        .mt40 {margin-top: 40px !important;}
+        .mt50 {margin-top: 50px !important;}
+        .mt60 {margin-top: 60px !important;}
+        .mt70 {margin-top: 70px !important;}
+
+        .mb10 {margin-bottom: 10px !important;}
+        .mb20 {margin-bottom: 20px !important;}
+        .mb30 {margin-bottom: 30px !important;}
+        .mb40 {margin-bottom: 40px !important;}
+        .mb50 {margin-bottom: 50px !important;}
+        .mb60 {margin-bottom: 60px !important;}
+        .mb70 {margin-bottom: 70px !important;}
+
+        /* common */
+        .container {
+            width: 1160px;
+            margin: 0 auto;
+            padding: 0 20px;
+            /* background-color: rgba(0,0,0,0.1); */
+        }
+        .nexon {
+            font-family: 'NexonLv1Gothic';
+            font-weight: 400;
+        }
+        .section.center {
+            text-align: center; 
+        }
+        .section__small {
+            font-style: 14px;
+            border-radius: 50px;
+            background-color: #CE7182;
+            color: #fff;
+            padding: 1px 23px;
+            text-transform: uppercase;
+            margin-bottom: 20px;
+            display: inline-block;
+        }
+        .section {
+            padding: 120px 0;
+        }
+        .section__h2 {
+            font-size: 50px;
+            font-weight: 400;
+            margin-bottom: 30px;
+            line-height: 1;
+        }
+        .section__desc {
+            font-style: 22px;
+            color: #666;
+            margin-bottom: 70px;
+            font-weight: 300;
+            line-height: 1.5;
+        }
+
+        /* footer */
+        .footer__menu {
+            display: flex;
+        }
+        .footer__menu > div {
+            width: 16.666%;
+        }
+        .footer__menu > div h3 {
+            margin-bottom: 13px;
+        }
+        .footer__menu > div li {
+            line-height: 1.9;
+            font-size: 14px;
+        }
+        .footer__menu > div li a {
+            color: #666;
+        }
+        .footeer_right {
+            margin-top: 50px;
+            border-top: 1px solid #d9d9d9;
+            padding-top: 50px;
+            text-align: center;
+            font-style: normal;
+            line-height: 1.6em;
+            color: #666;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <section class="footer-wrap section nexon">
+        <div class="container">
+            <h2 class="blind">푸터</h2>
+            <div class="footer__inner">
+                <div class="footer__menu">
+                    <div>
+                        <h3>모아보기</h3>
+                        <ul>
+                            <li><a href="#">전체글</a></li>
+                            <li><a href="#">주간 best</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>커피 업체 정보</h3>
+                        <ul>
+                            <li><a href="#">원두납품 정보</a></li>
+                            <li><a href="#">커피교육 정보</a></li>
+                            <li><a href="#">커피 아카데미</a></li>
+                            <li><a href="#">업체 이벤트 & 행사</a></li>
+                            <li><a href="#">스페셜티 카페</a></li>
+                            <li><a href="#">스페셜티 로스터</a></li>
+                            <li><a href="#">커피관련 브랜드</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>매거진</h3>
+                        <ul>
+                            <li><a href="#">커피뉴스</a></li>
+                            <li><a href="#">카페 투어</a></li>
+                            <li><a href="#">컨텐츠 제보</a></li>
+                            <li><a href="#">푸드&음료</a></li>
+                            <li><a href="#">커피 라이브러리</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>중고마켓</h3>
+                        <ul>
+                            <li><a href="#">전체</a></li>
+                            <li><a href="#">장비</a></li>
+                            <li><a href="#">매장</a></li>
+                            <li><a href="#">커피용품</a></li>
+                            <li><a href="#">기타</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>SNS</h3>
+                        <ul>
+                            <li><a href="#">facebook</a></li>
+                            <li><a href="#">instagram</a></li>
+                        </ul>
+                    </div>
+                    <div>
+                        <h3>공지사항</h3>
+                        <ul>
+                            <li><a href="#">이용문의</a></li>
+                            <li><a href="#">쇼핑몰</a></li>
+                            <li><a href="#">사이버몰 이용약관</a></li>
+                            <li><a href="#">광고 상품 안내</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <address class="footeer_right">
+                        2023 JINHYUNMI 커피 관련 사이트<br>Portfolio is Power All Rights Reserved
+                    </address>
+                </div>
+            </div>
+        </div>
+    </section>
+</body>
+</html>
