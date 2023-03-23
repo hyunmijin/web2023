@@ -287,14 +287,14 @@
 
     <script>
         // 선택자
-        const searcBox = document.querySelector(".search__box input");  //검색
+        const searchBox = document.querySelector(".search__box input");  //검색
         const searchList = document.querySelectorAll(".search__list li");  //검색
 
         document.querySelector(".search__info span").textContent = searchList.length;
 
         // 검색
-        searcBox.addEventListener("keyup", () => {
-            const uesrWord = searcBox.value;       //사용자가 입력한 키워드
+        searchBox.addEventListener("keyup", () => {
+            const uesrWord = searchBox.value;       //사용자가 입력한 키워드
 
             searchList.forEach(el => {
                 // const cssname = el.getAttribute("data-name");
