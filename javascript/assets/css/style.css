@@ -116,6 +116,7 @@
     .main__desc p {
         margin-bottom: 15px;
         border-left: 5px solid #5ea3fd;
+        padding-left: 10px;
         background-color: #ededec;
         padding: 12px 10px 10px 20px;
     }
@@ -185,7 +186,7 @@
         content: '';
         width: 5px;
         height: 5px;
-        background-color: #fff;
+        background-color: #9492f8;
         position: absolute;
         left: 0;
         top: 9px;
