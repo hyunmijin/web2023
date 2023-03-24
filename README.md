@@ -11,6 +11,8 @@
 퀴즈 게임 02 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect02.html   
 퀴즈 게임 03 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect03.html   
 퀴즈 게임 04 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect04.html   
+퀴즈 게임 05 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect05.html   
+서치 이펙트 01 : https://hyunmijin.github.io/web2023/javascript/search/searchEffect01.html  
 
 # 사이트
 이미지 유형01 : https://hyunmijin.github.io/web2023/site/imageType/imgType01.html   
