@@ -12,6 +12,7 @@
 퀴즈 게임 03 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect03.html   
 퀴즈 게임 04 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect04.html   
 퀴즈 게임 05 : https://hyunmijin.github.io/web2023/javascript/quiz/quizEffect05.html   
+서치 이펙트 01 : https://hyunmijin.github.io/web2023/javascript/search/searchEffect01.html  
 
 # 사이트
 이미지 유형01 : https://hyunmijin.github.io/web2023/site/imageType/imgType01.html   
@@ -19,6 +20,4 @@
 텍스트 유형01 : https://hyunmijin.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형01 : https://hyunmijin.github.io/web2023/site/sliderType/sliderType01.html   
 헤더 유형01 : https://hyunmijin.github.io/web2023/site/headerType/headerTpye01.html   
-이미지텍스트 유형01 : https://hyunmijin.github.io/web2023/site/img-TextType/img-TextType01.html   
-배너 유형01 : https://hyunmijin.github.io/web2023/site/bannerType/bannerType01.html  
-푸터 유형01 : https://hyunmijin.github.io/web2023/site/footer/footer01.html   
+이미지텍스트 유형01 : https://hyunmijin.github.io/web2023/site/img-TextType/img-TextType01.html
