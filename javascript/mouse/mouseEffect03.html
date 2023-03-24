@@ -8,9 +8,10 @@
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/mouse.css">
+
     <style>
         #header {
-            z-index: 10;
+            z-index: 100;
         }
         .mouse__wrap {
             cursor: none;
@@ -18,16 +19,17 @@
         .mouse__text {
             width: 100%;
             height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
             overflow: hidden;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            position: relative;
             z-index: 10;
         }
-        .mouse__text p{
-            font-size: 25px;
-            line-height: 1.5;
+        .mouse__text p {
+            font-size: 2.5vw;
+            line-height: 1.6;
         }
         .mouse__cursor {
             position: absolute;
@@ -38,7 +40,7 @@
             border-radius: 50%;
             border: 5px solid #fff;
             background-color: rgba(255,255,255,0.5);
-            background-image: url(img/mouseEffect03-min.jpg);
+            background-image: url(img/mouseEffect03-min.png);
             background-size: cover;
             background-position: center center;
             background-attachment: fixed;
@@ -110,8 +112,8 @@
         window.addEventListener("mousemove", e => {
             gsap.to(cursor, {
                 duration: 0.5, 
-                left: e.pageX -circle.width/2, 
-                top: e.pageY -circle.height/2
+                left: e.pageX - circle.width/2, 
+                top: e.pageY - circle.height/2
             });
         });
     </script>

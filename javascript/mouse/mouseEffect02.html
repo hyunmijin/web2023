@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="view-transition" content="same-origin">
+
     <title>02. 마우스 이펙트</title>
 
     <link rel="stylesheet" href="css/reset.css">
@@ -12,7 +14,7 @@
         .mouse__wrap {
             cursor: none;
         }
-        .mouse__text{
+        .mouse__text {
             width: 100%;
             height: 100vh;
             display: flex;
@@ -22,11 +24,11 @@
             overflow: hidden;
         }
         .mouse__text p {
-            font-size: 2vw;
-            line-height: 1.6;
+            font-size: 1.8vw;
+            line-height: 1.4;
         }
         .mouse__text p:last-child {
-            font-size: 2vw;
+            font-size: 2.5vw;
         }
         .mouse__text p span {
             color: rgb(33, 159, 197);
@@ -39,7 +41,7 @@
             height: 10px;
             z-index: 9999;
             border-radius: 50%;
-            background-color: rgba(225,225,225,0.3);
+            background: rgba(225,225,225,0.3);
             user-select: none;
             pointer-events: none;
             transition: transform 0.3s;
@@ -52,7 +54,7 @@
             height: 30px;
             z-index: 9998;
             border-radius: 50%;
-            background-color: rgba(225,225,225,0.3);
+            background: rgba(225,225,225,0.3);
             user-select: none;
             pointer-events: none;
             transition: transform 0.3s;
@@ -68,14 +70,14 @@
             transform: scale(0);
         }
         .mouse__cursor2.active2 {
-            transform: scale(2);
+            transform: scale(5);
             background-color: rgba(64, 225, 0, 0.473);
         }
         .mouse__cursor.active3 {
             transform: scale(0);
         }
         .mouse__cursor2.active3 {
-            transform: scale(2);
+            transform: scale(5);
             background-color: rgba(225, 82, 0, 0.6);
         }
     </style>
