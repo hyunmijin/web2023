@@ -19,4 +19,6 @@
 텍스트 유형01 : https://hyunmijin.github.io/web2023/site/textType/textType01.html   
 슬라이드 유형01 : https://hyunmijin.github.io/web2023/site/sliderType/sliderType01.html   
 헤더 유형01 : https://hyunmijin.github.io/web2023/site/headerType/headerTpye01.html   
-이미지텍스트 유형01 : https://hyunmijin.github.io/web2023/site/img-TextType/img-TextType01.html
+이미지텍스트 유형01 : https://hyunmijin.github.io/web2023/site/img-TextType/img-TextType01.html   
+배너 유형01 : https://hyunmijin.github.io/web2023/site/bannerType/bannerType01.html  
+푸터 유형01 : https://hyunmijin.github.io/web2023/site/footer/footer01.html   
