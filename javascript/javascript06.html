@@ -89,7 +89,16 @@
                     <h3>배열 메서드 : join()</h3>
                     <p>join() 메서드는 배열 요소를 문자열로 결합합니다. 반환은 문자열입니다.</p>
             <div class="script">
-<pre><code class="language-js">
+<pre><code class="language-js">{
+    const arrNum1 = [100, 200, 300, 400, 500];
+    const text1 = arrNum1.join('');     //100200300400500
+    const text2 = arrNum1.join(' ');    // 100 200 300 400 500
+    const text3 = arrNum1.join('*');    // 100*200*300*400*500
+    const text4 = arrNum1.join('-');    // 100-200-300-400-500
+    const text5 = arrNum1.join('💜');//100💜200💜300💜400💜500
+
+    console.log(text5);   
+}
 </code></pre>
             </div>
                 </div>
@@ -145,14 +154,6 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        const arrNum1 = [100,200,300,400,500];
-        const text1 = arrNum1.join(''); //100200300400500
-        const text2 = arrNum1.join(' ');//100 200 300 400 500
-        const text3 = arrNum1.join('*');//100*200*300*400*500
-        const text4 = arrNum1.join('-');//100-200-300-400-500
-        const text5 = arrNum1.join('💜');//100💜200💜300💜400💜500
-
-        console.log(text5);
     </script>
 
 </body>
