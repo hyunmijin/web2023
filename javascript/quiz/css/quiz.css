@@ -3,7 +3,7 @@
     position: fixed;
     left: 0;
     top: 0;
-    background-color: #262626;
+    background-color: #f191ac;
     color: #fff;
     padding: 10px;
     width: 100%;
@@ -13,7 +13,7 @@
 }
 #header::before {
     content: '';
-    border: 4px ridge #a3a3a3;
+    border: 4px ridge #fff;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -60,7 +60,7 @@
     left: 0;
     bottom: 0;
     width: 100%;
-    background-color: #262626;
+    background-color: #f191ac;
     text-align: center;
 }
 #footer a {
@@ -73,7 +73,7 @@
 }
 #footer::before {
     content: '';
-    border: 4px ridge #a3a3a3;
+    border: 4px ridge #fff;
     position: absolute;
     left: 5px;
     top: 5px;
@@ -94,17 +94,17 @@
 .quiz__wrap .quiz {
     width: 500px; 
     background-color: #ffffff;
-    border: 8px ridge #cacaca;
+    border: 8px ridge #f4bbc9;
     margin: 10px;
 }
 .quiz__title {
-    background-color: #cacaca;
-    border: 3px ridge #cacaca;
+    background-color: #f4bbc9;
+    border: 3px ridge #f4bbc9;
     border-bottom-width: 6px;
     padding: 5px;
     font-family: 'DungGeunMo';
     font-size: 16px;
-    color: #3b3b3b;
+    color: #ffffff;
     text-align: center;
 }
 .quiz__question {
@@ -113,7 +113,7 @@
     font-family: 'NanumBarunGothic';
     font-weight: bold;
     line-height: 1.5;
-    border-bottom: 6px ridge #cacaca;
+    border-bottom: 6px ridge #f4bbc9;
 }
 .quiz__question em {
     color: #ff3c3c;
@@ -127,7 +127,7 @@
 }
 .quiz__answer .confirm {
     background-color: #f5ff9b;
-    border: 6px ridge #cacaca;
+    border: 6px ridge #f4bbc9;
     width: 100%;
     font-family: 'NanumBarunGothic';
     font-weight: bold;
@@ -141,7 +141,7 @@
 }
 .quiz__answer .result {
     background-color: #fff;
-    border: 6px ridge #cacaca;
+    border: 6px ridge #f4bbc9;
     width: 100%;
     font-family: 'NanumBarunGothic';
     padding: 10px 20px;
@@ -150,7 +150,7 @@
 }
 .quiz__answer .input {
     background-color: #fff;
-    border: 6px ridge #cacaca;
+    border: 6px ridge #f4bbc9;
     width: 100%;
     font-family: 'NanumBarunGothic';
     padding: 10px 20px;
@@ -158,11 +158,11 @@
     margin-bottom: 10px;
 }
 .quiz__view {
-    border-bottom: 6px ridge #cacaca;
+    border-bottom: 6px ridge #f4bbc9;
     overflow: hidden;
 }
 .quiz__desc {
-    border-top: 6px ridge #cacaca;
+    border-top: 6px ridge #f4bbc9;
     padding: 20px;
     font-family: 'NanumBarunGothic';
     /* background-color: #e4e4e4; */
@@ -174,7 +174,7 @@
 }
 .quiz__choice {
     padding: 20px;
-    border-bottom: 6px ridge #cacaca;
+    border-bottom: 6px ridge ##f5ff9b;
     font-family: 'NanumBarunGothic';
 }
 .quiz__choice label {
@@ -202,17 +202,17 @@
     height: 26px;
     border-radius: 50%;
     background: #fff;
-    box-shadow: inset 0 0 0 4px #d6e6b3;
+    box-shadow: inset 0 0 0 4px #caadff;
     margin-right: 15px;
     transition: all 0.2s;
     flex-shrink: 0;
 }
 .quiz__choice label input:checked + span {
-    background-color: #d7dac1;
+    background-color: #f7eeed;
     border-radius: 10px;
 }
 .quiz__choice label input:checked + span::before {
-    box-shadow: inset 0 0 0 8px #6e9612;
+    box-shadow: inset 0 0 0 8px #caadff;
 }
 .quiz__check {
     position: fixed;
@@ -224,7 +224,7 @@
     border-radius: 50% ;
     z-index: 1000;
     text-align: center;
-    background-color: #6e9612;
+    background-color: #caadff;
     color: #fff;
     font-family: 'NanumBarunGothic';
     cursor: pointer;
@@ -233,7 +233,7 @@
     position: fixed;
     right: 20px;
     bottom: 170px;
-    background-color: #6e9612;
+    background-color: #caadff;
     text-align: center;
     width: 130px;
     border-radius: 10px;
@@ -248,7 +248,7 @@
     left: 50%;
     margin-left: -10px;
     bottom: -10px;
-    border-top: 10px solid #6e9612;
+    border-top: 10px solid #caadff;
     border-left: 10px solid transparent;
     border-right: 10px solid transparent;
 }
@@ -275,7 +275,7 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #87bb0e;
+    background-color: #caadff;
     border-radius: 50%;
     text-align: center;
     color: #fff;
@@ -289,7 +289,7 @@
     width: 120px;
     height: 120px;
     line-height: 120px;
-    background-color: #87bb0e;
+    background-color: #caadff;
     border-radius: 50%;
     text-align: center;
     color: #fff;

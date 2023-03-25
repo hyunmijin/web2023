@@ -40,14 +40,14 @@
     #header h1 a {
         font-size: 80px;
         font-weight: 800;
-        color: #0243f1;
+        color: #012a4a;
     }
     #header nav ul li {
         display: inline;
     }
     #header nav ul li a {
-        border: 1px dashed #0243f1;
-        color: #0243f1;
+        border: 1px dashed #012a4a;
+        color: #284b63;
         padding: 10px 20px;
         margin: 6px 3px;
         display: inline-block;
@@ -55,11 +55,11 @@
         transition: background-color 0.3s, color 0.3s;
     }
     #header nav ul li a:hover {
-        background-color: #0243f1;
+        background-color: #012a4a;
         color: #fff;
     }
     #header nav ul li.active a {
-        background-color: #0243f1;
+        background-color: #284b63;
         color: #fff;
     }
 
@@ -165,7 +165,7 @@
         margin-bottom: 10px;
     }
     .main__sample .notice {
-        border-left: 5px solid #0243f1;
+        border-left: 5px solid #284b63;
         padding: 13px 10px 10px 15px;
         background-color: #f6f6f6;
     }
@@ -186,7 +186,7 @@
         content: '';
         width: 5px;
         height: 5px;
-        background-color: #9492f8;
+        background-color: #353535;
         position: absolute;
         left: 0;
         top: 9px;
