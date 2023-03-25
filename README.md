@@ -1,6 +1,6 @@
 # web2023
 
-나의 블로그 : http://mi-1119.tistory.com/
+나의 블로그 : http://mi-1119.tistory.com/  sdfsdf
 
 # JAVASCRIPT
 데이터 저장하기 : https://hyunmijin.github.io/web2023/javascript/javascript01.html   
