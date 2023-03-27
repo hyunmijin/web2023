@@ -107,6 +107,16 @@
     color: #ffffff;
     text-align: center;
 }
+.search__info span {
+    background-color: #f4bbc9;
+    border: 5px ridge #f4bbc9;
+    border-bottom-width: 10px;
+    padding: 10px;
+    font-family: 'DungGeunMo';
+    font-size: 20px;
+    color: #ffffff;
+    text-align: center;
+}
 .quiz__question {
     padding: 20px;
     font-size: 24px;
@@ -138,6 +148,20 @@
 }
 .quiz__answer .confirm:hover {
     background-color: #f5ff9b;
+}
+.quiz__answer .next {
+    background-color: #eceed7;
+    border: 6px ridge #f4bbc9;
+    width: 100%;
+    font-family: 'NanumBarunGothic';
+    font-weight: bold;
+    padding: 10px 20px;
+    font-size: 22px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.quiz__answer .next:hover {
+    background-color: #eceed791;
 }
 .quiz__answer .result {
     background-color: #fff;
@@ -174,7 +198,7 @@
 }
 .quiz__choice {
     padding: 20px;
-    border-bottom: 6px ridge ##f5ff9b;
+    border-bottom: 6px ridge #f4bbc9;
     font-family: 'NanumBarunGothic';
 }
 .quiz__choice label {
