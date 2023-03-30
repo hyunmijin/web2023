@@ -50,16 +50,30 @@
     //         document.write(i);
     //     }
 
-        {
-            let arr1 = [100,200,300,400,500]
-            let arr2 = [600,700]
+        // {
+        //     let arr1 = [100,200,300,400,500]
+        //     let arr2 = [600,700]
 
-            //배열 펼침연산자
-            console.log(arr1);
-            console.log(...arr1);
-            console.log(...arr1, ...arr2);
-        }
+        //     //배열 펼침연산자
+        //     console.log(arr1);
+        //     console.log(...arr1);
+        //     console.log(...arr1, ...arr2);
+        // }
     // }
+{
+    let a, b, c, sum;
+    a=b=1;
+    sum = a+b;
+
+    for(let i=3; i<=5; i++){
+        c=a+b;
+        sum += c;
+        a=b;
+        b=c;
+    }
+    console.log(sum)
+}
+
     </script>
 </body>
 </html>
