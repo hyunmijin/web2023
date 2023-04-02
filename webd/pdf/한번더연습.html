@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>롯데월드</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        ul, li {
+            list-style: none;
+        }
+        #wrap {
+            width: 1200px;
+            margin: 0 auto;
+            /* background-color: #ccc; */
+        }
+        /* header */
+        #header {
+            /* background-color: #999; */
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 100px;
+        }
+        #header img {
+            width: 100px;
+        }
+        #header li {
+            display: inline-block;
+            font-weight: bold;
+        }
+        #header a {
+            margin: 10px;
+        }
+
+        /* banner */
+        .banner img {
+            width: 100%;
+        }
+
+        /* notice */
+        .notice {
+            display: flex;
+            justify-content: space-between;
+            margin-top: 20px;
+            margin-bottom: 20px;
+        }
+        .not1 {
+            width: 49%;
+            border: 1px solid #ccc;
+        }
+        .not1 h3, li{
+            background-color: #ccc;
+            padding: 10px;
+            margin: 10px;
+        }
+        .not2 {
+            width: 49%;
+        }
+        .not2 img {
+            width: 100%;
+        }
+        #footer {
+            display: flex;
+            height: 300px;
+            background-color: #777;
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div id="header">
+            <h1>
+                <img src="/webd/img/logo01.jpg" alt="롯데월드로고">
+            </h1>
+            <nav>
+                <ul>
+                    <li><a href="즐길거리">즐길거리</a></li>
+                    <li><a href="요금/우대혜택">요금/우대혜택</a></li>
+                    <li><a href="참여프로그램">참여프로그램</a></li>
+                    <li><a href="이용가이드">이용가이드</a></li>
+                    <li><a href="소통서비스">소통서비스</a></li>
+                </ul>
+            </nav>
+        </div>
+        <!-- header -->
+
+        <div id="section">
+            <div class="banner">
+                <img src="/webd/img/banner01.jpg" alt="배너">
+            </div>
+            <!-- banner -->
+
+            <div class="notice">
+                <div class="not1">
+                    <h3>롯데월드 소식 | 뉴스 • 공지</h3>
+                    <ul>
+                        <li><a href="그럴싸진관 미라클">그럴싸진관 미라클</a></li>
+                        <li><a href="트림스테이지">트림스테이지</a></li>
+                        <li><a href="힘내소중한너">힘내소중한너</a></li>
+                        <li><a href="이용요금안내">이용요금안내</a></li>
+                    </ul>
+                </div>
+                <div class="not2">
+                    <img src="/webd/img/banner02.jpg" alt="온종일 혜택">
+                </div>
+            </div>
+            <!-- notice -->
+            <div class="card"></div>
+            <!-- card -->
+        </div>
+        <!-- section -->
+        <div id="footer"></div>
+    </div>
+</body>
+</html>
