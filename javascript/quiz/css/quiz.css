@@ -23,7 +23,7 @@
 #header h1 {
     font-size: 28px;
     padding: 5px 5px 5px 10px;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     z-index: 10;
     position: relative;
 }
@@ -43,7 +43,7 @@
 }
 #header li a {
     color: #fff;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     border: 1px dashed #fff;
     display: inline-block;
     padding: 5px;
@@ -67,7 +67,7 @@
     color: #fff;
     padding: 20px;
     display: block;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     z-index: 10;
     position: relative;
 }
@@ -102,7 +102,7 @@
     border: 3px ridge #f4bbc9;
     border-bottom-width: 6px;
     padding: 5px;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     font-size: 16px;
     color: #ffffff;
     text-align: center;
@@ -112,7 +112,7 @@
     border: 5px ridge #f4bbc9;
     border-bottom-width: 10px;
     padding: 10px;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     font-size: 20px;
     color: #ffffff;
     text-align: center;
@@ -271,6 +271,7 @@
     font-family: 'NanumBarunGothic';
     color: #fff;
 }
+
 .quiz__info::after {
     content: '';
     position: absolute;
@@ -285,7 +286,7 @@
 /* cbt 유형 */
 .quiz__wrap__cbt {
     padding: 0 20px;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
 }
 .cbt__conts {
     width: calc(100% - 300px);
@@ -302,40 +303,7 @@
     justify-content: space-between;
     align-items: center;
 }
-.cbt__time {
-    position: relative;
-    padding-left: 40px !important;
-    margin: 3px 0;
-    float: right;
 
-}
-.cbt__time::before {
-    content: '';
-    position: absolute;
-    left: 16px;
-    top: 1px;
-    bottom: 1px;
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E%0A");
-    
-}
-.cbt__submit {
-    position: relative;
-    padding-left: 40px !important;
-    float: right;
-    margin: 3px 0;
-}
-.cbt__submit::before {
-    content: '';
-    position: absolute;
-    left: 16px;
-    top: 1px;
-    bottom: 1px;
-    width: 20px;
-    height: 20px;
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
-}
 .cbt__header > div > div {
     background-color: #f72459;
     display: inline-block;
@@ -343,16 +311,16 @@
     color: #fff;
     padding: 3px 20px;
     border-radius: 20px;
-    
 }
 .cbt__aside {
-    position: absolute;
+    position: fixed;
     right: 20px;
-    top: 100px;
-    height: 800px;
+    top: 150px;
+    height: calc(100vh - 140px);
     width: 280px;
     background-color: #fff;
     border: 8px ridge #f4bbc9;
+    overflow-y: auto;
 }
 .cbt__quiz {
     display: flex;
@@ -379,10 +347,10 @@
     left: 0;
     top: 0;
 }
-.cbt__quiz .cbt.bed {
+.cbt__quiz .cbt.bad {
     position: relative;
 }
-.cbt__quiz .cbt.bed::after {
+.cbt__quiz .cbt.bad::after {
     content: '';
     background-image: url(../img/X.png);
     background-size: contain;
@@ -395,14 +363,61 @@
 }
 .cbt__info {
     background-color: #f5e0e5;
-    border-bottom: 8px ridge #f4bbc9;
+    border-bottom: 4px ridge #f4bbc9;
     padding: 20px;
     text-align: center;
+    display: block;
 }
-.cbt__info .title {
-    text-decoration: underline;
-    text-underline-offset: 4px;
-    margin-bottom: 5px;
+.quiz__info > div {
+    border-bottom: 4px ridge #f4bbc9;
+    padding: 20px;
+}
+.cbt__time {
+    background-color: #f72459;
+    /* display: inline-block; */
+    margin-left: 3px;
+    color: #fff;
+    padding: 10px 20px 10px 40px;
+    border-radius: 28px;
+    position: fixed;
+    top: 101px;
+    right: 167px;
+    width: 130px;
+}
+.cbt__time a {
+    color: #fff;
+}
+.cbt__time::before {
+    content: '';
+    position: absolute;
+    left: 15px;
+    top: 8px;
+    bottom: 1px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M12 6v6h4.5m4.5 0a9 9 0 11-18 0 9 9 0 0118 0z' /%3E%3C/svg%3E%0A");
+}
+.cbt__submit {
+    background-color: #f72459;
+    /* display: inline-block; */
+    margin-left: 3px;
+    color: #fff;
+    padding: 10px 20px 10px 42px;
+    border-radius: 28px;
+    position: fixed;
+    top: 101px;
+    right: 27px;
+    width: 130px;
+}
+.cbt__submit::before {
+    content: '';
+    position: absolute;
+    left: 19px;
+    top: 8px;
+    bottom: 1px;
+    width: 20px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='%23fff' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M16.862 4.487l1.687-1.688a1.875 1.875 0 112.652 2.652L10.582 16.07a4.5 4.5 0 01-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 011.13-1.897l8.932-8.931zm0 0L19.5 7.125M18 14v4.75A2.25 2.25 0 0115.75 21H5.25A2.25 2.25 0 013 18.75V8.25A2.25 2.25 0 015.25 6H10' /%3E%3C/svg%3E%0A");
 }
 .cbt__info span {
     display: inline-block;
@@ -467,7 +482,6 @@
     width: 20px;
     color: #f72459;
 }
-
 .cbt__question {
     font-size: 1.4rem;
     margin-bottom: 10px;
@@ -486,6 +500,11 @@
 }
 .cbt__selects label {
     display: flex;
+}
+.cbt__selects label.correct span::before {
+    border-color: #f72459;
+    box-shadow: inset 0 0 0 10px #f72459;
+    color: #fff;
 }
 .cbt__selects label span {
     font-size: 1rem;
@@ -540,6 +559,9 @@
     position: relative;
     display: inline-block;
     /* border-radius: 40px; */
+}
+.cbt__desc.hide {
+    display: none;
 }
 .cbt__desc::before {
     content: '';
@@ -629,7 +651,7 @@
     border: 5px ridge #f4bbc9;
     border-bottom-width: 10px;
     padding: 10px;
-    font-family: 'DungGeunMo';
+    font-family: 'NanumBarunGothic';
     font-size: 20px;
     color: #ffffff;
     text-align: center;
