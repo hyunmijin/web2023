@@ -74,14 +74,12 @@
                 <div class="cbt__submit">제출하기</div>
             </div>
             <div class="cbt__aside">
-
                 <div class="cbt__info">
-
                     <div>
                         <div class="cbt__title">수험자 : <em>진현미</em></div>
                         <div class="cbt__score">
-                            <span>전체 문제수 : <em>60</em>문항</span>
-                            <span>남은 문제수 : <em>59문항</em></span>
+                            <span>전체 문제수 : <em class="num1">60</em>문항</span>
+                            <span>남은 문제수 : <em class="num2">60</em>문항</span>
                         </div>
                     </div>
                 </div>
@@ -124,8 +122,11 @@
         const cbtQuiz = document.querySelector(".cbt__quiz");
         const cbtOmr = document.querySelector(".cbt__omr");
         const cbtSubmit = document.querySelector(".cbt__submit");
+        const ScoreNum1 = document.querySelector(".num1");
+        const ScoreNum2 = document.querySelector(".num2");
 
         let questionAll = [];//모든 퀴즈 정보
+        // let count = 0;
 
         //데이터 가져오기
         const dataQuestion = () => {
@@ -172,12 +173,17 @@
                     if(item.hasOwnProperty("keyword_num")){
                         formattedQuestion.keywordNum = item.keyword_num;
                     }
+                     
+                    ScoreNum1.innerText - questionAll.length;
+                    ScoreNum2.innerText - questionAll.length;
 
                     // console.log(formattedQuestion);
                     return formattedQuestion;
                 });
                 // console.log(questionAll);
                 newQuestion();//문제 만들기
+
+
             })
             .catch((err) => console.log(err));
             const quizImg = document.querySelectorAll(".cbt__question__img");
@@ -191,7 +197,7 @@
             const exam = [];
             const omr = [];
             questionAll.forEach((question, number) => {
-                console.log(question.questionImg);
+                // console.log(question.questionImg);
                 exam.push(`
                     <div class="cbt">
                         <div class="cbt__question"><sapn>${question.number}</sapn>. ${question.question}</div>
@@ -230,9 +236,17 @@
                     </div>
                 `);
             });
+            // let number = questionAll.length;
+            // que.push(`
+            //     <div class="cbt__score">
+            //         <span>전체 문제수 : <em>${questionAll.length}</em>문항</span>
+            //         <span>남은 문제수 : <em>59문항</em></span>
+            //     </div>
+            // `);
         
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+            // number.innerHTML = number.join('');
         }        
         //정답 확인
         const answerQuiz = () => {
@@ -270,8 +284,11 @@
         }
 
         const answerSelect = () => {
-
-        }
+            const answeredCount = document.querySelectorAll('input[type="radio"]:checked').length;
+            const remainingCount = questionAll.length - answeredCount;
+            ScoreNum2.innerText = remainingCount;
+            return remainingCount;
+        };
 
         cbtSubmit.addEventListener("click", answerQuiz)
         dataQuestion();
