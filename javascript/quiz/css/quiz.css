@@ -313,13 +313,20 @@
     border-radius: 20px;
 }
 .cbt__aside {
+    font-family: 'NanumBarunGothic';
     position: fixed;
+    font-size: 18px;
     right: 20px;
-    top: 150px;
+    top: 100px;
     height: calc(100vh - 140px);
     width: 260px;
     background-color: #fff;
     /* overflow-y: auto; */
+}
+.cbt__title {
+    text-decoration: underline;
+    text-underline-offset: 4px;
+    margin-bottom: 5px;
 }
 .cbt__info{
     border: 8px ridge #f4bbc9;
@@ -346,8 +353,8 @@ button {
 .cbt__time::before {
     content: '';
     position: absolute;
-    left: 15px;
-    top: 8px;
+    left: 89px;
+    top: 86px;
     bottom: 1px;
     width: 20px;
     height: 20px;
@@ -369,8 +376,8 @@ button {
 .cbt__submit::before {
     content: '';
     position: absolute;
-    left: 19px;
-    top: 8px;
+    left: 90px;
+    top: 38px;
     bottom: 1px;
     width: 20px;
     height: 20px;
@@ -607,7 +614,57 @@ button {
     height: 20px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E%0A");
 }
+.cbt__start {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: 10000;
+    background-color: rgba(225,225,225,0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.cbt__start > div {
+    width: 50%;
+    height: 50vh;
+    background-color: #fff;
+    border: 8px ridge #f4bbc9;
+}
+.cbt__modal {
+    text-align: center;
+    border-radius: 30px;
+    padding: 50px;
+}
+.cbt__modal h2 {
+    background-color: #f789a5;
+    padding: 10px;
+    color:#fff;
+    border-radius: 30px;
+    margin-bottom: 30px;
+}
+.cbt__modal select {
+    border: 1px solid #f4bbc9;
+    padding: 10px 30px;
+    margin-bottom: 20px;
+    font-family: NanumBarunGothic;
+}
+.cbt__modal button {
+    /* width: 100px;
+    height: 100px;
+    color: #fff;
+    /* border-radius: 30px; */
+    /* background-color: #f4bbc9;
+    font-family: NanumBarunGothic;
+    border: 0; */ */
 
+}
+.but {
+    bottom: 30px;
+    padding: 20px;
+}
 /* dog__wrap */
 .dog .tail, 
 .dog .chin, 
@@ -1070,4 +1127,47 @@ button {
     .cbt__conts {
         width: 100%;
     }
+}
+
+버블버튼
+.minimal {
+    box-shadow: 2px 2px 5px rgba(0,0,0,0.15);
+    background: #fff;
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    border-radius: 5px;
+    width: 200px;
+    height: 50px;
+    margin: 0 auto;
+    border: 1px solid #f4bbc9;
+  }
+.lit-container:hover .lit,
+.lit-container:focus-within .lit {
+  background: rgba(153,153,153,0.2) !important;
+}
+.lit-container {
+  position: relative;
+}
+span.lit {
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  animation: blow 2s ease-in infinite;
+  transition: all 400ms ease;
+}
+@keyframes blow {
+  0% {
+    transform: translate(-50%, -50%) scale(0.1);
+    opacity: 0;
+  }
+  10% {
+    transform: translate(-50%, -50%);
+    opacity: 1;
+  }
+  100% {
+    transform: translate(-50%, -40vh);
+    opacity: 0;
+  }
 }
