@@ -93,7 +93,7 @@
                     </div> -->
                 </div>
             </div>
-            <!-- <div class="cbt__start">
+            <div class="cbt__start">
                 <div class="cbt__modal">
                     <h2>기능사 시험 도전하기</h2>
                     <div class="cbt__choice">
@@ -148,14 +148,11 @@
                             <option value="gineungsaWD2016_04">웹디자인기능사 2016년 4회</option>
                         </select>
                     </div>
-                    
                     <div>
                         <button class="but">시작하기</button>
                     </div>
                 </div>
-                
-            </div> -->
-
+            </div>
         </div>
     </main>
     <!-- //main -->
@@ -168,10 +165,20 @@
         const cbtSubmit = document.querySelector(".cbt__submit");
         const cbtRest = document.querySelector(".cbt__rest");
         const cbtLength = document.querySelector(".cbt__length");
+        const cbtBtn = document.querySelector(".but");
+        const cbtStart = document.querySelector(".cbt__start");
+
 
         let questionAll = [];  //모든 퀴즈 정보
         let questionLength = 0; //전체 문제수
         let questionRest = questionLength; //남은 문제수
+
+        cbtBtn.addEventListener("click", () => {
+            cbtStart.style.display="none";
+        });
+
+
+            
 
         //데이터 가져오기
         const dataQuestion = () => {
@@ -264,6 +271,14 @@
         
             cbtQuiz.innerHTML = exam.join('');
             cbtOmr.innerHTML = omr.join('');
+
+            const quizDesc = document.querySelectorAll(".cbt__question__desc");
+            
+            quizDesc.forEach(el => {
+                if(el.innerHTML == "undefined"){
+                    el.style.display = "none";
+                }
+            });
         }
 
         //정답 확인

@@ -313,9 +313,8 @@
     border-radius: 20px;
 }
 .cbt__aside {
-    font-family: 'NanumBarunGothic';
     position: fixed;
-    font-size: 18px;
+    font-size: 15px;
     right: 20px;
     top: 100px;
     height: calc(100vh - 140px);
@@ -448,7 +447,13 @@ button {
     display: inline-block;
 }
 .cbt__omr {
-    padding: 30px;
+    padding: 10px;
+    overflow: hidden;
+    border: 8px ridge #f4bbc9;
+    overflow: auto;
+    height: 400px;
+    background-color: #fff;
+
 }
 .cbt__omr .omr {
     margin: 5px 0;
@@ -466,7 +471,6 @@ button {
 .cbt__omr .omr strong {
     display: inline-block;
     text-align: center;
-    /* padding: 2px; */
     margin-bottom: 2px;
     background-color: #f72459;
     border-radius: 20px;
