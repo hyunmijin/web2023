@@ -626,6 +626,7 @@ button {
     position: relative;
     z-index: 10;
     line-height: 1.8;
+    color: #000;
 }
 .cbt__view input {
     border: 1px solid #f72459;
