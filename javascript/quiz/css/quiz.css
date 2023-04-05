@@ -640,7 +640,6 @@ button {
     position: absolute;
     left: 0;
     bottom: 0;
-    height: ;
 }
 .cbt__start {
     position: fixed;
@@ -675,16 +674,21 @@ button {
 }
 .cbt__modal select {
     border: 1px solid #f4bbc9;
-    padding: -18px 14px;
+    /* padding: -18px 14px; */
     margin-bottom: 10px;
+    display: block;
     font-family: NanumBarunGothic;
+    margin: 0 auto;
+    text-align: center;
+    padding: 10px;
+    margin-bottom: 10px;
 }
 .cbt__modal button {
     width: 100px;
     height: 40px;
-    color: #000;
+    color: #fff;
     border-radius: 30px;
-    background-color: #f4bbc9;
+    background-color: #e68ea4;
     font-family: NanumBarunGothic;
     border: 0;
 
@@ -694,7 +698,7 @@ button {
     padding: 20px;
 
 }
-.but::hover {
+.but:hover {
     background-color: #ccc;
 }
 /* dog__wrap */
