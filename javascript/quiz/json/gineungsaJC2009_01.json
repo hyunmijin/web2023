@@ -83,6 +83,7 @@
         "question": "다음 보기의 연산은?",
         "correct_answer": "AND 연산",
         "incorrect_answers": ["OR 연산","MOVE 연산","Complement 연산"],
+        "question_img": "gineungsaJC2009_01_03",
         "desc": "오른쪽 값을 왼쪽 밑에 씁니다. <br>01001101  <- 왼쪽 값 <br>01100111  <- 오른쪽 값<br>--------<br>01000101  <- 결과 값 둘다 1일때 1인 것은 ? And연산이죠!",
         "keyword_num": "12"
     },{

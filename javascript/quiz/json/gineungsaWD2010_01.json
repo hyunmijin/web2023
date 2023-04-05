@@ -117,7 +117,7 @@
         "correct_answer": "폐쇄성",
         "incorrect_answers": ["대칭성","유사성","연속성"],
         "desc": "폐쇠성은 미완성된 그림이나 도형에서도 인식 가능한 경향을 말합니다.",
-        "question_img": "gineungsaWD2012_04_01",
+        "question_img": "gineungsaWD2012_04_17",
         "keyword_num": "17"
     },{
         "subject": "디자인 일반",
@@ -286,6 +286,7 @@
     },{
         "subject": "데이터베이스 구축",
         "question": "웹 페이지 내에 애니메이션 장면이나 움직이는 이미지 광고를 삽입하고자 할 때 사용할 때 프로그램으로 거리가 먼것은?",
+        "question_desc": "CorelDraw",
         "correct_answer": "CorelDraw",
         "incorrect_answers": ["Flash", "Image Ready", "Director"],
         "desc": "CorelDraw는 웹 페이지 내에 애니메이션 장면이나 움직이는 이미지 광고를 삽입하는 데 사용되지 않습니다. Flash, Image Ready 및 Director는 웹 페이지에 애니메이션과 상호작용 등을 포함한 다양한 멀티미디어 컨텐츠를 제작하기 위한 프로그램입니다.",
@@ -359,7 +360,7 @@
         "correct_answer": "Flip Horizonta",
         "incorrect_answers": ["Flip Vertical","Rotate","Scale"],
         "desc": "그림에서 A 그림을 B 그림으로 바꿨을 때 포토샵에서 명령어는 Flip Horizontal입니다.<br>Flip Horizontal은 수평(가로) 뒤집기, Flip Vertical은 수직(세로) 뒤집기",
-        "question_img": "gineungsaWD2012_04_02",
+        "question_img": "gineungsaWD2012_04_51",
         "keyword_num": "51"
     },{
         "subject": "데이터베이스 구축",

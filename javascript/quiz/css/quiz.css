@@ -589,6 +589,9 @@ button {
     display: inline-block;
     /* border-radius: 40px; */
 }
+.hide {
+    display: none !important;
+}
 .cbt__desc.hide {
     display: none;
 }
@@ -618,6 +621,27 @@ button {
     height: 20px;
     background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 24 24' stroke-width='1.5' stroke='currentColor' class='w-6 h-6'%3E%3Cpath stroke-linecap='round' stroke-linejoin='round' d='M11.25 4.5l7.5 7.5-7.5 7.5m-6-15l7.5 7.5-7.5 7.5' /%3E%3C/svg%3E%0A");
 }
+.cbt__view {
+    margin-bottom: 20px;
+    position: relative;
+    z-index: 10;
+    line-height: 1.8;
+}
+.cbt__view input {
+    border: 1px solid #f72459;
+    padding: 2px 10px;
+    font-family: serif;
+}
+.cbt__view span {
+    position: relative;
+}
+.cbt__view span::before {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    height: ;
+}
 .cbt__start {
     position: fixed;
     left: 0;
@@ -633,41 +657,45 @@ button {
 }
 .cbt__start > div {
     width: 50%;
-    height: 50vh;
+    height: 53vh;
     background-color: #fff;
     border: 8px ridge #f4bbc9;
 }
 .cbt__modal {
     text-align: center;
     border-radius: 30px;
-    padding: 50px;
+    padding: 53px;
 }
 .cbt__modal h2 {
-    background-color: #f789a5;
+    /* background-color: #f789a5; */
     padding: 10px;
-    color:#fff;
+    color:#f789a5;
     border-radius: 30px;
-    margin-bottom: 30px;
+    margin-bottom: 15px;
 }
 .cbt__modal select {
     border: 1px solid #f4bbc9;
-    padding: 10px 30px;
-    margin-bottom: 20px;
+    padding: -18px 14px;
+    margin-bottom: 10px;
     font-family: NanumBarunGothic;
 }
 .cbt__modal button {
-    /* width: 100px;
-    height: 100px;
-    color: #fff;
-    /* border-radius: 30px; */
-    /* background-color: #f4bbc9;
+    width: 100px;
+    height: 40px;
+    color: #000;
+    border-radius: 30px;
+    background-color: #f4bbc9;
     font-family: NanumBarunGothic;
-    border: 0; */ */
+    border: 0;
 
 }
 .but {
     bottom: 30px;
     padding: 20px;
+
+}
+.but::hover {
+    background-color: #ccc;
 }
 /* dog__wrap */
 .dog .tail, 
