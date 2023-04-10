@@ -54,7 +54,7 @@
 <body class="img01 bg04 font10">
     <header id="header">
         <h1>Javascript Slider Effect01</h1>
-        <p>01. 슬라이드 이펙트<p>
+        <p>01. 슬라이드 이펙트 : 트랜지션 효과<p>
         <ul>
             <li class="active"><a href="sliderEffect01.html">1</a></li>
             <li><a href="sliderEffect02.html">2</a></li> 
@@ -94,20 +94,20 @@
         let sliderCount = slider.length;     //이미지 갯수
         let sliderInterval = 3000;             //이미지 변경 간격 시간
 
-        setInterval(() => {
-            //0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0  //currentIndex
-            //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  //nextIndex
-            let nextIndex = (currentIndex + 1) % sliderCount;
+        // setInterval(() => {
+        //     //0 1 2 3 4 0 1 2 3 4 0 1 2 3 4 0  //currentIndex
+        //     //1 2 3 4 0 1 2 3 4 0 1 2 3 4 0 1  //nextIndex
+        //     let nextIndex = (currentIndex + 1) % sliderCount;
 
-            slider[currentIndex].style.opacity = "0";
-            slider[nextIndex].style.opacity = "1";  
+        //     slider[currentIndex].style.opacity = "0";
+        //     slider[nextIndex].style.opacity = "1";  
             
-            currentIndex = nextIndex;
+        //     currentIndex = nextIndex;
             
             
-            console.log(currentIndex);
+        //     console.log(currentIndex);
 
-        }, sliderInterval);
+        // }, sliderInterval);
 
         
         // slider[0].style.opacity = "0";            //첫번째 이미지를 안보이게
@@ -124,6 +124,29 @@
 
         // slider[4].style.opacity = "0";            //다섯번째 이미지를 안보이게
         // slider[0].style.opacity = "1";            //첫번째 이미지를 보이게
+    </script>
+
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        setInterval(()=>{
+            let nextIndex = (currentIndex + 1) % slidercount;
+            gsap.to(slider[currentIndex], { duration: 1, opacity: 0 });
+            gsap.to(slider[nextIndex], { duration: 1, opacity: 1 });
+            currentIndex = nextIndex;
+        },sliderInterval)
+    </script>
+
+    <!-- jQrery -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script>
+        setInterval(()=>{
+            let nextIndex = (currentIndex + 1) % slidercount;
+            $(".slider").eq(currentIndex).animate({ opacity: 0 },1000);
+            $(".slider").eq(nextIndex).animate({ opacity: 1 },1000);
+            currentIndex = nextIndex;
+        },sliderInterval);
     </script>
 </body>
 </html>

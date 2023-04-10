@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>03. 슬라이더 - 위아래로</title>
+    <title>03. 슬라이더 - 위로</title>
 
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/slider.css">
@@ -41,7 +41,7 @@
 <body class="img02 bg05 font08">
     <header id="header">
         <h1>Javascript Slider Effect03</h1>
-        <p>03. 슬라이드 이펙트 - 위아래로<p>
+        <p>03. 슬라이드 이펙트 - 위로<p>
         <ul>
             <li><a href="sliderEffect01.html">1</a></li> 
             <li><a href="sliderEffect02.html">2</a></li> 
@@ -120,30 +120,19 @@
     </script>
     
     <!-- GSAP -->
-    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script> -->
+    <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % sliderCount;
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;
 
-        //     gsap.to(".slider__inner", {
-        //         x : -800 * currentIndex,
-        //         duration : 1,
-        //         ease: "elastic.out(1, 0.3)"
-        //     })
+            gsap.to(".slider__inner", {
+                y : -450 * currentIndex,
+                duration : 1,
+                ease: "elastic.out(1, 0.3)"
+            })
 
-        // }, sliderInterval);
-
-        // setInterval(() => {
-        //     currentIndex = (currentIndex + 1) % sliderCount;
-
-        //     gsap.to(".slider__inner", {
-        //         y : -450 * currentIndex,
-        //         duration : 1,
-        //         ease: "elastic.out(1, 0.3)"
-        //     })
-
-        // }, sliderInterval);
-    </script>
+        }, sliderInterval);
+    </script> -->
 
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
