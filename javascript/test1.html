@@ -8,25 +8,20 @@
 </head>
 <body>
     <script>
-        for(let i=2; i<=9; i++){
-            document.write(i + "단","<br>");
 
-            for(let j=1; j<=9; j++){
-                document.write(i + "*" + j + "=" + i*j);
-                document.write("<br>");
-            }
-            document.write("<br><br>");
+{
+    let data = [10, 6, 7, 9, 3];
+    let temp;
+
+    for(let i=0; i<4; i++){
+        for(let j=i+1; j<5; j++){
+            temp = data[i];
+            data[i] = data[j];
+            data[j] = temp;
         }
-
-
-        for(let i=8; i<=8; i++){
-            document.write(i + "단", "<br>");
-
-                for(let j=1; j<=9; j++){
-                    document.write(i + "*" + j + "=" + i*j + "<br>")
-                }
-            
-        }
+    }
+    console.log(data)
+}
     </script>
 </body>
 </html>
