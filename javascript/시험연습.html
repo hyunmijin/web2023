@@ -8,72 +8,130 @@
 </head>
 <body>
     <script>
+        // //문제1번
         // {
-        //     let arr1 = [100,200,300,400,500];
-        //     let arr2 = [600,700];
+        //     let data = [10, 6, 7, 9, 3];
+        //     let temp;
 
-        //     document.write(arr1, "<br>");
-        //     document.write(...arr1, "<br>");
-        //     document.write(...arr1, ...arr2);
+        //     for(let i=0; i<4; i++){
+        //         for(let j=i+1; j<5; j++){
+        //             if(data[i] > data[j]){
+        //                 temp = data[i];
+        //                 data[i] = data[j];
+        //                 data[j] = temp;
+        //             }
+        //         }
+        //     }
+
+        //     console.log(data);
         // }
-    // {
-    //     const arr = [1,2,3,4,5];
-    //     const str = "string";
-    //     console.log(...arr)
-    //     console.log(...str)
-    // }
-
-    // {
-    //     const obj = {
-    //         a:100,
-    //         b:200,
-    //         c:"javascript"
-    //     }
-    //     console.log(Object.keys(obj));
-    //     console.log(Object.values(obj));
-    //     console.log(Object.entries(obj));
-    // }
-
-    // {
-    //     let arr = [100,200,300,400,500];
-
-    //     arr.forEach(function(el){
-    //         document.write(el)
-    //     });
-
-    //     document.write("<br>")
-    //     for(let i in arr){
-    //         document.write(i);
-    //     }
-    //     document.write("<br>")
-    //     for(let i of arr){
-    //         document.write(i);
-    //     }
-
+        // //문제2번
         // {
-        //     let arr1 = [100,200,300,400,500]
-        //     let arr2 = [600,700]
+        //     let a = func(4);
 
-        //     //배열 펼침연산자
-        //     console.log(arr1);
-        //     console.log(...arr1);
-        //     console.log(...arr1, ...arr2);
+        //     for(let i=0; i<a.length; i++){
+        //         console.log(a[i]);
+        //     }
+        //     function func(n){
+        //         let num = [];
+        //         for(let i=0; i<n; i++){
+        //             num[i]=i;
+        //         }
+        //         return num;
+        //     }
         // }
-    // }
-{
-    let a, b, c, sum;
-    a=b=1;
-    sum = a+b;
+        // //문제3번
+        // {
+        //     let i=3, k=1;
 
-    for(let i=3; i<=5; i++){
-        c=a+b;
-        sum += c;
-        a=b;
-        b=c;
-    }
-    console.log(sum)
-}
+        //     switch(i){
+        //         case 1: k++;
+        //         case 2: k += 3;
+        //         case 3: k = 0;
+        //         case 4: k += 3;
+        //         case 5: k -= 10;
+        //         default: k--;
+        //     }
+        //     console.log(k);
+        // }
 
+        // //4번
+        // {
+        //     let i=0, c=0;
+
+        //     while(i<10){
+        //         i++;c *= i;
+        //     }
+        //     console.log(c);
+        // }
+
+        // //5번
+        // {
+        //     function func1(){
+        //     return 10;
+        //     }
+        //     function func2(){
+        //         return(30+func1());
+        //     }
+        //     function func3(){
+        //         return(60+func2());
+        //     }
+        //     function func4(){
+        //         return(80 + func3());
+        //     }
+        //     console.log(func4());
+        // }
+
+        //6번
+        // {
+        //     let i=0;
+        //     let sum = 0;
+
+        //     while(i<10){
+        //         i++;
+        //         if(i % 2 == 1){
+        //             continue;
+        //         }
+        //         sum += i;
+        //     }
+        //     console.log(sum);
+        // }
+
+        //7번
+        // {
+        //     function func(num1, num2){
+        //         let res =1;
+        //         for(let i=0; i<num2; i++){
+        //             res *= num1;
+        //         }
+        //         return res;
+        //     }
+        //     let res = func(2,10);
+
+        //     console.log(res)
+        // }
+
+        //8번
+        // {
+        //     let a=3, b=4, c=3, d=5;
+
+        //     if((a == 2 | a == c) & !(c > d) & (1 == b ^ c !=d)){
+        //         a =b+c;
+        //         if(7 == b ^ c != a){
+        //             console.log(a);
+        //         } else {
+        //             console.log(b);
+        //         }
+        //     }
+        // }
+
+        //9번
+
+        function func(a){
+            if(a<1)return 1
+            return a * func(a -1);
+        }
+        console.log(func(5));
     </script>
 </body>
 </html>
