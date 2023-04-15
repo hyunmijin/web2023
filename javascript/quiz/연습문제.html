@@ -55,7 +55,7 @@
 
         const dataresult = (value) => {
             console.log(value);
-            fetch('json/dummy01.json')
+            fetch('json/dummy.json')
             .then(res => res.json())
             .then(items => {
                 const randomIndex = Math.floor(Math.random() * items.length);
