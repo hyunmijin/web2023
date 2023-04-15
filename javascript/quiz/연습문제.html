@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docsdfsfument</title>
+    <style>
+        @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        * {
+            margin: 0 auto;
+            padding: 0;
+        }
+        body {
+            background-color: #ccc;
+        }
+        #result {
+            width: 1200px;
+            height: 1200px;
+            flex-direction: column;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            font-size: 30px;
+            line-height: 100px;
+            font-family: 'SCoreDream';
+        }
+        .quote {
+            font-weight: bold;
+            font-size: 35px;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="result">
+        <div class="quote"></div>
+        <div class="author"></div>
+    </div>
+    <div id="canvas"></div>
+
+    <script>
+        const Result = document.querySelector("#result");
+        const Quote = result.querySelector(".quote");
+        const Author = result.querySelector(".author");
+
+        let resultAll = [];
+
+
+        // fetch('json/dummy01.json')
+        // .then(res => res.json())
+        // .then(quotes => console.log(quotes))
+        // .catch(error => console.log(error))
+
+        const dataresult = (value) => {
+            console.log(value);
+            fetch('json/dummy01.json')
+            .then(res => res.json())
+            .then(items => {
+                const randomIndex = Math.floor(Math.random() * items.length);
+                Quote.textContent = items[randomIndex].quote;
+                Author.textContent = items[randomIndex].author;
+            })
+            .catch((err) => console.log(err));
+        }
+        dataresult();
+        setInterval(dataresult, 10000);
+            
+    </script>
+</body>
+</html>
