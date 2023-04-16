@@ -204,7 +204,7 @@ Database changed
 
                     <h3 id="intro4-4" class="page-header">데이터베이스 삭제</h3>
                     <div class="bs-callout bs-callout-info">drop databases 데이터 베이스 이름</div>
-<pre><code class="language-js">mysql> drop databas sample01;
+<pre><code class="language-js">mysql> drop database sample01;
 Query OK, 0 rows affected (0.03 sec)
 
 mysql> show databases;
@@ -225,7 +225,7 @@ mysql> show databases;
                     <h3 id="intro5" class="page-header">💜 테이블</h3>
                     <h3 id="intro5-1" class="page-header">테이블 만들기</h3>
                     <div class="bs-callout bs-callout-info">create table 테이블 이름;</div>
-<pre><code class="language-js">create table member(
+<pre><code class="language-js">create table members(
     memberID int(10) unsigned auto_increment,
     youEmail varchar(40) NOT NULL,
     youName varchar(10) NOT NULL,
@@ -247,8 +247,7 @@ mysql> show databases;
 </code></pre>
                     <h3 id="intro5-2" class="page-header">테이블 전체보기</h3>
                     <div class="bs-callout bs-callout-info">show tables;</div>
-<pre><code class="language-js">Query OK, 0 rows affected (0.03 sec)
-mysql> show tables;
+<pre><code class="language-js">mysql> show tables;
 +--------------------+
 | Tables_in_sample01 |
 +--------------------+
@@ -259,7 +258,7 @@ mysql> show tables;
 
                     <h3 id="intro5-3" class="page-header">테이블 보기</h3>
                     <div class="bs-callout bs-callout-info">desc 테이블 이름;</div>
-<pre><code class="language-js">mysql> desc member;
+<pre><code class="language-js">mysql> desc members;
 +------------+------------------+------+-----+---------+----------------+
 | Field      | Type             | Null | Key | Default | Extra          |
 +------------+------------------+------+-----+---------+----------------+
@@ -276,7 +275,7 @@ mysql> show tables;
 
                     <h3 id="intro5-4" class="page-header">테이블 삭제</h3>
                     <div class="bs-callout bs-callout-info">drop table 테이블 이름;</div>
-<pre><code class="language-js">mysql> drop table member;
+<pre><code class="language-js">mysql> drop table members;
 Query OK, 0 rows affected (0.01 sec)
 </code></pre>
 
@@ -291,8 +290,9 @@ Query OK, 0 rows affected (0.01 sec)
                 <div class="bs-docs-section">
                     <h3 id="intro6" class="page-header">💜 테이블 데이터</h3>
                     <h4 id="intro6-1" class="page-header">데이터 입력하기</h4>
-                    <div class="bs-callout bs-callout-info"><code>INTO</code>테이블이름(필드명) <code>VALUES</code></div>
-<pre><code class="language-js">INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("webstoryboy@naver.com","황상연","1234","19990304","26","03140316");
+                    <div class="bs-callout bs-callout-info"><code>INSERT</code><code>INTO</code> 테이블명 <code>VALUES;</code></div>
+<pre><code class="language-js">INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES(메일, 이름, 비밀번호, 생일, 나이, 현재날짜시간);
+INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("webstoryboy@naver.com","황상연","1234","19990304","26","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dlscks0930@naver.com","황인찬","1234","19980930","26","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("gp2617@naver.com","천설희","1234","19950313","29","03140316");
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("dsy1943@naver.com","여다슬","1943","20011227","23","03140316");
@@ -322,22 +322,21 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUES("aimee00418@gmail.com","권현정","1234","19830211","39","03140316");
 </code></pre>
 
-<pre><code class="language-js">
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "정말 감사합니다. 잘 봤어요", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "정말 감사합니다. 잘 봤어요", "456456");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "이건 정말 사야합니다.", "456456");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "내용이 좋네요 또 올게요", "345345");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "정말 감사합니다. 잘 봤어요", "345345");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "멋진 내용입니다.", "1234567");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "정말 감사합니다. 잘 봤어요.", "456456");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "아전 별루~", "45645");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "이거 사기에 가까워요~ 절대 사지 마세요", "45645");
-    INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "사기꾼들 돈내놔!!!", "456456");
-    </code></pre>
+<pre><code class="language-js">INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "정말 감사합니다. 잘 봤어요", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("14", "정말 감사합니다. 잘 봤어요", "456456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "이건 정말 사야합니다.", "456456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("5", "내용이 좋네요 또 올게요", "345345");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "정말 감사합니다. 잘 봤어요", "345345");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("1", "멋진 내용입니다.", "1234567");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("9", "정말 감사합니다. 잘 봤어요.", "456456");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("4", "아전 별루~", "45645");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("2", "이거 사기에 가까워요~ 절대 사지 마세요", "45645");
+INSERT INTO reviews(memberID, youText, regTime) VALUES("7", "사기꾼들 돈내놔!!!", "456456");
+</code></pre>
                     <h4 id="intro6-2" class="page-header">데이터 불러오기</h4>  
                     <div class="bs-callout bs-callout-info"><code>SELECT</code> 필드명 <code>FROM</code> 테이블명 <code>WHERE</code> 조건</div>
                     <h4>전체 데이터 불러오기</h4>
-<pre><code class="language-js">SELECT * FROM member1</code></pre>
+<pre><code class="language-js">SELECT * FROM member;</code></pre>
                     <h4>memberID가 1번인 경우만 불러오기</h4>
 <pre><code class="language-js">SELECT * FROM member WHERE memberID = 1;</code></pre>
                     <h4>memberID가 1번이 아닌 경우만 불러오기</h4>
@@ -444,17 +443,23 @@ INSERT INTO members(youEmail, youName, youPass, youBirth, youAge, regTime) VALUE
 
             <div class="bs-docs-section">
                 <h3 id="intro8" class="page-header">💜테이블 합치기(JOIN)</h3>
+                <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명 앨리어스] JOIN [테이블명 앨리어스] ON [기준이 되는 조건문]</div>
+                <h4>두 개의 테이블(members, review) 합치기</h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
 
-                <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명 앨리어스] JOIN [연결할 테이블명 앨리어스] ON [기준이 되는 조건문]</div>
-<pre><code class="language-js">ALTER TABLE members DROP youPhone;</code></pre>
+                <h4>두 개의 테이블(members, review) 합치기 : 필드명 변경하기(AS)</h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime AS reviewRegTime FROM members m JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
 
+                <h4>두 개의 테이블(members, review) 합치기 : 왼쪽 테이블 기준</h4>
+<pre><code class="language-js">SELECT m.youEmail, m.youName, r.youText, r.regTime FROM members m LEFT JOIN reviews r ON (m.memberID = r.memberID);</code></pre>
+
+            </div>
             <!-- intro8 -->
 
             <div class="bs-docs-section">
                 <h3 id="intro9" class="page-header">💜집계함수</h3>
 
-                <pre><code class="language-js">
-CREATE TABLE schoolRecode (
+                <pre><code class="language-js">CREATE TABLE schoolRecode (
     studentID int(10) unsigned NOT NULL AUTO_INCREMENT comment "학생번호",
     class tinytext comment "소속클래스(반)",
     english tinytext NOT NULL comment "영어점수",
@@ -471,8 +476,7 @@ INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(2, 50, 40
 INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(3, 60, 50, 24, 70);
 INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(4, 70, 60, 25, 60);
 INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70, 26, 50);
-                </code></pre>
-                
+                </code></pre>     
 
                 <h4>레코드 갯수 구하기</h4>
 <pre><code class="language-js">SELECT count(class) FROM schoolRecode;</code></pre>
@@ -496,45 +500,43 @@ INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70
 <pre><code class="language-js">SELECT avg(coding) FROM schoolRecode;</code></pre>
 
                 <h4>그룹별 집계</h4>
-<div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] GROUP BY [필드명]</div>
-
+                <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] GROUP BY [필드명];</div>
                 <h4>반별로 학생들의 영어 점수 평균값 구하기</h4>
-<div class="language-js">SELECT class, avg(english) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</div>
+<pre><code class="language-js">SELECT class, avg(english) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</code></pre>
 
                 <h4>반별로 학생들의 수학 점수 합계 구하기</h4>
-<div class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</div>
+<pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class;</code></pre>
 
                 <h4>반별로 학생들의 수학 점수 합계 점수가 70점 이상</h4>
-<div class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class HAVING sum(math) >= 70;</div>
+<pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class HAVING sum(math) >= 70;</code></pre>
 
                 <h4>출력 결과의 정렬</h4>
-<div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] ORDER BY [필드명] DESC 또는 ASC</div>
+                <div class="bs-callout bs-callout-info">SELECT [필드명] FROM [테이블명] ORDER BY [필드명] DESC(내림차순) 또는 ASC(오름차순);</div>
+
                 <h4>영어 점수를 높은 순에서 낮은 순으로 표시</h4>
-<div class="language-js">SELECT studentID, english FROM schoolRecode ORDER BY english DESC;</div>
+<pre><code class="language-js">SELECT studentID, english FROM schoolRecode ORDER BY english DESC;</code></pre>
                 <h4>영어 점수를 높은 순에서 낮은 순으로 표시</h4>
-<div class="language-js">SELECT studentID, english FROM schoolRecode ORDER BY english ASC;</div>
-                <h4>반별 수학 점수를 높은 순에서 낮은 순으로</h4>
-<div class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class ORDER BY sum(math) DESC;</div>
+<pre><code class="language-js">SELECT studentID, english FROM schoolRecode ORDER BY english ASC;</code></pre>
+
+                <h4>반 별 수학 점수를 높은 순에서 낮은 순으로</h4>
+<pre><code class="language-js">SELECT class, sum(math) FROM schoolRecode WHERE class IN(1,2,3,4,5) GROUP BY class ORDER BY sum(math) DESC;</code></pre>
+</div>
             <!-- intro9 -->
-
             </div>
-
             <div class="col-md-3">
                 <div class="bs-sidebar hidden-print affix-top" role="complementary">
-                    
                     <ul class="nav bs-sidenav">
                         <li class="active"><a href="#intro1">MySQL</a></li>
                         <li><a href="#intro2">MySQL 설치</a></li>
                         <li><a href="#intro3">MySQL 실행</a></li>
                         <li><a href="#intro4">데이터베이스</a>
                             <ul class="nav bs-sidenav">
-                                <li><a href="#intro4-1">데이터 베이스 보기</a></li>
-                                <li><a href="#intro4-2">데이터 베이스 만들기</a></li>
-                                <li><a href="#intro4-3">데이터 베이스 사용</a></li>
-                                <li><a href="#intro4-4">데이터 베이스 삭제</a></li>
+                                <li><a href="#intro4-1">데이터베이스 보기</a></li>
+                                <li><a href="#intro4-2">데이터베이스 만들기</a></li>
+                                <li><a href="#intro4-3">데이터베이스 사용</a></li>
+                                <li><a href="#intro4-4">데이터베이스 삭제</a></li>
                             </ul>
                         </li>
-
                         <li><a href="#intro5">테이블</a>
                             <ul class="nav bs-sidenav">
                                 <li><a href="#intro5-1">테이블 만들기</a></li>
@@ -543,7 +545,6 @@ INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70
                                 <li><a href="#intro5-4">테이블 삭제</a></li>
                             </ul>
                         </li>
-
                         <li><a href="#intro6">테이블 데이터</a>
                             <ul class="nav bs-sidenav">
                                 <li><a href="#intro6-1">데이터 입력하기</a></li>
@@ -552,7 +553,6 @@ INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70
                                 <li><a href="#intro6-4">데이터 삭제하기</a></li>
                             </ul>
                         </li>
-
                         <li><a href="#intro7">테이블 수정</a>
                             <ul class="nav bs-sidenav">
                                 <li><a href="#intro7-1">필드 추가하기</a></li>
@@ -562,7 +562,7 @@ INSERT INTO schoolRecode(class, english, math, science, coding) VALUES(5, 80, 70
                         </li>
 
                         <li><a href="#intro8">테이블 합치기</a></li>
-                        <li><a href="#intro8">집계함수</a></li>
+                        <li><a href="#intro9">집계함수</a></li>
                     </ul>
                     <!-- intro -->
                 

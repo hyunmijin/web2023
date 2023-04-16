@@ -217,24 +217,21 @@
                         <li>시작 위치에서 종료 위치 값을 추출하여, 새로운 문자열을 반환합니다.</li>
                     </ul>
                     <div class="script">
-<pre><code class="language-js">{
-    "javascript".slice(0);//javascript
-    "javascript".slice(1);//avascript
-    "javascript".slice(2);//vascript
-    "javascript".slice(0, 1);//j
-    "javascript".slice(1, 2);//a
-    "javascript".slice(0, 2);//ja
-    "javascript".slice(0, 3);//jav
-    "javascript".slice(5, 10);//cript
-    "javascript".slice(5, -1);//crip
-    "javascript".slice(5, -2);//cri
-    "javascript".slice(-1);//t
-    "javascript".slice(-2);//pt
-    "javascript".slice(-3);//ipt
-    "javascript".slice(-3, -1);//ip
-    "javascript".slice(-3, -2);//i
-}
-
+<pre><code class="language-js">"javascript".slice(0);//javascript
+"javascript".slice(1);//avascript
+"javascript".slice(2);//vascript
+"javascript".slice(0, 1);//j
+"javascript".slice(1, 2);//a
+"javascript".slice(0, 2);//ja
+"javascript".slice(0, 3);//jav
+"javascript".slice(5, 10);//cript
+"javascript".slice(5, -1);//crip
+"javascript".slice(5, -2);//cri
+"javascript".slice(-1);//t
+"javascript".slice(-2);//pt
+"javascript".slice(-3);//ipt
+"javascript".slice(-3, -1);//ip
+"javascript".slice(-3, -2);//i
 </code></pre>
                     </div>
                 </div>
@@ -247,32 +244,30 @@
                         <li>구분자를 이용하여, 여러개의 문자열(배열)을 반환합니다.</li>
                     </ul>
                     <div class="script">
-<pre><code class="language-js">{
-    "javascript".split("");//['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
-    "java script".split(" ");//['java', 'script']
-    "java scr ipt".split(" ");//['java', 'scr', 'ipt']
+<pre><code class="language-js">"javascript".split("");//['j', 'a', 'v', 'a', 's', 'c', 'r', 'i', 'p', 't']
+"java script".split(" ");//['java', 'script']
+"java scr ipt".split(" ");//['java', 'scr', 'ipt']
 
-    "java scr ipt".split("", 1);//['j']
-    "java scr ipt".split("", 2);//['j', 'a']
-    "java scr ipt".split("", 3);//['j', 'a', 'v']
+"java scr ipt".split("", 1);//['j']
+"java scr ipt".split("", 2);//['j', 'a']
+"java scr ipt".split("", 3);//['j', 'a', 'v']
 
-    "java script".split(" ", 1);//['java']
-    "java script".split(" ", 2);//['java', 'script']
+"java script".split(" ", 1);//['java']
+"java script".split(" ", 2);//['java', 'script']
 
-    "javascript".split("j");//['', 'avascript']
-    "javascript".split("a");//['j', 'v', 'script'] a 다 빠짐
-    "javascript".split("e");//['javascript']
+"javascript".split("j");//['', 'avascript']
+"javascript".split("a");//['j', 'v', 'script'] a 다 빠짐
+"javascript".split("e");//['javascript']
 
-    "java/scr/ipt".split("/");//['java', 'scr', 'ipt']
-    "java&scr!ipt".split("&");//['java', 'scr!ipt']
-    "java&scr!ipt".split("!");//['java&scr', 'ipt']
-    "java&scr!ipt".split(/&|\!/);//['java', 'scr!ipt']
+"java/scr/ipt".split("/");//['java', 'scr', 'ipt']
+"java&scr!ipt".split("&");//['java', 'scr!ipt']
+"java&scr!ipt".split("!");//['java&scr', 'ipt']
+"java&scr!ipt".split(/&|\!/);//['java', 'scr!ipt']
 
-    "javascript".split("").join();//j,a,v,a,s,c,r,i,p,t
-    "javascript".split("").join("*");//j*a*v*a*s*c*r*i*p*t
-    "javascript".split("").reverse().join();//t,p,i,r,c,s,a,v,a,j //reverse는 문자열에서만 가능
-    "javascript".split("").reverse().join("/");//t,p,i,r,c,s,a,v,a,j //reverse는 문자열에서만 가능
-}
+"javascript".split("").join();//j,a,v,a,s,c,r,i,p,t
+"javascript".split("").join("*");//j*a*v*a*s*c*r*i*p*t
+"javascript".split("").reverse().join();//t,p,i,r,c,s,a,v,a,j //reverse는 문자열에서만 가능
+"javascript".split("").reverse().join("/");//t,p,i,r,c,s,a,v,a,j //reverse는 문자열에서만 가능
 </code></pre>
                     </div>
                 </div>
@@ -285,12 +280,10 @@
                         <li>메서드는 문자열의 앞/뒤 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
                     </ul>
                     <div class="script">
-<pre><code class="language-js">{
-    "javascript".trim("");//javascript                                                   
-    "javascript ".trim("");//javascript
-    " javascript ".trim("");//javascript
-    " java script ".trim("");//java script
-}
+<pre><code class="language-js">"javascript".trim("");//javascript                                                   
+"javascript ".trim("");//javascript
+" javascript ".trim("");//javascript
+" java script ".trim("");//java script
 </code></pre>
                     </div>
                 </div>
@@ -318,9 +311,7 @@
                         <li>메서드는 문자열의 앞 공백을 제거하고, 새로운 문자열을 반환합니다.</li>
                     </ul>
                     <div class="script">
-<pre><code class="language-js">{
-    " javascript ".trimStart("");//javascript
-}
+<pre><code class="language-js">" javascript ".trimStart("");//javascript
 </code></pre>
                     </div>
                 </div>
