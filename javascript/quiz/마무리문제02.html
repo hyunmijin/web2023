@@ -9,16 +9,6 @@
     <style>
         @import url('https://webfontworld.github.io/TheJamsil/TheJamsil.css');
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
-        @font-face {
-    font-family: 'Tmon';
-    font-weight: normal;
-    font-style: normal;
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmon/Tmon.eot');
-    src: url('https://cdn.jsdelivr.net/gh/webfontworld/tmon/Tmon.eot?#iefix') format('embedded-opentype'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/tmon/Tmon.woff2') format('woff2'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/tmon/Tmon.woff') format('woff'),
-         url('https://cdn.jsdelivr.net/gh/webfontworld/tmon/Tmon.ttf') format("truetype");
-    font-display: swap;}
 
         * {
             margin: 0;
@@ -84,16 +74,16 @@
         //     Result.innerHTML = randomIndex + ("," + randomIndex);
         // }
         Btn.addEventListener("click", () => {
-            let numbers = [];
+            let numbers = new Set();
 
-            while(numbers.length < 6) {
+            while(numbers.size < 6) {
                 const randomIndex = Math.floor(Math.random() * 45) + 1;
-                if(!numbers.includes(randomIndex)) {
-                    numbers.push(randomIndex);
-                }
+                numbers.add(randomIndex);
             }
-            Result.innerHTML = numbers.join(", ");
+            
+            Result.innerHTML = [...numbers].join(", ");
         });
+        
     </script>
 </body>
 </html>
