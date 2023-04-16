@@ -12,23 +12,41 @@
             padding: 0;
         }
         body {
+            width: 100%;
+            height: 100vh;
             background-color: #ccc;
+            background-image: url(/javascript/slider/img/bg.jpg);
+            background-size: cover;
+            position: relative;
+            overflow: hidden;
+        }
+        body::after {
+            content: '';
+            position: absolute;
+            left:0; top:0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(14, 14, 14, 0.545);
+            z-index: -1;
         }
         #result {
-            width: 1200px;
-            height: 1200px;
-            flex-direction: column;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
             text-align: center;
-            font-size: 30px;
-            line-height: 100px;
+            font-size: 20px;
+            line-height: 70px;
             font-family: 'SCoreDream';
+            color: #fff;
         }
         .quote {
             font-weight: bold;
-            font-size: 35px;
+            font-size: 30px;
         }
     </style>
 </head>
@@ -38,35 +56,24 @@
         <div class="quote"></div>
         <div class="author"></div>
     </div>
-    <div id="canvas"></div>
 
     <script>
         const Result = document.querySelector("#result");
         const Quote = result.querySelector(".quote");
         const Author = result.querySelector(".author");
 
-        let resultAll = [];
-
-
-        // fetch('json/dummy01.json')
-        // .then(res => res.json())
-        // .then(quotes => console.log(quotes))
-        // .catch(error => console.log(error))
-
-        const dataresult = (value) => {
-            console.log(value);
+        const dataresult = () => {
             fetch('json/dummy.json')
             .then(res => res.json())
             .then(items => {
                 const randomIndex = Math.floor(Math.random() * items.length);
                 Quote.textContent = items[randomIndex].quote;
-                Author.textContent = items[randomIndex].author;
+                Author.textContent = "- " + items[randomIndex].author;
             })
             .catch((err) => console.log(err));
         }
         dataresult();
         setInterval(dataresult, 10000);
-            
     </script>
 </body>
 </html>
