@@ -1,39 +1,48 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>dsfd</title>
+    <title>Docsdfsfument</title>
     <style>
         @import url('https://webfontworld.github.io/score/SCoreDream.css');
+        @import url('https://webfontworld.github.io/Poppins/Poppins.css');
+
         * {
             margin: 0 auto;
             padding: 0;
         }
+
         body {
             width: 100%;
-            height: 100vh; 
+            height: 100vh;
             /* background-color: #ccc; */
-            /* background-image: url(https://hyunmijin.github.io/web2023/javascript/slider/img/bg.jpg); */
-            /* background-size: cover; */
+            background-image: url(https://source.unsplash.com/movie/?travel);
+            background-size: cover;
             position: relative;
             overflow: hidden;
+            transition: background-image 1s ease-in-out;
         }
-        /* body::after {
+
+        body::after {
             content: '';
             position: absolute;
-            left:0; top:0;
+            left: 0;
+            top: 0;
             width: 100%;
             height: 100%;
-            background-color: rgba(14, 14, 14, 0.545);
+            background-color: rgba(14, 14, 14, 0.292);
             z-index: -1;
-        } */
+        }
+
         #result {
-            border: 1px solid #fff;
+            /* border: 1px solid #fff; */
+            background-color: #1a0c0cac;
             padding: 30px;
-            width: 100%;
-            height: 100vh;;
+            width: 700px;
+            height: 300px;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -45,52 +54,52 @@
             text-align: center;
             font-size: 20px;
             line-height: 70px;
-            font-family: 'SCoreDream';
-            color: #fff;
+            font-family: 'Poppins';
+            color: #b7bd07;
         }
+
         .quote {
             font-weight: bold;
             font-size: 25px;
             line-height: 35px;
-        }
-        .image {
-            background-size: cover;
-            position: fixed;
-            z-index: -2;
-            width: 100%;
-            height: 100%;
+            font-family: 'Poppins';
         }
     </style>
 </head>
+
 <body>
 
     <div id="result">
-        <p class="quote"></p>
-        <p class="author"></p>
-        <img class="image" src="" alt="sky Image /">
+        <div class="quote"></div>
+        <div class="author"></div>
     </div>
 
     <script>
         const Result = document.querySelector("#result");
-        const Quote = Result.querySelector(".quote");
-        const Author = Result.querySelector(".author");
-        const Image = Result.querySelector(".image");
+        const Quote = result.querySelector(".quote");
+        const Author = result.querySelector(".author");
 
-        const updateData  = () => {
+
+        const dataresult = () => {
             fetch('json/dummy.json')
-            .then(res => res.json())
-            .then(items => {
-                const randomIndex = Math.floor(Math.random() * items.length);
-                Quote.textContent = items[randomIndex].quote;
-                Author.textContent = "- " + items[randomIndex].author;
-            })
-            .catch((err) => console.log(err));
+                .then(res => res.json())
+                .then(items => {
+                    const randomIndex = Math.floor(Math.random() * items.length);
+                    Quote.textContent = items[randomIndex].quote;
+                    Author.textContent = "- " + items[randomIndex].author;
 
-            Image.src = "https://source.unsplash.com/random/?sky&" + new Date().getTime();
+                    const img = new Image();
+                    img.onload = function () {
+                        const newBgUrl = `url(${img.src})`;
+                        document.body.style.backgroundImage = newBgUrl;
+                    }
+                    img.src = `https://source.unsplash.com/random/?travel=${Date.now()}`;
+                })
+                .catch((err) => console.log(err));
         }
-        updateData ();
-
-        setInterval(updateData , 10000);
+        dataresult();
+        setInterval(dataresult, 10000);
     </script>
 </body>
+
 </html>
