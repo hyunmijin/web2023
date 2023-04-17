@@ -14,13 +14,13 @@
         body {
             width: 100%;
             height: 100vh; 
-            background-color: #ccc;
+            /* background-color: #ccc; */
             /* background-image: url(https://hyunmijin.github.io/web2023/javascript/slider/img/bg.jpg); */
             /* background-size: cover; */
             position: relative;
             overflow: hidden;
         }
-        body::after {
+        /* body::after {
             content: '';
             position: absolute;
             left:0; top:0;
@@ -28,12 +28,12 @@
             height: 100%;
             background-color: rgba(14, 14, 14, 0.545);
             z-index: -1;
-        }
+        } */
         #result {
             border: 1px solid #fff;
             padding: 30px;
-            width: 700px;
-            height: 300px;
+            width: 100%;
+            height: 100vh;;
             position: absolute;
             top: 50%;
             left: 50%;
@@ -54,14 +54,11 @@
             line-height: 35px;
         }
         .image {
-            background-image: url("https://source.unsplash.com/random/?sky&");
             background-size: cover;
             position: fixed;
             z-index: -2;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            width: 100%;
+            height: 100%;
         }
     </style>
 </head>
