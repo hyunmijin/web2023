@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,18 +10,20 @@
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/parallax.css">
 </head>
+
 <body class="img01 bg01 font10">
     <header id="header">
         <h1>Javascript Parallax Effect01</h1>
-        <p>패럴럭스 이펙트 : 메뉴 효과<p>
+        <p>패럴럭스 이펙트 : 메뉴 효과
+        <p>
         <ul>
             <li class="active"><a href="parallaxEffect01.html">1</a></li>
-            <li><a href="parallaxEffect02.html">2</a></li> 
-            <li><a href="parallaxEffect03.html">3</a></li> 
-            <li><a href="parallaxEffect04.html">4</a></li> 
-            <li><a href="parallaxEffect05.html">5</a></li> 
-            <li><a href="parallaxEffect06.html">6</a></li> 
-            <li><a href="parallaxEffect07.html">7</a></li> 
+            <li><a href="parallaxEffect02.html">2</a></li>
+            <li><a href="parallaxEffect03.html">3</a></li>
+            <li><a href="parallaxEffect04.html">4</a></li>
+            <li><a href="parallaxEffect05.html">5</a></li>
+            <li><a href="parallaxEffect06.html">6</a></li>
+            <li><a href="parallaxEffect07.html">7</a></li>
         </ul>
     </header>
     <!-- //header -->
@@ -154,20 +157,22 @@
     <!-- parallax__info -->
 
     <footer id="footer">
-        <a href="mailto:hunmi961119@gmail.com">hunmi961119@gmail.com</a> 
+        <a href="mailto:hunmi961119@gmail.com">hunmi961119@gmail.com</a>
     </footer>
     <!-- //footer -->
 
     <script>
+
+
         window.addEventListener("scroll", () => {
             let scrollTop = window.pageYOffset || window.scrollY || document.documentElement.scrollTop;
 
             document.querySelectorAll(".parallax__item").forEach((item, index) => {
-                if(scrollTop >= item.offsetTop -2){
+                if (scrollTop >= item.offsetTop - 2) {
                     document.querySelectorAll(".parallax__nav li").forEach((li) => {
                         li.classList.remove("active");
                     });
-                    document.querySelector(".parallax__nav li:nth-child("+(index+1)+")").classList.add("active");
+                    document.querySelector(".parallax__nav li:nth-child(" + (index + 1) + ")").classList.add("active");
                 }
             });
 
@@ -193,17 +198,32 @@
             // document.querySelector(".info .offset8").innerText = document.getElementById("section8").offsetTop;
             // document.querySelector(".info .offset9").innerText = document.getElementById("section9").offsetTop;
 
+            // for문
             // for(let i=1; i<=9; i++){
-            //     document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop;
+            //     document.querySelector(`.info .offset${i}`).innerText = document.getElementById(`section${i}`).offsetTop;
             // }
-            
-            infoli.length.forEach(i => {
-                document.querySelector(".info .offset"+i).innerText = document.getElementById("section"+i).offsetTop;
-            });
+
+            // document.querySelectorAll(".info span").forEach((e, i) => {
+            //     e.innerHTML = document.getElementById(`section${i + 1}`).offsetTop;
+            // });
+
+            const infoSpans = document.querySelectorAll(".info span");
+
+            // for (let i in infoSpans) {
+            //     const e = infoSpans[i];
+            //     e.innerHTML = document.getElementById(`section${parseInt(i) + 1}`).offsetTop;
+            // }
+
+            for (const e of infoSpans) {
+                const index = Array.from(infoSpans).indexOf(e);
+                e.innerHTML = document.getElementById(`section${index + 1}`).offsetTop;
+            }
 
             // forEach, forin, forof문으로 바꾸기 미션
         });
-    </script>
     
+    </script>
+
 </body>
+
 </html>
