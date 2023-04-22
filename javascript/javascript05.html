@@ -52,7 +52,7 @@
                     <li><a href="#sample01">01. <strong>string.prototype.at()</strong>                메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 요소를 반환합니다.</a></li>
                     <li><a href="#sample02">02. <strong>string.prototype.charAt()</strong>            메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 단일문자를 반환합니다.</a></li>
                     <li><a href="#sample03">03. <strong>string.prototype.charCodeAt()</strong>        메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 정수 값을 반환합니다.</a></li>
-                    <li><a href="#sample04">04. <strong>string.prototype.charPointAt()</strong>       메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
+                    <li><a href="#sample04">04. <strong>string.prototype.codePointAt()</strong>       메서드는 지정한 숫자(index)를 받아, 문자열에서 해당 되는 인덱스의 유니코드 포인트 정수 값을 반환합니다.</a></li>
                     <li><a href="#sample05">05. <strong>string.prototype.concat()</strong>            메서드는 매개변수로 전달된 문자열을 받어, 결합된 새로운 문자열을 반환합니다.</a></li>
                     <li><a href="#sample06">06. <strong>string.prototype.includes()</strong>✨           메서드는 문자열 포함 여부를 검색하여, 불린(true, false)을 반환합니다.</a></li>
                     <li><a href="#sample07">07. <strong>string.prototype.indexOf()</strong>✨          메서드는 문자열을 검색하여, 주어진 값과 일치하는 첫 번째 위치값(index)을 반환합니다.</a></li>
@@ -85,6 +85,106 @@
                 </ul>
             </div>
             <div class="main__sample">
+
+                <div id="sample01" class="sample">
+                    <h3>01. at()</h3>
+                    <div class="notice">"문자열".at(index(가져올 문자의 위치))</div>
+                    <ul>
+                        <li>주어진 인덱스에 해당하는 문자를 반환합니다.</li>
+                        <li>인덱스는 0부터 시작하며, 음수값도 허용됩니다.</li>
+                        <li>문자열의 범위를 벗어나는 경우 "undefined"를 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript refernce".at(0);   //j
+"javascript refernce".at(1);   //a
+"javascript refernce".at(-1);   //e
+"javascript refernce".at(-7);   //e
+"javascript refernce".at(-7);   //e
+"javascript refernce".at(20);   //undefined
+"javascript refernce".at(-20);   //undefined
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample01 -->
+
+                <div id="sample02" class="sample">
+                    <h3>02. charAt()</h3>
+                    <div class="notice">"문자열".charAt(index(가져올 문자의 인덱스))</div>
+                    <ul>
+                        <li>지정된 인덱스에 위치한 문자를 반환합니다.</li>
+                        <li>인덱스는 0부터 시작하며, 문자열의 길이보다 큰 값을 입력하면 빈 문자열(`' '`)을 반환합니다.
+                        </li>
+                        <li></li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript refernce".charAt(0);     //j
+"javascript refernce".charAt(8);     //p
+"javascript refernce".charAt(-1);    //" "(빈 문자열)
+"javascript refernce".charAt(8);     //p
+"javascript refernce".charAt(10);     //" "(빈 문자열)
+"javascript refernce".charAt(10);     //" "(빈 문자열)
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample02 -->
+
+                <div id="sample03" class="sample">
+                    <h3>03. charCodeAt()</h3>
+                    <div class="notice">"문자열".charCodeAt(index(유니코드 값을 구하고가 하는 문자의 인덱스))</div>
+                    <ul>
+                        <li>문자열에서 특정 인덱스에 위치한 문자의 유니코드값을 반환하는 메서드입니다.</li>
+                        <li>문자열의 인덱스를 매개변수로 받아 해당 인덱스에 위치한 문자의 유니코드값을 정수로 반환합니다.
+                        </li>
+                        <li>인덱스는 0부터 시작하며, 문자열의 길이보다 큰 값이나 음수 값을 전달하면 "NaN" 을 반환합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript refernce".charCodeAt(0);      //106
+"javascript refernce".charCodeAt(1);      //97
+"javascript refernce".charCodeAt(2);      //118
+"javascript refernce".charCodeAt(-1);      //NaN
+"javascript refernce".charCodeAt(-1);      //NaN
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample03 -->
+
+                <div id="sample04" class="sample">
+                    <h3>04. codePointAt()</h3>
+                    <div class="notice">"문자열".codePointAt(index(코드 포인트를 가져올 인덱스))</div>
+                    <ul>
+                        <li>특정 인덱스에 위치한 유니코드 코드 포인트를 반환하는 메서드</li>
+                        <li>인덱스는 0부터 시작하며, 문자열의 길이보다 작아야합니다.
+                        </li>
+                        <li>0보다 작거나 문자열의 길이보다 크거나 같은 경우 "undefined"를 반환합니다.</li>
+                        <li>유니코드 문자를 다룰 때 유용하게 사용될 수 있습니다.이모지와 같은 멀티바이트 문자나 유니코드 문자의 이스케이프시퀸스를 다루는 경우 유용하게 사용됩니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript".codePointAt(0);    //97
+"javascript".codePointAt(1);    //118
+"javascript".codePointAt(-1);    //undefiend
+"❣💜😥".codePointAt(0);         //10083
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample04 -->
+
+                <div id="sample05" class="sample">
+                    <h3>05. concat()</h3>
+                    <div class="notice">"문자열".concat("문자열")</div>
+                    <ul>
+                        <li>문자열을 결합하여 새로운 문자열로 반환하는 기능을 가지고 있습니다.</li>
+                        <li>반환값 : 새로운 문자열을 반환합니다. 기존 문자열들을 순서대로 결합한 결과를 가지고 있습니다.
+                        </li>
+                        <li>여러개의 문자열을 결합해야 하는 경우 유용하게 사용될 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"java".concat("script");      //javascript
+"javascript".concat(0);      //javascript0
+"java", "script".concat();     //java script
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample05 -->
 
                 <div id="sample06" class="sample">
                     <h3>06. includes()</h3>
@@ -158,6 +258,28 @@
                 </div>
                 <!-- sample08 -->
 
+                <div id="sample09" class="sample">
+                    <h3>09. localeCompare()</h3>
+                    <div class="notice">"문자열".localeCompare()(비교값)</div>
+                    <ul>
+                        <li>두 개의 문자열을 비교해 정렬 순서를 결정하는데 사용됩니다.</li>
+                        <li>세 가지의 가능한 반환 값(수치(음수, 양수, 0)) 중 하나를 반환합다.</li>
+                        <li>0: 두 문자열이 동일한 문자열인 경우</li>
+                        <li>-1(음수): 정렬 순서상 앞에 있거나 더 작은 문자열인 경우</li>
+                        <li>1(양수): 정렬 순서상 뒤에 있거나 더 큰 문자열인 경우</li>
+                        <li>대소문자 구별, 유니코드 문자 비교 가능(다양한 언어의 알파벳이나 기호 포함 문자열)</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"a".localeCompare("a");     //0 
+"a".localeCompare("b");     //1
+"b".localeCompare("a");     //-1
+"java".localeCompare("script");     //-1
+"script".localeCompare("java");     //1
+</code></pre>
+                    </div>
+                </div>
+                <!-- sample08 -->
+
                 <div id="sample10" class="sample">
                     <h3>10. match()</h3>
                     <div class="notice">"문자열".match(검색값)<br>"문자열".match(정규식표현)</div>
@@ -185,6 +307,81 @@
                     </div>
                 </div>
                 <!-- sample10 -->
+
+                <div id="sample12" class="sample">
+                    <h3>12. normalize()</h3>
+                    <div class="notice">"문자열".normalize(선택적 매개변수 정규화 형태)</div>
+                    <ul>
+                        <li>문자열에 포함된 정규화된 유니코드 문자들을 표준화하여 통일된 형태로 변환할 수 있습니다.</li>
+                        <li>normalize()매개변수를 생략하면 NFC 형태로 정규화 됩니다.</li>
+                        <li>정규화된 문자열을 반환합니다.</li>
+                        <li>문자열의 유니코드 정규화를 수행해 문자열 처리의 일관성을 유지할 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript".normalize();                 //javascript
+"javascript".normalize("NFD");        //javascript
+"javascript".normalize("NFKC");      //javascript
+"javascript".normalize("NFKD");      //javascript
+
+"\u2665".normalize();                    //♥
+"\u2665".normalize("NFD");           //♥
+"\u2665".normalize("NFKC");         //♥
+"\u2665".normalize("NFKD");         //♥
+</code></pre> 
+                    </div>
+                </div>
+                <!-- sample12 -->
+
+                <div id="sample13" class="sample">
+                    <h3>13. padEnd()</h3>
+                    <div class="notice">"문자열".padEnd(targetLength, [padString])</div>
+                    <ul>
+                        <li>문자열을 특정 길이로 패딩(채움)하는 기능을 제공합니다.</li>
+                        <li>주어진 길이에 도달하기 위해 원본 문자열의 끝에 특정 문자를 추가해 길이를 맞출 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript".padEnd(10, "-");     //javascript
+"javascript".padEnd(10, "-");     //javascript-
+"javascript".padEnd(15, "-");     //javascript-----
+"javascript".padEnd(15, ".");      //javascript.....
+</code></pre> 
+                    </div>
+                </div>
+                <!-- sample13 -->
+
+                <div id="sample14" class="sample">
+                    <h3>14. padStart()</h3>
+                    <div class="notice">"문자열".padStart(targetLength, [padString])</div>
+                    <ul>
+                        <li>문자열을 특정 길이로 패딩(채움)하는 기능을 제공합니다.</li>
+                        <li>주어진 길이에 도달하기 위해 원본 문자열의 시작부분에 특정 문자를 추가해 길이를 맞출 수 있습니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript".padStart(10, "⁎");       //javascript
+"javascript".padStart(15, "⁎");       //⁎⁎⁎⁎⁎javascript
+"javascript".padStart(15, "❤");      //❤❤❤❤❤javascript
+"javascript".padStart(20, "❤");     //❤❤❤❤❤❤❤❤❤❤javascript
+</code></pre> 
+                    </div>
+                </div>
+                <!-- sample14 -->
+
+                <div id="sample15" class="sample">
+                    <h3>15. repeat()</h3>
+                    <div class="notice">"문자열".repeat(count(반복할 횟수))</div>
+                    <ul>
+                        <li>문자열을 주어진 횟수만큼 반복해 새로운 문자열을 생성합니다.</li>
+                        <li>0이상의 정수값만 반복할 수 있습니다. 0보다 작거나 소수이면, "RangeError" 예외가 발생합니다.</li>
+                    </ul>
+                    <div class="script">
+<pre><code class="language-js">"javascript".repeat(1);      //javascript
+"javascript".repeat(2);      //javascriptjavascript
+"javascript".repeat(3);      //javascriptjavascriptjavascript
+"javascript".repeat(-1);     //RangeError
+</code></pre> 
+                    </div>
+                </div>
+                <!-- sample15 -->
 
                 <div id="sample18" class="sample">
                     <h3>18. search()</h3>
@@ -334,15 +531,17 @@
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
     <script>
-        "javascript".trim("");//javascript
-        "javascript ".trim("");//javascript
-        " javascript ".trim("");//javascript
-        " java script ".trim("");//java script
 
-        " javascript ".trimStart("");//javascript
-        " javascript ".trimEnd("");//javascript
 
-        console.log("javascript".trim(""));
+
+
+
+
+
+
+
+
+    console.log("javascript".repeat(-1));
     </script>
 
 </body>
