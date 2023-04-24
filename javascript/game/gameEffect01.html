@@ -49,34 +49,65 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
     <script>
+
         $(".icon1").draggable({
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "img/game_mouse01.png")
+                $(".cursor img").attr("src", "img/game_mouse01.png");
+                $("#header").css("background-color", "#ff33007e");
             },
+            drag: function () {
+                $(".info").html("지금은 빨간색 폴더를 드래그중입니다.")
+            },
+            stop: function () {
+                $(".info").html("드래그가 멈췄습니다.");
+                settime(); 
+            }
         });
         $(".icon2").draggable({
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "img/game_mouse02.png")
+                $(".cursor img").attr("src", "img/game_mouse02.png");
+                $("#header").css("background-color", "#5100ff7e");
             },
+            drag: function () {
+                $(".info").html("지금은 파란색 폴더를 드래그중입니다.")
+            },
+            stop: function () {
+                $(".info").html("드래그가 멈췄습니다.");
+            }
         });
         $(".icon3").draggable({
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "img/game_mouse03.png")
+                $(".cursor img").attr("src", "img/game_mouse03.png");
+                $("#header").css("background-color", "#04ff007e");
             },
+            drag: function () {
+                $(".info").html("지금은 녹색 폴더를 드래그중입니다.")
+            },
+            stop: function () {
+                $(".info").html("드래그가 멈췄습니다.");
+            }
         });
         $(".icon4").draggable({
             containment: ".icon__box", scroll: false,
 
             start: function () {
-                $(".cursor img").attr("src", "img/game_mouse04.png")
+                $(".cursor img").attr("src", "img/game_mouse04.png");
+                $("#header").css("background-color", "#eeff007e");
             },
+            drag: function () {
+                $(".info").html("지금은 노란색 폴더를 드래그중입니다.")
+            },
+            stop: function () {
+                $(".info").html("드래그가 멈췄습니다.");
+            }
         });
+
 
         window.onload = function () {
             window.addEventListener("mousemove", e => {
@@ -90,6 +121,7 @@
             printTime();          //오른쪽 상단 시간
             printAgent();         //하단 중앙
         }
+
         // $("#draggable3").draggable({ containment: "#containment-wrapper", scroll: false });
 
         function updateTime() {
@@ -111,21 +143,25 @@
 
         //현재 화면 크기 가져오기
         let screenWidth = window.innerWidth || documentElement.body.clientWidth;
-        let screenHeight =window.innerHeight || documentElement.body.clientHeight;
+        let screenHeight = window.innerHeight || documentElement.body.clientHeight;
 
         //운영체제에 따라 메세지 출력
-        if (osName.includes('mac')){
-            document.getElementById('osName').innerText = 'masOS (맥)';
-        } else if (osName.includes('win')){
-            document.getElementById('osName').innerText = 'Windows';
-        } else if(osName.includes('iphone')) {
-            document.getElementById('osName').innerText = 'iPhone';
-        } else if(osName.includes('galaxy')){
-            document.getElementById('osName').innerText = 'Galaxy';
-        } else {
-            document.getElementById('osName').innerText = '다른 운영체제';
+        function os() {
+            if (osName.includes('mac')) {
+                document.getElementById('osName').innerText = 'masOS (맥)';
+            } else if (osName.includes('win')) {
+                document.getElementById('osName').innerText = 'Windows';
+            } else if (osName.includes('iphone')) {
+                document.getElementById('osName').innerText = 'iPhone';
+            } else if (osName.includes('galaxy')) {
+                document.getElementById('osName').innerText = 'Galaxy';
+            } else {
+                document.getElementById('osName').innerText = '다른 운영체제';
+            }
         }
         document.getElementById('screenSize').innerText = screenWidth + 'X' + screenHeight;
+
+
     </script>
 </body>
 
