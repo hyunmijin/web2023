@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GAME Effect</title>
+    <link rel="stylesheet" href="../game/css/bg.css">
+    <link rel="stylesheet" href="../game/css/reset.css">
+    <link rel="stylesheet" href="../game/css/game.css">
+</head>
+
+<body>
+    <div class="cursor">
+        <img src="img/game_mouse01.png" alt>
+    </div>
+    <header id="header">
+        <h1>JIN GAME WORLD</h1>
+        <div class="time">2023년 4월 24일 09시 30분 15초</div>
+    </header>
+
+    <main>
+        <div class="icon__box">
+            <div class="icon1">
+                <img src="img/game_icon01.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            <div class="icon2">
+                <img src="img/game_icon02.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            <div class="icon3">
+                <img src="img/game_icon03.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+            <div class="icon4">
+                <img src="img/game_icon04.png" alt="뮤직">
+                <span>뮤직듣기</span>
+            </div>
+        </div>
+    </main>
+
+    <footer id="footer">
+        <div class="info">현재 맥을 사용하고 있으면, 화면 크기는 1920 X 760입니다.</div>
+    </footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.13.2/jquery-ui.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js"></script>
+    <script>
+        $(".icon1").draggable({
+            containment: ".icon__box", scroll: false,
+
+            start: function () {
+                $(".cursor img").attr("src", "img/game_mouse01.png")
+            },
+        });
+        $(".icon2").draggable({
+            containment: ".icon__box", scroll: false,
+
+            start: function () {
+                $(".cursor img").attr("src", "img/game_mouse02.png")
+            },
+        });
+        $(".icon3").draggable({
+            containment: ".icon__box", scroll: false,
+
+            start: function () {
+                $(".cursor img").attr("src", "img/game_mouse03.png")
+            },
+        });
+        $(".icon4").draggable({
+            containment: ".icon__box", scroll: false,
+
+            start: function () {
+                $(".cursor img").attr("src", "img/game_mouse04.png")
+            },
+        });
+
+        window.onload = function () {
+            window.addEventListener("mousemove", e => {
+                gsap.to(".cursor", {
+                    trantion: 0,
+                    left: e.pageX - 7,
+                    top: e.pageY - 10
+                });
+            });
+
+            printTime();          //오른쪽 상단 시간
+            printAgent();         //하단 중앙
+        }
+        // $("#draggable3").draggable({ containment: "#containment-wrapper", scroll: false });
+
+        function updateTime() {
+            const now = new Date();
+            const year = now.getFullYear();
+            const month = now.getMonth() + 1;
+            const day = now.getDate();
+            const hour = now.getHours();
+            const minute = now.getMinutes();
+            const second = now.getSeconds();
+
+            const timeElem = document.querySelector(".time");
+            timeElem.textContent = `${year}년 ${month}월 ${day}일 ${hour}시 ${minute}분 ${second}초`;
+        };
+        setInterval(updateTime, 1000);
+
+        const footer = document.getElementById("footer");
+
+// 현재 창의 화면 크기를 가져오는 함수
+function getWindowSize() {
+    const windowWidth = window.innerWidth || document.documentElement.clientWidth || document.body.clientWidth;
+    const windowHeight = window.innerHeight || document.documentElement.clientHeight || document.body.clientHeight;
+    return { width: windowWidth, height: windowHeight };
+}
+
+// 현재 창의 화면 크기를 가져와서 정보를 표시하는 함수
+function showWindowSize() {
+    const windowSize = getWindowSize();
+    const infoText = `현재 윈도우를 사용하고 있으며, 화면 크기는 ${windowSize.width} X ${windowSize.height}입니다.`;
+    footer.innerHTML = `<div class="info">${infoText}</div>`;
+}
+
+// 초기에 한번 화면 크기 정보를 표시하고, 창의 크기가 변경될 때마다 다시 표시
+showWindowSize();
+window.addEventListener("resize", showWindowSize);
+
+    </script>
+</body>
+
+</html>
