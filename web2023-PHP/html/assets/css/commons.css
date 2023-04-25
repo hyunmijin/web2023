@@ -16,14 +16,17 @@
     left: 0;
  }
 
- /* bg */
+ /* Color Style */
  .gray {
     background-color: var(--bg__gray);
  }
  .black {
     background-color: var(--bg__black);
  }
-
+.white {
+   background-color: var(--color__white) !important;
+   color: var(--bg__black) !important;
+}
 
  /* font */
  body.macintosh {
@@ -32,6 +35,7 @@
  body.windows {
     font-family: var(--main__win) !important;
  }
+ 
 
  /* container */
  .container {
@@ -87,6 +91,18 @@
    border-radius: 5px;
    padding: 0.5em;
  }
+ .btnStyle3 {    /* 기본 버튼 스타일 */
+   display: inline-block;
+   font-size: 1rem;
+   text-align: center;
+   padding: 0.5em;
+   background-color: var(--color__black);
+   width: 90px;
+   color: var(--color__white);
+   border-radius: 5px;
+   cursor: pointer;
+ }
+
 
  /* 간격설정 */
 .mt10 {margin-top: 10px !important;}
@@ -104,11 +120,14 @@
 .mb50 {margin-bottom: 50px !important;}
 .mb60 {margin-bottom: 60px !important;}
 .mb70 {margin-bottom: 70px !important;}
+.mb80 {margin-bottom: 80px !important;}
+.mb90 {margin-bottom: 90px !important;}
+.mb100 {margin-bottom: 100px !important;}
 
 
 /* Input style */
 .inputStyle {
-   background-color: #f5f5f5;
+   background-color: #fff;
    width: 100%;
    border-radius: 5px;
    padding: 1em 2em;
