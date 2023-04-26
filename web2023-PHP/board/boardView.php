@@ -1,6 +1,7 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
+    // include "../connect/sessionCheck.php";
 ?>
 
 <!DOCTYPE html>
@@ -99,7 +100,7 @@
             <div class="board__btn mb100">
                 <a href="boardModify.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3">수정하기</a>
                 <!-- <a href="boardRemove.php?boardID=<?=$_GET['boardID']?>" class="btnStyle3" onclick="confirm('정말 삭제할거니?', '')">삭제하기</a> -->
-                <a href="boardRemove.php?boardID=<?=urlencode($_GET['boardID'])?>" class="btnStyle3" onclick="return confirm('정말 삭제할거니?')">삭제하기</a>
+                <a href="boardRemove.php?boardID=<?=($_GET['boardID'])?>" class="btnStyle3" onclick="return confirm('정말 삭제할거니?')">삭제하기</a>
                 <a href="board.php" class="btnStyle3">목록보기</a>
             </div>
         </div> 
