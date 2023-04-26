@@ -51,7 +51,7 @@ const allMusic = [
         audio: "music_audio010"
     }
 ];
-const musicWrap = document.querySelector(".nusic__wrap");
+const musicWrap = document.querySelector(".music__wrap");
 const musicName = musicWrap.querySelector(".music__control .title h3");
 const musicArtist= musicWrap.querySelector(".music__control .title p");
 const musicView = musicWrap.querySelector(".music__view .image img");
