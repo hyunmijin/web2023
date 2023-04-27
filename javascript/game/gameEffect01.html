@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GAME Effect</title>
-    <link rel="stylesheet" href="../game/css/bg.css">
+    <!-- <link rel="stylesheet" href="../game/css/bg.css"> -->
     <link rel="stylesheet" href="../game/css/reset.css">
     <link rel="stylesheet" href="../game/css/game.css">
     <link rel="stylesheet" href="../game/css/music.css">
@@ -78,7 +78,7 @@
                                 <i class="prev" id="control-prev" title="이전곡 재생"></i>
                             </span>
                             <span>
-                                <i class="paly" id="control-play" title="재생"></i>
+                                <i class="play" id="control-play" title="재생"></i>
                             </span>
                             <span>
                                 <i class="next" id="control-next" title="다음곡 재생"></i>
@@ -176,8 +176,6 @@
                 });
             });
 
-            printTime();          //오른쪽 상단 시간
-            printAgent();         //하단 중앙
         }
 
         // $("#draggable3").draggable({ containment: "#containment-wrapper", scroll: false });
@@ -218,8 +216,6 @@
             }
         }
         document.getElementById('screenSize').innerText = screenWidth + 'X' + screenHeight;
-
-
     </script>
 </body>
 
