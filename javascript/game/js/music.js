@@ -1,54 +1,54 @@
 const allMusic = [
     {
-        name: "1. Who Do You Think I Think You Are",
-        artist: "Mini Vandals",
+        name: "1. 아무노래",
+        artist: "아무개",
         img: "music_view01",
         audio: "music_audio01"
     }, {
-        name: "2. The Monuments and Tunnels in Goa and Hampi",
-        artist: "Bail Bonds",
+        name: "2. 아무노래",
+        artist: "아무개",
         img: "music_view02",
         audio: "music_audio02"
     }, {
-        name: "3. We Cruisin'",
-        artist: "Otis McDonald",
+        name: "3. 아무노래",
+        artist: "아무개",
         img: "music_view03",
         audio: "music_audio03"
     }, {
-        name: "4. Forever Young",
-        artist: "Otis McDonald",
+        name: "4. 아무노래",
+        artist: "아무개",
         img: "music_view04",
         audio: "music_audio04"
     }, {
-        name: "5. Ice & Fire",
-        artist: "King Canyon",
+        name: "5. 아무노래",
+        artist: "아무개",
         img: "music_view05",
         audio: "music_audio05"
     }, {
-        name: "6. Emotional Mess",
-        artist: "Amy Lynn & the Honey Men",
+        name: "6. 아무노래",
+        artist: "아무개",
         img: "music_view06",
         audio: "music_audio06"
     }, {
-        name: "7. The Last Goodbye",
-        artist: "Telecasted",
+        name: "7. 아무노래",
+        artist: "아무개",
         img: "music_view07",
         audio: "music_audio07"
     }, {
-        name: "8. Big River",
-        artist: "Telecasted",
+        name: "8. 아무노래",
+        artist: "아무개",
         img: "music_view08",
         audio: "music_audio08"
     }, {
-        name: "9. The Urban Groove",
-        artist: "Hanu Dixit",
+        name: "9. 아무노래",
+        artist: "아무개",
         img: "music_view09",
         audio: "music_audio09"
     }, {
-        name: "10. The Monuments and Tunnels in Goa and Hampi",
-        artist: "Bail Bonds",
-        img: "music_view10",
-        audio: "music_audio10"
+        name: "10. 아무노래",
+        artist: "아무개",
+        img: "music_view010",
+        audio: "music_audio010"
     }
 ];
 const musicWrap = document.querySelector(".music__wrap");
@@ -64,7 +64,7 @@ const musicProgress = musicWrap.querySelector(".progress");
 const musicProgressCurrent = musicWrap.querySelector(".progress .timer .currnet");
 const musicProgressDuration = musicWrap.querySelector(".progress .timer .duration");
 
-let musicIndex = 1;         //현재 음악 인덱스
+let musicIndex = 8;         //현재 음악 인덱스
 
 //음악 재생
 const loadMusic = (num) => {
@@ -166,4 +166,5 @@ musicNextBtn.addEventListener("click", () => {
 
 window.addEventListener("load", () => {
     loadMusic(musicIndex);
+    // console.log(musicIndex)
 });
