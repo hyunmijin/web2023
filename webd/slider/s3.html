@@ -144,8 +144,8 @@
     <script>
         const slider = document.querySelectorAll(".slider");
         const sliderImg = document.querySelector(".slider__inner");
-        let index = 0;
-        let sliderIndex = 0;
+        let index = 7;
+        let sliderIndex = 9;
         sliderImg.style.transition = "all 0.6s";
         sliderImg.style.transform = "translateY(" + (-300) + "px)"; // 초기값 설정
         setInterval(() => {
@@ -155,7 +155,7 @@
             }
             sliderImg.style.transform = "translateY(" + (-3600 + (300 * sliderIndex)) + "px)"; //계산해서 -이동
             index++;
-        }, 1000);
+        }, 3000);
 
     </script>
 </body>
