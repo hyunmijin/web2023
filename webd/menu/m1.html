@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <meta charset="UTF-8">
@@ -127,8 +127,6 @@
             display: none;
         }
 
-        .nav>ul>li>ul>li {}
-
         .nav>ul>li>ul>li>a {
             padding: 10px;
             display: block;
@@ -198,7 +196,7 @@
         </div>
     </div>
 
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script>
         //하나씩
         // $(".nav > ul > li").mouseover(function(){
@@ -208,41 +206,41 @@
         //     $(this).find(".submenu").stop().slideUp();
         // });
 
-        //자바로변환
-        const navList = document.querySelectorAll(".nav > ul > li");
+        // 자바로변환
+        // const navList = document.querySelectorAll(".nav > ul > li");
 
-        navList.forEach((li) => {
-            li.addEventListener("mouseover", () => {
-                li.querySelector(".submenu").style.display = "block";
-            });
-            li.addEventListener("mouseout", () => {
-                li.querySelector(".submenu").style.display = "none";
-            });
-        });
-
-
-        // const navList = document.querySelectorAll('.nav > ul > li');
-
-        // navList.forEach(li => {
-        //     const submenu = li.querySelector('.submenu');
-
-        //     li.addEventListener('mouseover', () => {
-        //         submenu.style.display = 'block';
-        //         submenu.style.opacity = 0;
-
-        //         let opacity = 0;
-        //         const fadeIn = setInterval(() => {
-        //             opacity += 0.1;
-        //             submenu.style.opacity = opacity;
-        //             if (opacity >= 1) clearInterval(fadeIn);
-        //         }, 30);
+        // navList.forEach((li) => {
+        //     li.addEventListener("mouseover", () => {
+        //         li.querySelector(".submenu").style.display = "block";
         //     });
-
-        //     li.addEventListener('mouseout', () => {
-        //         submenu.style.display = 'none';
-        //         submenu.style.opacity = 0;
+        //     li.addEventListener("mouseout", () => {
+        //         li.querySelector(".submenu").style.display = "none";
         //     });
         // });
+
+
+        const navList = document.querySelectorAll('.nav > ul > li');
+
+        navList.forEach(li => {
+            const submenu = li.querySelector('.submenu');
+
+            li.addEventListener('mouseover', () => {
+                submenu.style.display = 'block';
+                submenu.style.opacity = 0;
+
+                let opacity = 0;
+                const fadeIn = setInterval(() => {
+                    opacity += 0.1;
+                    submenu.style.opacity = opacity;
+                    if (opacity >= 1) clearInterval(fadeIn);
+                }, 30);
+            });
+
+            li.addEventListener('mouseout', () => {
+                submenu.style.display = 'none';
+                submenu.style.opacity = 0;
+            });
+        });
     </script>
 
 </body>
