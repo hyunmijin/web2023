@@ -12,6 +12,9 @@
             padding: 0;
             font-family: 'TheJamsil';
         }
+        body {
+            background-color: #f8daff99;
+        }
         a {
             text-decoration: none;
             color: #666;
@@ -31,7 +34,7 @@
             padding: 20px;
         }
         #nav li a {
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff;
             width: 50px;
             height: 50px;
             display: inline-block;
@@ -42,15 +45,16 @@
         }
         #nav li a:hover,
         #nav li.active a {
-            border-color: #000;
-            background-color: #000;
+            border-color: #ffffff;
+            background-color: #8757a9;
             color: #fff;
         }
         #main {
             margin: 20px;
             margin-left: 0;
-            border: 1px solid #ccc;
+            border: 1px solid #ffffff;
             width: calc(100% - 40px);
+            background-color: #ffffff66;
         }
     </style>
 </head>
@@ -88,13 +92,13 @@
                 <li><a href="menu/m6.html">M-6</a></li>
             </ul>
             <ul>
-                <li><a href="menu/s1.html">S-1</a></li>
-                <li><a href="menu/s2.html">S-2</a></li>
-                <li><a href="menu/s3.html">S-3</a></li>
+                <li><a href="slider/s1.html">S-1</a></li>
+                <li><a href="slider/s2.html">S-2</a></li>
+                <li><a href="slider/s3.html">S-3</a></li>
             </ul>
         </nav>
         <main id="main">
-            <iframe src="layout/B4.html" frameborder="0"></iframe>
+            <iframe src="layout/A1.html" frameborder="0"></iframe>
         </main>
     </div>    
 </body>
@@ -112,6 +116,6 @@
             })
             li.classList.add("active");
         })
-    })
+    });
 </script>
 </html>

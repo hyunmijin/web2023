@@ -1,93 +1,129 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>웹디자인 기능사 실기 B유형 1번 레이아웃</title>
+    <link rel="stylesheet" href="/webd/css/webd.css">
     <style>
         * {
             margin: 0;
             padding: 0;
         }
-        .wrap {
-            width: 1200px;
-            margin: 0 auto;
+        #wrap {
+            width: 100%;
+            height: 700px;
+            /* background-color: #ccc; */
         }
-        .header {
-            display: flex;
+        #header {
             width: 100%;
             height: 100px;
-            background-color: #7fc2bc;
+            background-color: #60a2a2;
         }
-        .header .logo {
-            width: 30%;
-            height: 100px;
-            background-color: #92cac5;
+        #header .container {
+            display: flex;
         }
-        .header .nav {
-            width: 70%;
-            height: 100px;
-            background-color: #61c7be;
+        #header h1 {
+            width: 20%;
+            background-color: #7bbdbd;
         }
-        .slider {
+        #header nav {
+            width: 80%;
+            background-color: #6fbebe;
+        }
+
+        #slider {
             width: 100%;
             height: 300px;
-            background-color: #498f89;
+            /* background-color: #b0c958; */
         }
-        .section {
+
+        #contents {
             width: 100%;
-            display: flex;
             height: 200px;
+            /* background-color: #daddd0; */
         }
-        .section .sec1 {
-            width: 33.333%;
-            background-color: #359189;
-        }
-        .section .sec2 {
-            width: 33.333%;
-            background-color: #27bdb0;
-        }
-        .section .sec3 {
-            width: 33.333%;
-            background-color: #154b46;
-        }
-        .footer {
-            /* width: 100%; */
-            height: 100px;
+        #contents .container {
             display: flex;
         }
-        .footer .foot1 {
-            width: 20%;
-            background-color: #86a19f;
+        #contents .content1 {
+            width: 33.3333%;
+            background-color: #58b5b5;
         }
-        .footer .foot2 {
-            width: 60%;
-            background-color: #1c756f;
+        #contents .content2 {
+            width: 33.3333%;
+            background-color: #1c5757;
         }
-        .footer .foot3 {
+        #contents .content3 {
+            width: 33.3333%;
+            background-color: #33bdbd;
+        }
+
+        #footer {
+            width: 100%;
+            height: 100px;
+            background-color: #52b0b0;
+        }
+        #footer .container {
+            display: flex;
+        }
+        #footer .footer1 {
             width: 20%;
-            background-color: #21beb4;
+            background-color: #94cdcd;
+        }
+        #footer .footer2 {
+            width: 80%;
+        }
+        #footer .footer2-1 {
+            width: 100%;
+            height: 50px;
+            background-color: #49e0e0;
+        }
+        #footer .footer2-2 {
+            width: 100%;
+            height: 50px;
+            background-color: #11b0b0;
+        }
+        .container {
+            width: 1200px;
+            height: inherit;
+            margin: 0 auto;
+            background-color: #50cece;
         }
     </style>
 </head>
 <body>
-    <div class="wrap">
-        <div class="header">
-            <div class="logo">로고</div>
-            <div class="nav">메뉴</div>
+    <div id="wrap">
+        <div id="header">
+            <div class="container">
+                <h1>로고</h1>
+                <nav>메뉴</nav>
+            </div>
         </div>
-        <div class="slider">슬라이더</div>
-        <div class="section">
-            <div class="sec1">공지사항</div>
-            <div class="sec2">배너</div>
-            <div class="sec3">바로가기</div>
+
+        <div id="slider">
+            <div class="container">이미지 슬라이드</div>
         </div>
-        <div class="footer">
-            <div class="foot1">로고</div>
-            <div class="foot2">카피라이트</div>
-            <div class="foot3">SNS</div>
+
+        <div id="contents">
+            <div class="container">
+                <div class="content1">공지사항</div>
+                <div class="content2">배너</div>
+                <div class="content3">바로가기</div>
+            </div>
         </div>
+
+        <div id="footer">
+            <div class="container">
+                <div class="footer1">로고</div>
+                <div class="footer2">
+                    <div class="footer2-1">하단메뉴</div>
+                    <div class="footer2-2">COPYRIGHT</div>
+                </div>
+            </div>
+        </div>
+
     </div>
 </body>
 </html>

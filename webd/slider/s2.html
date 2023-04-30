@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 슬라이더유형 2번 레이아웃_아래로</title>
+    <link rel="stylesheet" href="/webd/css/webd.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        .wrap {
+            width: 1200px;
+            margin: 0 auto;
+        }
+
+        .header {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: #7fc2bc;
+        }
+
+        .header .logo {
+            width: 30%;
+            height: 100px;
+            background-color: #92cac5;
+        }
+
+        .header .nav {
+            width: 70%;
+            height: 100px;
+            background-color: #61c7be;
+        }
+        .slider__wrap {
+            width: 100%;
+            height: 300px;
+        }
+        .slider__img {  /* 이미지가 보이는 영역 */
+            position: relative;
+            width: 1200px;
+            height: 300px;
+            overflow: hidden;
+        }
+        .slider__inner {  /* 이미지 움직이는 영역 = 전체 이미지를 감싸고있는 부모 : 움직이는 영역 */
+            /* display: flex;
+            flex-wrap: wrap; */
+            width: 1200px;
+            height: 900px;
+        }
+        .slider {  /* 개별적인 이미지 */
+            width: 1200px;
+            height: 300px;
+        }
+
+        .section {
+            width: 100%;
+            display: flex;
+            height: 200px;
+        }
+
+        .section .sec1 {
+            width: 33.333%;
+            background-color: #359189;
+        }
+
+        .section .sec2 {
+            width: 33.333%;
+            background-color: #27bdb0;
+        }
+
+        .section .sec3 {
+            width: 33.333%;
+            background-color: #154b46;
+        }
+
+        .footer {
+            /* width: 100%; */
+            height: 100px;
+            display: flex;
+        }
+
+        .footer .foot1 {
+            width: 20%;
+            background-color: #86a19f;
+        }
+
+        .footer .foot2 {
+            width: 60%;
+            background-color: #1c756f;
+        }
+
+        .footer .foot3 {
+            width: 20%;
+            background-color: #21beb4;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">로고</div>
+            <div class="nav">메뉴</div>
+        </div>
+        <div class="slider__wrap">
+            <div class="slider__img">
+                <div class="slider__inner">
+                    <div class="slider"><img src="/webd/slider/img/slider01_1.png" alt="배너"></div>
+                    <div class="slider"><img src="/webd/slider/img/slider01_2.png" alt="배너"></div>
+                    <div class="slider"><img src="/webd/slider/img/slider01_3.png" alt="배너"></div>
+                </div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sec1">공지사항</div>
+            <div class="sec2">배너</div>
+            <div class="sec3">바로가기</div>
+        </div>
+        <div class="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">COPYRIGHT</div>
+            <div class="foot3">SNS</div>
+        </div>
+    </div>
+
+    <script>
+        const sliderWrap = document.querySelector(".slider__wrap");
+        const sliderImg = sliderWrap.querySelector(".slider__img");
+        const sliderInner = sliderWrap.querySelector(".slider__inner");
+        const slider = sliderWrap.querySelectorAll(".slider");
+
+        let currentIndex = 0;
+        let sliderCount = slider.length;
+        let sliderIntever = 3000;
+
+        sliderInner.style.transition = "all 0.4s";
+
+        setInterval(() => {
+            currentIndex = (currentIndex + 1) % sliderCount;
+
+            sliderInner.style.transform = "translateY(" + -300 * currentIndex + "px)"
+        }, sliderIntever);
+    </script>
+</body>
+
+</html>

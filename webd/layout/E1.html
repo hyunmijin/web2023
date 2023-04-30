@@ -1,1 +1,117 @@
-
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 E유형 1번 레이아웃</title>
+    <link rel="stylesheet" href="/webd/css/webd.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .aside {
+            width: 200px;
+            height: calc(100% - 120px);
+        }
+        .aside1 {
+            width: 100%;
+            height: 100%;
+            /* background-color: #d7acac; */
+        }
+        .aside1-1 {
+            width: 100%;
+            height: 120px;
+            background-color: #d7acac;
+        }
+        .aside1-2 {
+            width: 100%;
+            height: calc(100% - 120px);
+            background-color: #ba9494;
+        }
+        .section {
+            width: 400px;
+            height: calc(100% - 120px);
+            background-color: #000;
+        }
+        .sec1 {
+            width: 100%;
+            height: 21%;
+            background-color: #c89a9a;
+        }
+        .sec2 {
+            width: 100%;
+            height: 29%;
+            background-color: #885f5f;
+        }
+        .sec3 {
+            width: 100%;
+            height: 29%;
+            background-color: #ab3434;
+        }
+        .sec4 {
+            width: 100%;
+            height: 21%;
+            background-color: #c89a9a;
+        }
+        .img {
+            width: calc(100% - 600px);
+            height: calc(100% - 120px);
+            background-color: #ccc;
+        }
+        .footer {
+            display: flex;
+            width: 100%;
+            height: 120px;
+        }
+        .footer1 {
+            width: 200px;
+            height: 120px;
+            background-color: #8f4444;
+        }
+        .footer2 {
+            width: calc(100% - 200px);
+            height: 120px;
+        }
+        .footer2-1 {
+            height: 50%;
+            background-color: #9b6161;
+        }
+        .footer2-2 {
+            height: 50%;
+            background-color: #ab7e7e;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="aside">
+            <div class="aside1">
+                <div class="aside1-1">로고</div>
+                <div class="aside1-2">메뉴</div>
+            </div>
+        </div>
+        <div class="section">
+            <div class="sec1">배너</div>
+            <div class="sec2">공지사항</div>
+            <div class="sec3">갤러리</div>
+            <div class="sec4">링크</div>
+        </div>
+        <div class="img">이미지 슬라이드</div>
+        <div class="footer">
+            <div class="footer1">로고</div>
+            <div class="footer2">
+                <div class="footer2-1">하단메뉴</div>
+                <div class="footer2-2">COPYRIGHT</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>웹디자인 기능사 실기 메뉴유형 2번 레이아웃</title>
+    <link rel="stylesheet" href="/webd/css/webd.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        .wrap {
+            text-align: center;
+            color: #fff;
+            width: 1200px;
+            margin: 0 auto;
+        }
+        .header {
+            display: flex;
+            width: 100%;
+            height: 100px;
+            background-color: #7fc2bc;
+        }
+        .header .logo {
+            width: 30%;
+            height: 100px;
+            background-color: #92cac5;
+        }
+        .header .nav {
+            width: 70%;
+            background-color: #61c7be;
+        }
+        .slider {
+            width: 100%;
+            height: 300px;
+            background-color: #498f89;
+        }
+        .section {
+            width: 100%;
+            display: flex;
+            height: 200px;
+        }
+        .section .sec1 {
+            width: 33.333%;
+            background-color: #359189;
+        }
+        .section .sec2 {
+            width: 33.333%;
+            background-color: #27bdb0;
+        }
+        .section .sec3 {
+            width: 33.333%;
+            background-color: #154b46;
+        }
+        .footer {
+            /* width: 100%; */
+            height: 100px;
+            display: flex;
+        }
+        .footer .foot1 {
+            width: 20%;
+            background-color: #86a19f;
+        }
+        .footer .foot2 {
+            width: 60%;
+            background-color: #1c756f;
+        }
+        .footer .foot3 {
+            width: 20%;
+            background-color: #21beb4;
+        }
+        a {
+            text-decoration: none;
+            color: #000;
+        }
+        li {
+            list-style: none;
+        }
+        .nav {
+            width: 80%;
+            text-align: right;
+            background-color: #ffffff;
+            padding: 30px 40px;
+        }
+        .nav > ul  {
+            display: flex;
+            justify-content: right;
+        }
+        .nav > ul > li {
+            position: relative;
+        }
+        .nav > ul > li > a {
+            background-color: #ffffff;
+            padding: 10px 40px;
+        }
+        .nav > ul > li > a:hover {
+            background-color: #fad0d0;
+        } 
+        .nav > ul > li > ul {
+            position: absolute;
+            left: 0;
+            top: 40px;
+            background-color: #fff;
+            width: 100%;
+            display: none;
+        }
+        .nav > ul > li > ul > li {}
+        .nav > ul > li > ul > li > a {
+            padding: 10px;
+            display: block;
+        }
+        .nav > ul > li > ul > li > a:hover {
+            background-color: #ddd;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <div class="header">
+            <div class="logo">로고</div>
+            <nav class="nav">
+                <ul>
+                    <li>
+                        <a href="#">메뉴1</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴1-1</a></li>
+                            <li><a href="#">서브메뉴1-2</a></li>
+                            <li><a href="#">서브메뉴1-3</a></li>
+                            <li><a href="#">서브메뉴1-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴2</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴2-1</a></li>
+                            <li><a href="#">서브메뉴2-2</a></li>
+                            <li><a href="#">서브메뉴2-3</a></li>
+                            <li><a href="#">서브메뉴2-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴3</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴3-1</a></li>
+                            <li><a href="#">서브메뉴3-2</a></li>
+                            <li><a href="#">서브메뉴3-3</a></li>
+                            <li><a href="#">서브메뉴3-4</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="#">메뉴4</a>
+                        <ul class="submenu">
+                            <li><a href="#">서브메뉴4-1</a></li>
+                            <li><a href="#">서브메뉴4-2</a></li>
+                            <li><a href="#">서브메뉴4-3</a></li>
+                            <li><a href="#">서브메뉴4-4</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="slider">슬라이더</div>
+        <div class="section">
+            <div class="sec1">공지사항</div>
+            <div class="sec2">배너</div>
+            <div class="sec3">바로가기</div>
+        </div>
+        <div class="footer">
+            <div class="foot1">로고</div>
+            <div class="foot2">카피라이트</div>
+            <div class="foot3">SNS</div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+<script>
+    //하나씩
+    // $(".nav > ul > li").mouseover(function(){
+    //     $(this).find(".submenu").stop().slideDown();
+    // });
+    // $(".nav > ul > li").mouseout(function(){
+    //     $(this).find(".submenu").stop().slideUp();
+    // });
+
+    //전체
+    $(".nav > ul > li").mouseover(function(){
+        $(".nav > ul > li").find(".submenu").stop().slideDown();
+    });
+    $(".nav > ul > li").mouseout(function(){
+        $(".nav > ul > li").find(".submenu").stop().slideUp();
+    });
+
+    //자바로변환
+    document.querySelectorAll(".nav > ul > li").forEach(li => {
+        li.addEventListener("mouseover", () => {
+            
+        });
+    });
+    //슬라이더까지 
+    
+</script>
+
+</body>
+</html>
