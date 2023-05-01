@@ -65,34 +65,58 @@
                             <td></td>
                         </tr> -->
 <?php
-    // boardID 값이 존재하는지 확인
     if(isset($_GET['boardID'])) {
-        // boardID 값이 정수형으로 변환 가능한지 확인
-        $boardID = intval($_GET['boardID']);
-        
-        // 정수형으로 변환된 boardID 값이 0 이상인지 확인
-        if($boardID > 0) {
-            // 올바른 boardID 값인 경우에만 SQL 쿼리 실행
-            $sql = "SELECT b.boardContents, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(m.memberID = b.memberID) WHERE b.boardID = {$boardID}";
-            $result = $connect->query($sql);
-
-            if($result) {
-                $info = $result->fetch_array(MYSQLI_ASSOC);
-
-                echo "<tr><th>제목</th><td>".$info['boardTitle']."</td></tr>";
-                echo "<tr><th>등록자</th><td>".$info['youName']."</td></tr>";
-                echo "<tr><th>등록일</th><td>".date('Y-m-d', $info['regTime'])."</td></tr>";
-                echo "<tr><th>조회수</th><td>".$info['boardView']."</td></tr>";
-                echo "<tr><th>내용</th><td>".$info['boardContents']."</td></tr>";
-            } else {
-                echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
-            }
+        $boardID = $_GET['boardID'];
+        //보드뷰
+        $sql = "UPDATE board SET boardView = boardView + 1 WHERE boardID = {$boardID}";
+        $connect -> query($sql);
+        // echo $boardID;
+        $sql = "SELECT b.boardContents, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(m.memberID = b.memberID) WHERE b.boardID = {$boardID}";
+        $result = $connect -> query($sql);
+        if($result){
+            $info = $result -> fetch_array(MYSQLI_ASSOC);
+            echo "<tr><th>제목</th><td>".$info['boardTitle']."</td></tr>";
+            echo "<tr><th>등록자</th><td>".$info['youName']."</td></tr>";
+            echo "<tr><th>등록일</th><td>".date('Y-m-d', $info['regTime'])."</td></tr>";
+            echo "<tr><th>조회수</th><td>".$info['boardView']."</td></tr>";
+            echo "<tr><th>내용</th><td>".$info['boardContents']."</td></tr>";
         } else {
-            echo "<tr><td colspan='4'>잘못된 게시글 ID입니다.</td></tr>";
+            echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
         }
-    } else {
-        echo "<tr><td colspan='4'>게시글 ID가 전달되지 않았습니다.</td></tr>";
     }
+    // // boardID 값이 존재하는지 확인
+    // if(isset($_GET['boardID'])) {
+
+    //     //보드 뷰 +1
+    //     $sql = "UPDATE borad SET boardView = boardView + 1 WHERE boardID = {$boardID}";
+    //     $connect -> query($sql);
+
+    //     // boardID 값이 정수형으로 변환 가능한지 확인
+    //     $boardID = intval($_GET['boardID']);
+        
+    //     // 정수형으로 변환된 boardID 값이 0 이상인지 확인
+    //     if($boardID > 0) {
+    //         // 올바른 boardID 값인 경우에만 SQL 쿼리 실행
+    //         $sql = "SELECT b.boardContents, b.boardTitle, m.youName, b.regTime, b.boardView FROM board b JOIN members m ON(m.memberID = b.memberID) WHERE b.boardID = {$boardID}";
+    //         $result = $connect->query($sql);
+
+    //         if($result) {
+    //             $info = $result->fetch_array(MYSQLI_ASSOC);
+
+    //             echo "<tr><th>제목</th><td>".$info['boardTitle']."</td></tr>";
+    //             echo "<tr><th>등록자</th><td>".$info['youName']."</td></tr>";
+    //             echo "<tr><th>등록일</th><td>".date('Y-m-d', $info['regTime'])."</td></tr>";
+    //             echo "<tr><th>조회수</th><td>".$info['boardView']."</td></tr>";
+    //             echo "<tr><th>내용</th><td>".$info['boardContents']."</td></tr>";
+    //         } else {
+    //             echo "<tr><td colspan='4'>게시글이 없습니다.</td></tr>";
+    //         }
+    //     } else {
+    //         echo "<tr><td colspan='4'>잘못된 게시글 ID입니다.</td></tr>";
+    //     }
+    // } else {
+    //     echo "<tr><td colspan='4'>게시글 ID가 전달되지 않았습니다.</td></tr>";
+    // }
 ?>
                     </tbody>
                 </table>

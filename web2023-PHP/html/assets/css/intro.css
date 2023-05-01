@@ -43,6 +43,9 @@
     text-align: center;
     /* padding: 0 10%; */
 }
+.intro__inner.center .intro__text em {
+    color: red;
+}
 .intro__btn {
     margin-top: 30px;
     margin-bottom: 50px;

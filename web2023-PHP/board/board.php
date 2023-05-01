@@ -1,6 +1,12 @@
 <?php
     include "../connect/connect.php";
     include "../connect/session.php";
+
+    $sql = "SELECT count(boardID) FROM board";
+    $result = $connect -> query($sql);
+
+    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
+    $boardTotalCount = $boardTotalCount['count(boardID)'];
 ?>
 
 <!DOCTYPE html>
@@ -38,14 +44,14 @@
         <div calss="board__inner">
             <div class="board__search">
                 <div class="left">
-                    *총<em>1111</em>건의 게시물이 등록되어 있습니다.
+                    *총<em><?=$boardTotalCount?></em>건의 게시물이 등록되어 있습니다.
                 </div>
                 <div class="right">
-                    <form action="#" name="#" method="post">
+                    <form action="boardSearch.php" name="boardSearch" method="get">
                         <fieldset>
                             <legend class="blind">게시판 검색 영역</legend>
-                            <input type="search" placeholder="검색어를 입력하세요!">
-                            <select name="#" id="#">
+                            <input type="search" name="searchKeyword" id="searchKeyword" placeholder="검색어를 입력하세요!" required>
+                            <select name="searchOption" id="searchOption">
                                 <option value="title">제목</option>
                                 <option value="content">내용</option>
                                 <option value="name">등록자</option>
@@ -127,17 +133,6 @@
                 <ul>
 <?php
     //게시글 총 갯수
-    // 몇 페이지??
-
-    $viewNum = 10;
-
-    $sql = "SELECT count(boardID) FROM board";
-    $result = $connect -> query($sql);
-
-    $boardTotalCount = $result -> fetch_array(MYSQLI_ASSOC);
-    $boardTotalCount = $boardTotalCount['count(boardID)'];
-
-
 
     //총 페이지 갯수
     $boardTotalCount = ceil($boardTotalCount/$viewNum);
@@ -153,7 +148,7 @@
     if($endPage >= $boardTotalCount) $endPage = $boardTotalCount;
 
     // 첫 페이지로 가기/ 이전 페이지로 가기
-    if($page != 1 && $page < $boardTotalCount){
+    if($page !== 1 && $boardTotalCount !=0 && $page <= $boardTotalCount){
         echo "<li><a href='board.php?page=1'>처음으로</a></li>";
         $prevPage = $page - 1;
         echo "<li><a href='board.php?page={$prevPage}'>이전</a></li>";
@@ -166,14 +161,12 @@
 
         echo "<li class='{$active}'><a href='board.php?page={$i}'>{$i}</a></li>";
     }
-// 마지막 페이지로/ 다음 페이지로
-if($page != $boardTotalCount && $page < $boardTotalCount){
-    $nextPage = $page + 1;
-    echo "<li><a href='board.php?page={$nextPage}'>다음</a></li>";
-    echo "<li><a href='board.php?page={$boardTotalCount}'>마지막으로</a></li>";
-}
-
-
+    // 마지막 페이지로/ 다음 페이지로
+    if($page != $boardTotalCount && $page <= $boardTotalCount){
+        $nextPage = $page + 1;
+        echo "<li><a href='board.php?page={$nextPage}'>다음</a></li>";
+        echo "<li><a href='board.php?page={$boardTotalCount}'>마지막으로</a></li>";
+    }
 ?>
                     <!-- <li><a href="#">처음으로</a></li>
                     <li><a href="#">이전</a></li>
