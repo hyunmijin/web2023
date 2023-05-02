@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="ko">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -13,16 +14,19 @@
     <meta name="robots" content="all">
 
     <!-- 파비콘 -->
-    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/cake.png"/>
-    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/cake.png"/>
-    <link rel="apple-touch-icon" href="assets/ico/cake.png"/> 
+    <link rel="shortcut icon" type="image/x-icon" href="assets/ico/cake.png" />
+    <link rel="apple-touch-icon" sizes="114x114" href="assets/ico/cake.png" />
+    <link rel="apple-touch-icon" href="assets/ico/cake.png" />
 
     <!-- CSS -->
     <link rel="stylesheet" href="assets/css/fonts.css">
     <link rel="stylesheet" href="assets/css/reset.css">
     <link rel="stylesheet" href="assets/css/common.css">
+    <link rel="stylesheet" href="assets/css/swiper.css">
     <link rel="stylesheet" href="assets/css/style.css">
+
 </head>
+
 <body>
     <div id="skip">
         <a href="#">헤더 영역 바로가기</a>
@@ -43,32 +47,61 @@
 
     <main id="mainType">
         <section id="sliderType" class="nexon">
-            <h2  class="blind">슬라이드 영역</h2>
+            <h2 class="blind">슬라이드 영역</h2>
             <div class="slider__inner">
-                <div class="slider">
-                    <div class="slider__info container">
-                        <span class="small">event</span>
-                        <h3 class="title">커피와 함께하는 사이트</h3>
-                        <p class="desc">커피에 관심 있는 사람들이 모여 정보를 공유하고 소통할 수 있는 커뮤니티 사이트입니다. 커피 추천, 맛집 추천, 추출 방법 등의 정보를 얻을 수 있습니다.</p>
-                        <div class="btn">
-                            <a href="#">자세히 보기</a>
-                            <a href="#">상담 신청</a>
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider img1">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">커피와 함께하는 사이트</h3>
+                                    <p class="desc">커피에 관심 있는 사람들이 모여 정보를 공유하고 소통할 수 있는 커뮤니티 사이트입니다. 커피 추천, 맛집 추천, 추출 방법
+                                        등의 정보를 얻을 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img2">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">커피와 함께하는 사이트</h3>
+                                    <p class="desc">커피에 관심 있는 사람들이 모여 정보를 공유하고 소통할 수 있는 커뮤니티 사이트입니다. 커피 추천, 맛집 추천, 추출 방법
+                                        등의 정보를 얻을 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider img3">
+                                <div class="slider__info container">
+                                    <span class="small">event</span>
+                                    <h3 class="title">커피와 함께하는 사이트</h3>
+                                    <p class="desc">커피에 관심 있는 사람들이 모여 정보를 공유하고 소통할 수 있는 커뮤니티 사이트입니다. 커피 추천, 맛집 추천, 추출 방법
+                                        등의 정보를 얻을 수 있습니다.</p>
+                                    <div class="btn">
+                                        <a href="#">자세히 보기</a>
+                                        <a href="#">상담 신청</a>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                    <div class="silder__arrow">
-                        <a href="#"><span class="blind">이전 이미지</span></a>
-                        <a href="#"><span class="blind">다음 이미지</span></a>
+                    <div class="swiper-pagination"></div>
+                    <div class="swiper-button">
+                        <div class="swiper-button-play"><span class="ir">play</span></div>
+                        <div class="swiper-button-stop"><span class="ir">stop</span></div>
                     </div>
-                    <div class="silder__dot">
-                        <a href="#" class="dot active"><span class="blind">첫번째 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">두번째 이미지</span></a>
-                        <a href="#" class="dot"><span class="blind">세번째 이미지</span></a>
-                        <a href="#" class="play"><span class="blind">플레이</span></a>
-                        <a href="#" class="stop"><span class="blind">정지</span></a>
-                    </div>
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
                 </div>
-                <!-- <div class="slider"></div>
-                <div class="slider"></div> -->
             </div>
         </section>
         <!-- //sliderType -->
@@ -80,24 +113,24 @@
 
             <div class="image__inner container">
                 <article class="image">
-                <figure class="image__header">
-                    <img src="assets/img/imageType01_01.jpg" alt="커피란 무엇인가">
-                </figure>
-                <div class="image__body">
-                    <h3 class="title">커피란 무엇인가</h3>
-                    <p class="desc">일반적으로 커피 열매의 씨앗인 커피 콩, 혹은 그 씨앗을 로스팅해 갈아서 물에 우려내서 만드는 음료</p>
-                    <a href="#" class="btn">자세히보기</a>
-                </div>
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_01.jpg" alt="커피란 무엇인가">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">커피란 무엇인가</h3>
+                        <p class="desc">일반적으로 커피 열매의 씨앗인 커피 콩, 혹은 그 씨앗을 로스팅해 갈아서 물에 우려내서 만드는 음료</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
                 </article>
                 <article class="image">
-                <figure class="image__header">
-                    <img src="assets/img/imageType01_02.jpg" alt="커피의 종류">
-                </figure>
-                <div class="image__body">
-                    <h3 class="title">커피의 종류</h3>
-                    <p class="desc">커피의 품종은 크게 3가지로 구별 아바리카, 로부스타, 리베리카</p>
-                    <a href="#" class="btn">자세히보기</a>
-                </div>
+                    <figure class="image__header">
+                        <img src="assets/img/imageType01_02.jpg" alt="커피의 종류">
+                    </figure>
+                    <div class="image__body">
+                        <h3 class="title">커피의 종류</h3>
+                        <p class="desc">커피의 품종은 크게 3가지로 구별 아바리카, 로부스타, 리베리카</p>
+                        <a href="#" class="btn">자세히보기</a>
+                    </div>
                 </article>
             </div>
         </section>
@@ -109,7 +142,7 @@
                 <article class="text">
                     <span>NOTICE</span>
                     <h3>요즘 인기있는 커피 종류</h3>
-                    <p>카페인테리어는 카페 내부의 디자인과  인테리어를 의미합니다.</p>
+                    <p>카페인테리어는 카페 내부의 디자인과 인테리어를 의미합니다.</p>
                     <ul>
                         <li><a href="#">에스프레소(Espresso)</a></li>
                         <li><a href="#">라떼 마키아또 (Latte Macchiato)</a></li>
@@ -138,17 +171,19 @@
             <h2 class="blind">카드 영역</h2>
             <div class="container">
                 <h2 class="section__h2">커피에 대해 알아보자</h2>
-                <p class="section__desc">커피는 카페인이 포함된 차류 음료입니다. 커피는 주로 커피 콩에서 추출되며, 세계 각국에서 재배되고 있습니다. 일반적으로 커피는 커피빈, 원두, 분쇄된 커피 등 다양한 형태로 판매됩니다.</p>
-                <div class="card__inner"> 
+                <p class="section__desc">커피는 카페인이 포함된 차류 음료입니다. 커피는 주로 커피 콩에서 추출되며, 세계 각국에서 재배되고 있습니다. 일반적으로 커피는 커피빈,
+                    원두, 분쇄된 커피 등 다양한 형태로 판매됩니다.</p>
+                <div class="card__inner">
                     <article class="card">
                         <figure class="card__header">
                             <img src="assets/img/cardType01_01.jpg" alt="커피의 좋은점">
                         </figure>
                         <div class="card__body">
                             <h3 class="title">커피의 좋은점</h3>
-                            <p class="desc">커피는 일부 연구에서 많은 건강상의 이점이 있다는 것으로 나타났습니다. 커피는 당뇨병, 간암, 알츠하이머병 등의 발병 위험을 줄이는 데 도움이 될 수 있다는 것으로 알려져 있습니다.</p>
-                            <a href="#" class="btn">자세히 보기</a> 
-                        </div> 
+                            <p class="desc">커피는 일부 연구에서 많은 건강상의 이점이 있다는 것으로 나타났습니다. 커피는 당뇨병, 간암, 알츠하이머병 등의 발병 위험을 줄이는 데
+                                도움이 될 수 있다는 것으로 알려져 있습니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
+                        </div>
                     </article>
                     <article class="card">
                         <figure class="card__header">
@@ -156,8 +191,9 @@
                         </figure>
                         <div class="card__body">
                             <h3 class="title">커피의 안좋은점</h3>
-                            <p class="desc">과도한 카페인 섭취는 심장 및 불면증 등의 건강상의 문제를 유발할 수 있으므로 적절한 양을 유지하는 것이 중요, 개인의 건강 상태 및 개인의 카페인 허용 한계를 고려하여 섭취해야 합니다.</p>
-                            <a href="#" class="btn">자세히 보기</a> 
+                            <p class="desc">과도한 카페인 섭취는 심장 및 불면증 등의 건강상의 문제를 유발할 수 있으므로 적절한 양을 유지하는 것이 중요, 개인의 건강 상태 및
+                                개인의 카페인 허용 한계를 고려하여 섭취해야 합니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
                         </div>
                     </article>
                     <div class="card">
@@ -166,8 +202,9 @@
                         </figure>
                         <div class="card__body">
                             <h3 class="title">커피의 재배</h3>
-                            <p class="desc">에티오피아, 콜롬비아, 브라질, 인도네시아 등 세계 각국에서 재배되고 있습니다. 커피의 품질은 재배 지역, 고도, 일조량, 재배 방법 등 다양한 요인에 따라 결정됩니다.</p>
-                            <a href="#" class="btn">자세히 보기</a> 
+                            <p class="desc">에티오피아, 콜롬비아, 브라질, 인도네시아 등 세계 각국에서 재배되고 있습니다. 커피의 품질은 재배 지역, 고도, 일조량, 재배 방법 등
+                                다양한 요인에 따라 결정됩니다.</p>
+                            <a href="#" class="btn">자세히 보기</a>
                         </div>
                     </div>
                 </div>
@@ -176,7 +213,7 @@
         <!-- //cardType -->
 
         <section id="bannerType">
-            <h2 class="blind"  class="nexon section">베너 영역</h2>
+            <h2 class="blind" class="nexon section">베너 영역</h2>
             <div class="banner__inner">
                 <div class="banner">
                     <div class="banner__info section nexon center">
@@ -197,32 +234,38 @@
             <div class="text__inner container">
                 <div class="text t1">
                     <h3 class="text__title">요즘 유행하는 커피</h3>
-                    <p class="text__desc">콜드 브루 커피, 네이트로 커피, 핸드 드립 커피, 라떼 아트, 샷 브루 커피, 캡슐 커피 등 여러가지 커피가 있습니다. 요즘은 달달한 크림이 올라간 커피도 유행이고 쓴 에스프레소도 유행입니다.</p>
+                    <p class="text__desc">콜드 브루 커피, 네이트로 커피, 핸드 드립 커피, 라떼 아트, 샷 브루 커피, 캡슐 커피 등 여러가지 커피가 있습니다. 요즘은 달달한
+                        크림이 올라간 커피도 유행이고 쓴 에스프레소도 유행입니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t2">
                     <h3 class="text__title">커피 맛있는 카페</h3>
-                    <p class="text__desc">네이버 블로그나 인스타그램, 근처 카페 찾기 등과같은 검색 기능으로 카페를 찾을 수 있습니다. 전문적인 로스팅카페를 원한다면 로스팅하는카페를 검색해보면됩니다.</p>
+                    <p class="text__desc">네이버 블로그나 인스타그램, 근처 카페 찾기 등과같은 검색 기능으로 카페를 찾을 수 있습니다. 전문적인 로스팅카페를 원한다면 로스팅하는카페를
+                        검색해보면됩니다.</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t3">
                     <h3 class="text__title">1일 2카페</h3>
-                    <p class="text__desc">맛있고 예쁜 카페를 하나 가면 근처에 또 좋은 카페 없나 둘러보게 됩니다. 그렇게 1일 2카페를 가서 둘다 성공하면 그날은 기분 UP! 바로 블로그나 인스타 포스팅을 해야겠죠?</p>
+                    <p class="text__desc">맛있고 예쁜 카페를 하나 가면 근처에 또 좋은 카페 없나 둘러보게 됩니다. 그렇게 1일 2카페를 가서 둘다 성공하면 그날은 기분 UP! 바로
+                        블로그나 인스타 포스팅을 해야겠죠?</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t4">
                     <h3 class="text__title">분위기 좋은 카페</h3>
-                    <p class="text__desc">카페를 갈때는 맛도 중요하지만 분위기도 많이 봅니다. 인테리어가 예쁜 카페는 일단 들어가보곤하는데요. 이런 예쁜 카페들이 맛도 좋은면 더 좋겠죠?</p>
+                    <p class="text__desc">카페를 갈때는 맛도 중요하지만 분위기도 많이 봅니다. 인테리어가 예쁜 카페는 일단 들어가보곤하는데요. 이런 예쁜 카페들이 맛도 좋은면 더
+                        좋겠죠?</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t5">
                     <h3 class="text__title">디저트 맛있는 카페</h3>
-                    <p class="text__desc">요즘은 베이커리 카페가 정말 많아졌습니다. 커피도 커피지만 같이 먹을 디저트까지 맛있다면 정말 좋겠죠? 디저트 맛집이 있다면 알려줘~ 좋은 곳은 다같이 공유하자구요!~</p>
+                    <p class="text__desc">요즘은 베이커리 카페가 정말 많아졌습니다. 커피도 커피지만 같이 먹을 디저트까지 맛있다면 정말 좋겠죠? 디저트 맛집이 있다면 알려줘~ 좋은
+                        곳은 다같이 공유하자구요!~</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
                 <div class="text t6">
                     <h3 class="text__title">편안한 카페</h3>
-                    <p class="text__desc">카페를 놀러갈때 가기도 하지만 공부하러 가거나 작업하러 갈때는 편안하고 시끄럽지 않은 카페를 찾게됩니다. 이런 편안한 카페들도 따로 알아두면 좋겠죠?</p>
+                    <p class="text__desc">카페를 놀러갈때 가기도 하지만 공부하러 가거나 작업하러 갈때는 편안하고 시끄럽지 않은 카페를 찾게됩니다. 이런 편안한 카페들도 따로 알아두면
+                        좋겠죠?</p>
                     <a class="text__btn" href="#">더보기</a>
                 </div>
             </div>
@@ -300,5 +343,45 @@
         </div>
     </footer>
     <!-- footerType -->
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script>
+        const swiper = new Swiper('.swiper', {
+            direction: 'horizontal',
+            loop: true,
+
+            autoplay: {
+                delay:3000,
+                disableOnInteraction: false,
+            },
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable : true,
+            },
+
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        }); 
+
+        const btnStop = document.querySelector(".swiper-button-stop");
+        const btnStart = document.querySelector(".swiper-button-play");
+
+        btnStart.style.display = "none";
+
+        document.querySelector(".swiper-button-play").addEventListener("click", () => {
+            swiper.autoplay.start();
+            btnStart.style.display = "none";
+            btnStop.style.display = "block";
+        });
+        document.querySelector(".swiper-button-stop").addEventListener("click", () => {
+            swiper.autoplay.stop();
+            btnStart.style.display = "block";
+            btnStop.style.display = "none";
+        });
+    </script>
 </body>
+
 </html>
