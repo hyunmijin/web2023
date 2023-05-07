@@ -985,10 +985,10 @@
 
                 <div id="sample27" class="sample">
                     <h3>27. 함수 종류 : 콜백 함수(반복문)</h3>
-                    <p>콜백함수는 다른 함수의 인수로 전달되는 함수이다. 이를 통해 함수의 동작을 조작하거나 확장할 수 있다. <br>어떤 함수에 콜백 함수를 전달하면 그 함수는 작업이 끝난 후에
-                        콜백 함수를 호출하여 결과를 반환할 수 있다.</p>
+                    <p>반복문에서 사용되는 콜백함수의 경우, 일반적으로 배열의 각 요소에 대해 적용됩니다. 예를 들어 javascript에서 forEach()메서드를 사용해 배열의 각 요소를 반복하면 콜백함수가 호출됩니다.<br>
+                    콜백함수의 인자로는 현재 요소, 해당 요소의 인덱스, 배열 전체가 전달됩니다.</p>
                     <div class="script">
-<pre><code code class="language-js">{
+                        <pre><code code class="language-js">{
     function func(index){
         console.log("함수실행"+index);
     }
@@ -1021,6 +1021,109 @@
                     </div>
                 </div>
                 <!-- sample27 -->
+
+                <div id="sample28" class="sample">
+                    <h3>28. 함수 종류 : 콜백 함수(동기/비동기)</h3>
+                    <p>동기적 콜백 함수는 호출된 함수가 콜백 함수의 실행이 끝날 때까지 기다립니다. 이 경우 콜백함수는 호출된 함수와 동기적으로 작동하며, 호출된 함수가 실행 중일 때 다른 코드가 실행되지 않습니다.
+                    <br>ex) Array.prototype.forEach()<br>
+                    비동기적 콜백 하뭇는 호출된 함수의 실행과 독립적으로 작동합니다. 호출된 함수가 작업을 완료할 때까지 콜백함수는 기다리지 않고 다른 코드를 실행합니다.
+                    ex) setTimeout(), Node.js의 fs.readaFile()</p>
+                    <div class="script">
+                        <pre><code code class="language-js">{
+    //01
+    function funcA(){
+        console.log("funcA가 실행되었습니다.");
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+
+    funcA();
+    funcB();
+
+    //02
+    function funcA(){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+        }, 1000)
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+    funcA();
+    funcB();
+
+    //03
+    function funcA(callback){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcB(){
+        console.log("funcB가 실행되었습니다.");
+    }
+    funcA(function(){
+        funcB();
+    });
+
+    //04. 콜백지옥
+    function funcA(callback){
+        setTimeout(() => {
+            console.log("funcA가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcB(callback){
+        setTimeout(() => {
+            console.log("funcB가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcC(callback){
+        setTimeout(() => {
+            console.log("funcC가 실행되었습니다.");
+            callback();
+        }, 1000);
+    }
+    function funcD(){
+        setTimeout(() => {
+            console.log("funcD가 실행되었습니다.");
+        }, 1000);
+    }
+    funcA(function(){
+        funcB(function(){
+            funcC(function(){
+                funcD();
+            });
+        });
+    });
+}
+</code></pre>
+                    </div>
+
+                    <div class="result">
+                        <details>
+                            <summary>결과 확인하기</summary>
+                            <div>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br>
+                                <br>
+                                funcB가 실행되었습니다.<br>
+                                funcA가 실행되었습니다.<br>
+                                <br>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br>
+                                <br>
+                                funcA가 실행되었습니다.<br>
+                                funB가 실행되었습니다.<br>
+                                funC가 실행되었습니다.<br>
+                                funD가 실행되었습니다.
+                            </div>
+                        </details>
+                    </div>
+                </div>
+                <!-- sample28 -->
             </div>
     </main>
     <!-- //main -->
@@ -1032,91 +1135,7 @@
 
     <script src="assets/js/highlight.min.js"></script>
     <script>hljs.highlightAll();</script>
-    <script>
-        //27. 콜백함수 :  반복문
-        {
-            function func(index){
-                console.log("함수실행"+index);
-            }
-            function callback(num){
-                for(let i=1; i<=10; i++){
-                    num(i);
-                }
-            }
-            callback(func);
-        }
-
-        //28. 콜백함수 : 동기/비동기
-        // {
-            //01
-            // function funcA (){
-            //     console.log("funcA실행");
-            // }
-            // function funcB (){
-            //     console.log("funcB실행");
-            // }
-            // funcA();
-            // funcB();
-
-            //02
-            // function funcA (){
-            //     setTimeout(() => {
-            //         console.log("funcA실행");
-            //     }, 1000)
-            // }
-            // function funcB (){
-            //     console.log("funcB실행");
-            // }
-            // funcA();
-            // funcB();
-
-            //03
-            // function funcA(callback){
-            //     setTimeout(() => {
-            //         console.log("funcA실행");
-            //         callback();
-            //     }, 1000)
-            // }
-            // function funcB(){
-            //     console.log("funcB실행");
-            // }
-            // funcA(function(){
-            //     funcB();
-            // });
-
-            //04 : 콜백지옥
-        //     function funcA(callback) {
-        //         setTimeout(() => {
-        //             console.log("funcA실행");
-        //             callback();
-        //         }, 1000);
-        //     }
-        //     function funcB(callback) {
-        //         setTimeout(() => {
-        //             console.log("funcB실행");
-        //             callback();
-        //         }, 1000);
-        //     }
-        //     function funcC(callback) {
-        //         setTimeout(() => {
-        //             console.log("funcC실행");
-        //             callback();
-        //         }, 1000);
-        //     }
-        //     function funcD() {
-        //         setTimeout(() => {
-        //             console.log("funcD실행");
-        //         }, 1000);
-        //     }
-        //     funcA(function () {
-        //         funcB(function () {
-        //             funcC(function () {
-        //                 funcD();
-        //             })
-        //         })
-        //     })
-        // }
-    </script>
+    <script></script>
 
 </body>
 
