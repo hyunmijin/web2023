@@ -120,7 +120,7 @@ webpack compiled successfully
 
                 <div class="bs-docs-section">
                     <h3 id="intro3" class="page-header">REACT 기본 개념 익히기</h3>
-                    <h4 id="intro3-1"class="bs-docs-section">1. hello world 출력하기</h4>
+                    <h4 id="intro3-1" class="page-header">1. hello world 출력하기</h4>
 <pre><code class="language-js">import React from "react";
 import ReactDOM from "react-dom/client";
 
@@ -129,8 +129,8 @@ root.render(&lt;h1&gt;Hello World&lt;/h1&gt;);
 
 //hello world
 </code></pre>
-                    <h4 class="bs-docs-section">2. JSX</h4>
-                    <p>JSX는 React에서 UI를 생성하는 데 필요한 구성 요소(component)와 같은 JavaScript 코드를 생성하기 위해 사용됩니다. 이렇게 생성된 JavaScript 코드는 React에서 사용되는 createElement() 함수를 사용하여 가상돔(Virtual DOM) 객체를 생성합니다.</p>
+                    <h4 class="page-header">2. JSX</h4>
+                    <p id="intro3-2">JSX는 React에서 UI를 생성하는 데 필요한 구성 요소(component)와 같은 JavaScript 코드를 생성하기 위해 사용됩니다. 이렇게 생성된 JavaScript 코드는 React에서 사용되는 createElement() 함수를 사용하여 가상돔(Virtual DOM) 객체를 생성합니다.</p>
 <pre><code class="language-js">const name = "jinhyunmi";
 const hello = <h1>hello {name}</h1>
 
@@ -141,22 +141,23 @@ root.render(hello);
 </code></pre>
                     <p>객체와 함수를 같이 사용한 경우</p>
 <pre><code class="language-js">import React from "react";
-    import ReactDOM from "react-dom/client";
-    
-    function helloName(){
-      return name.nick;
-    }
-    
-    const name = {
-      nick : "hyunmi",
-    }
-    
-    const hello = <h1>Hello, {helloName()}</h1>;
-    
-    const root = ReactDOM.createRoot(document.getElementById("root"));
-    root.render(hello);
+import ReactDOM from "react-dom/client";
+
+function helloName(){
+    return name.nick;
+}
+
+const name = {
+    nick : "hyunmi",
+}
+
+const hello = <h1>Hello, {helloName()}</h1>;
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
+root.render(hello);
 </code></pre>
-                    <h4 class="bs-docs-section">3. 렌더링</h4>
+                    <h4 class="page-header">3. 렌더링</h4>
+                    <p id="intro3-3"></p>
 <pre><code class="language-js">import React from 'react'
 import ReactDOM from 'react-dom';
 
