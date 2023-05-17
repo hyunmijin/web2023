@@ -11,18 +11,283 @@
     <link rel="stylesheet" href="css/parallax.css">
 </head>
 <style>
-    .split span{
+    /* .split span {
         display: inline-block;
         min-width: 1vw;
         opacity: 0;
         transform: translateY(50px);
         transition: all 0.6s cubic-bezier(0.075, 0.82, 0.165, 1);
     }
-    .split.show span{
+
+    .split span.show {
         opacity: 1;
         transform: translateY(0);
     }
-    .split span:nth-child(1) {transition-delay: 100ms;}
+
+    /* 기본 효과 */
+    /* .style1.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .style1.split span.show {
+        opacity: 1;
+    } */
+
+    /* 밑에서 올라오기 */
+    /* .style2.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+        transition: all 0.3s ease-in-out;
+        transform: translateY(100px);
+    }
+
+    .style2.split span.show {
+        opacity: 1;
+        transform: translateY(0);
+    } */
+
+    /* 효과3 */
+    /* .style3.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+        transition: all 0.3s cubic-bezier(0.075, 0.82, 0.165, 1);
+        transform: translateY(100px) translateX(-100px) rotate(360deg);
+    }
+
+    .style3.split span.show {
+        opacity: 1;
+        transform: translateY(0) translateX(0) rotate(0);
+    } */
+
+    /* 효과4 */
+    /* .style4.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+    }
+
+    .style4.split span.show {
+        animation: wobble 0.5s 1;
+        opacity: 1;
+    } */
+
+    /* 효과5 */
+    /* .style5.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+    }
+
+    .style5.split span.show {
+        animation: rubberBand 0.5s 1;
+        opacity: 1;
+    } */
+
+    /* 효과6 */
+    /* .style6.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+    }
+
+    .style6.split span.show {
+        animation: flash 0.5s 1;
+        opacity: 1;
+    } */
+
+    /* 효과7 */
+    /* .style7.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+    }
+
+    .style7.split span.show {
+        animation: flip 0.5s 1;
+        opacity: 1;
+    } */
+
+    /* 효과8 */
+    /* .style8.split span {
+        opacity: 0;
+        display: inline-block;
+        min-width: 1vw;
+    }
+
+    .style8.split span.show {
+        animation: flipInX 0.5s 1;
+        opacity: 1;
+    } */
+
+    /* @keyframes wobble {
+        0% {
+            transform: translate3d(0, 0, 0);
+            opacity: 0;
+        }
+
+        15% {
+            transform: translate3d(-25%, 25%, 0) rotate3d(0, 0, 1, -5deg);
+        }
+
+        30% {
+            transform: translate3d(20%, 20%, 0) rotate3d(0, 0, 1, 3deg);
+        }
+
+        45% {
+            transform: translate3d(-15%, 15%, 0) rotate3d(0, 0, 1, -3deg);
+        }
+
+        60% {
+            transform: translate3d(10%, 10%, 0) rotate3d(0, 0, 1, 2deg);
+        }
+
+        75% {
+            transform: translate3d(-5%, 5%, 0) rotate3d(0, 0, 1, -1deg);
+        }
+
+        100% {
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+    }
+
+    @keyframes rubberBand {
+        0% {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1)
+        }
+
+        30% {
+            -webkit-transform: scale3d(1.25, .75, 1);
+            transform: scale3d(1.25, .75, 1)
+        }
+
+        40% {
+            -webkit-transform: scale3d(.75, 1.25, 1);
+            transform: scale3d(.75, 1.25, 1)
+        }
+
+        50% {
+            -webkit-transform: scale3d(1.15, .85, 1);
+            transform: scale3d(1.15, .85, 1)
+        }
+
+        65% {
+            -webkit-transform: scale3d(.95, 1.05, 1);
+            transform: scale3d(.95, 1.05, 1)
+        }
+
+        75% {
+            -webkit-transform: scale3d(1.05, .95, 1);
+            transform: scale3d(1.05, .95, 1)
+        }
+
+        to {
+            -webkit-transform: scaleX(1);
+            transform: scaleX(1)
+        }
+    }
+
+    @keyframes flash {
+
+        0%,
+        50%,
+        to {
+            opacity: 1
+        }
+
+        25%,
+        75% {
+            opacity: 0
+        }
+    }
+
+    @keyframes flip {
+        0% {
+            -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+            transform: perspective(400px) scaleX(1) translateZ(0) rotateY(-1turn);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out
+        }
+
+        40% {
+            -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+            transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-190deg);
+            -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out
+        }
+
+        50% {
+            -webkit-transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+            transform: perspective(400px) scaleX(1) translateZ(150px) rotateY(-170deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+        }
+
+        80% {
+            -webkit-transform: perspective(400px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg);
+            transform: perspective(400px) scale3d(.95, .95, .95) translateZ(0) rotateY(0deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+        }
+
+        to {
+            -webkit-transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+            transform: perspective(400px) scaleX(1) translateZ(0) rotateY(0deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+        }
+    }
+
+    @keyframes flipInX {
+        0% {
+            -webkit-transform: perspective(400px) rotateX(90deg);
+            transform: perspective(400px) rotateX(90deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in;
+            opacity: 0
+        }
+
+        40% {
+            -webkit-transform: perspective(400px) rotateX(-20deg);
+            transform: perspective(400px) rotateX(-20deg);
+            -webkit-animation-timing-function: ease-in;
+            animation-timing-function: ease-in
+        }
+
+        60% {
+            -webkit-transform: perspective(400px) rotateX(10deg);
+            transform: perspective(400px) rotateX(10deg);
+            opacity: 1
+        }
+
+        80% {
+            -webkit-transform: perspective(400px) rotateX(-5deg);
+            transform: perspective(400px) rotateX(-5deg)
+        }
+
+        to {
+            -webkit-transform: perspective(400px);
+            transform: perspective(400px)
+        }
+    }  */
+    .split {
+        transform-style: preserve-3d;
+    }
+    .split span {
+        display: inline-block;
+        min-width: 1vw;
+        opacity: 0;
+        transform: translate3d(-100px, 100px, 30px) scale(4) rotate(200deg);
+    }
+
+
+    /* .split span:nth-child(1) {transition-delay: 100ms;}
     .split span:nth-child(2) {transition-delay: 150ms;}
     .split span:nth-child(3) {transition-delay: 200ms;}
     .split span:nth-child(4) {transition-delay: 250ms;}
@@ -63,7 +328,8 @@
     .split span:nth-child(39) {transition-delay: 2100ms;}
     .split span:nth-child(40) {transition-delay: 2150ms;}
     .split span:nth-child(41) {transition-delay: 2200ms;}
-    .split span:nth-child(42) {transition-delay: 2250ms;}
+    .split span:nth-child(42) {transition-delay: 2250ms;} */
+    
 </style>
 
 <body class="img01 bg01 font10">
@@ -90,7 +356,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">네가 믿을 수 있다면, 넌 이미 반 이긴 것이다.</p>
+                <p class="parallax__item__desc split style8">네가 믿을 수 있다면, 넌 이미 반 이긴 것이다.</p>
             </section>
             <!-- //section1 -->
 
@@ -100,7 +366,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">성공의 비결은 시작하는 것이다.</p>
+                <p class="parallax__item__desc split style2">성공의 비결은 시작하는 것이다.</p>
             </section>
             <!-- //section2 -->
 
@@ -110,7 +376,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">불가능은 무엇인가? 단지 미래의 가능성을 아직 발견하지 못한 것일 뿐이다.</p>
+                <p class="parallax__item__desc split style3">불가능은 무엇인가? 단지 미래의 가능성을 아직 발견하지 못한 것일 뿐이다.</p>
             </section>
             <!-- //section3 -->
 
@@ -120,7 +386,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">계획이 없다면 실패를 계획한 것이다.</p>
+                <p class="parallax__item__desc split style4">계획이 없다면 실패를 계획한 것이다.</p>
             </section>
             <!-- //section4 -->
 
@@ -130,7 +396,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">내일의 나를 더 나은 사람으로 만들기 위해 오늘 노력하라.</p>
+                <p class="parallax__item__desc split style5">내일의 나를 더 나은 사람으로 만들기 위해 오늘 노력하라.</p>
             </section>
             <!-- //section5 -->
 
@@ -140,7 +406,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">기회는 문을 두드리지 않는다. 우리가 문을 열어야 한다.</p>
+                <p class="parallax__item__desc split style6">기회는 문을 두드리지 않는다. 우리가 문을 열어야 한다.</p>
             </section>
             <!-- //section6 -->
 
@@ -150,7 +416,7 @@
                 <figure class="parallax__item__imgWrap">
                     <div class="parallax__item__img"></div>
                 </figure>
-                <p class="parallax__item__desc split">성공은 무엇보다 인내와 노력을 요구한다.</p>
+                <p class="parallax__item__desc split style7">성공은 무엇보다 인내와 노력을 요구한다.</p>
             </section>
             <!-- //section7 -->
 
@@ -203,12 +469,44 @@
         function scroll() {
             let scrollTop = window.pageXOffset || window.scrollY;
 
-            //CSS 클래스 추가
-            document.querySelectorAll(".parallax__item").forEach(item => {
-                if(scrollTop > item.offsetTop) {
-                    item.querySelector(".split").classList.add("show");
+            //CSS 클래스 추가(단순작업)
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if(scrollTop > item.offsetTop) {
+            //         item.querySelector(".split").classList.add("show");
+            //     }
+            // });
+
+            // span에 show 추가
+            // document.querySelectorAll(".parallax__item").forEach(item => {
+            //     if (scrollTop >= item.offsetTop) {
+            //         item.querySelectorAll(".split span").forEach((span, index) => {
+            //             setTimeout(() => {
+            //                 span.classList.add("show");
+            //             }, 50 * index)
+            //         });
+            //     }
+            // });
+
+            // gsap
+            const items = document.querySelectorAll(".parallax__item");
+
+            items.forEach((item, itemIndex) => {
+                if (scrollTop >= item.offsetTop) {
+                    const spans = item.querySelectorAll(".split span");
+
+                    gsap.to(spans, {
+                        duration: 0.1,
+                        opacity: 1,
+                        x: 0,
+                        y: 0,
+                        z: 0,
+                        scale: 1,
+                        rotation:0,
+                        stagger: 0.05
+                    });
                 }
             });
+
 
             requestAnimationFrame(scroll);
         }
