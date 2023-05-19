@@ -67,7 +67,6 @@ img {
     color: #fff;
     padding: 15px 45px;
     background-color: #a696bb;
-    display: block;
 }
 
 .header .nav>ul>li>a:hover {
@@ -84,8 +83,6 @@ img {
     left: 0;
     width: 100%;
 }
-
-/* .header .nav>ul>li>ul>li {} */
 
 .header .nav>ul>li>ul>li>a {
     padding: 10px 20px;
