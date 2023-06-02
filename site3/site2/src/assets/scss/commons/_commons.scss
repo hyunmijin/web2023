@@ -1,0 +1,136 @@
+
+// container
+.container {
+    width: 1280px;
+    margin: 0 auto;
+    // background-color: #ccc;
+    position: relative;
+}
+
+//section
+.section.center {
+    text-align: center;
+}
+.section {
+    padding: 120px 0;
+
+    > h3 {
+        font-size: 50px;
+    }
+    > p {
+        font-size: 22px;
+        font-weight: 300;
+        margin-bottom: 50px;
+    }
+}
+
+//bg
+.bg-blue {
+    background-color: var(--bg_seection);
+}
+//button
+.button-blue {
+    @include button(#4857EC, #ffffff);
+}
+.button-red {
+    @include button(#FF3344, #ffffff);
+}
+.button-green {
+    @include button(#00C183, #ffffff);
+}
+
+//icon
+.icon-bg1 {
+    @include icon(#39d3a26b, url("data:image/svg+xml,%0A%3Csvg width='37' height='36' viewBox='0 0 37 36' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M27.7269 20.6489C27.7333 18.9434 27.2835 17.2672 26.4243 15.794C25.565 14.3208 24.3274 13.1041 22.8398 12.2701C21.3522 11.436 19.6686 11.0149 17.9635 11.0503C16.2584 11.0857 14.5937 11.5764 13.142 12.4715C11.6903 13.3666 10.5044 14.6336 9.70701 16.1412C8.90965 17.6489 8.52989 19.3423 8.60709 21.046C8.68428 22.7497 9.21562 24.4018 10.1461 25.8312C11.0765 27.2605 12.3722 28.4151 13.8989 29.1752V33.8757C13.906 34.1536 14.0214 34.4177 14.2205 34.6117C14.4196 34.8057 14.6867 34.9142 14.9647 34.9141H21.3594C21.6374 34.9142 21.9045 34.8057 22.1036 34.6117C22.3027 34.4177 22.4181 34.1536 22.4252 33.8757V29.0933C24 28.3093 25.3281 27.1063 26.2634 25.6165C27.1988 24.1267 27.7052 22.4078 27.7269 20.6489V20.6489Z' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M18.1621 1V5.09922' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M29.0933 4.90796L26.1965 7.83207' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M35.3241 13.3796H31.2249' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M7.23081 4.90796L10.1276 7.83207' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1 13.3796H5.09922' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") )
+}
+.icon-bg2 {
+    @include icon(#95d3b573, url("data:image/svg+xml,%0A%3Csvg width='40' height='40' viewBox='0 0 40 40' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M36.7143 16.8571C36.7143 16.1751 36.4434 15.5211 35.9611 15.0388C35.4789 14.5566 34.8248 14.2857 34.1429 14.2857H29L25.1429 9.14282H14.8571L11 14.2857H5.85714C5.17516 14.2857 4.5211 14.5566 4.03887 15.0388C3.55663 15.5211 3.28571 16.1751 3.28571 16.8571V32.2857C3.28571 32.9677 3.55663 33.6217 4.03887 34.104C4.5211 34.5862 5.17516 34.8571 5.85714 34.8571H34.1429C34.8248 34.8571 35.4789 34.5862 35.9611 34.104C36.4434 33.6217 36.7143 32.9677 36.7143 32.2857V16.8571Z' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20 29.0714C23.1954 29.0714 25.7857 26.4811 25.7857 23.2857C25.7857 20.0904 23.1954 17.5 20 17.5C16.8046 17.5 14.2143 20.0904 14.2143 23.2857C14.2143 26.4811 16.8046 29.0714 20 29.0714Z' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E%0A") )
+}
+.icon-bg3 {
+    @include icon(#a8cf8a88, url("data:image/svg+xml,%0A%3Csvg width='32' height='32' viewBox='0 0 32 32' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1236_3747)'%3E%3Cpath d='M18.2857 30.8571H3.42857C2.82237 30.8571 2.24099 30.6163 1.81233 30.1876C1.38368 29.759 1.14286 29.1776 1.14286 28.5714V3.42854C1.14286 2.82233 1.38368 2.24095 1.81233 1.81229C2.24099 1.38364 2.82237 1.14282 3.42857 1.14282H20.5714' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 7.99996L27.4286 1.14282L30.8571 7.99996V27.4285C30.8571 28.3378 30.4959 29.2099 29.8529 29.8529C29.21 30.4959 28.3379 30.8571 27.4286 30.8571C26.5193 30.8571 25.6472 30.4959 25.0042 29.8529C24.3612 29.2099 24 28.3378 24 27.4285V7.99996Z' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M24 21.7142H30.8571' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M8 1.14282V30.8571' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13.7143 9.14282H18.2857' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1236_3747'%3E%3Crect width='32' height='32' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") )
+}
+.icon-bg4 {
+    @include icon(#7b81c28f, url("data:image/svg+xml,%0A%3Csvg width='33' height='33' viewBox='0 0 33 33' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cg clip-path='url(%23clip0_1302_654)'%3E%3Cpath d='M16.5 1.17859V10.6072' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M20.0357 25.9286H25.9286' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.17857 10.6072H31.8214V29.4643C31.8214 30.0895 31.5731 30.689 31.131 31.1311C30.689 31.5731 30.0894 31.8215 29.4643 31.8215H3.53572C2.91056 31.8215 2.31101 31.5731 1.86896 31.1311C1.42691 30.689 1.17857 30.0895 1.17857 29.4643V10.6072Z' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M1.17857 10.6072L4.71429 3.79502C5.09546 3.02723 5.67876 2.3779 6.40143 1.91688C7.1241 1.45587 7.9588 1.20061 8.81572 1.17859H24.1843C25.0613 1.17905 25.9209 1.42417 26.6663 1.88639C27.4116 2.34861 28.0133 3.00959 28.4036 3.79502L31.8214 10.6072' stroke='%23000001' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='clip0_1302_654'%3E%3Crect width='33' height='33' fill='white'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A") )
+}
+.icon-bg5 {
+    @include icon(#f76d6d65, url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.625 21.5625H24.375V3.75H7.5C6.9725 3.76937 6.53312 3.955 6.18187 4.30687C5.83062 4.65875 5.645 5.09813 5.625 5.625V21.5625ZM7.5 1.875H25.3125C25.5862 1.875 25.8109 1.96281 25.9866 2.13844C26.1622 2.31406 26.25 2.53875 26.25 2.8125V22.5C26.25 22.7737 26.1622 22.9984 25.9866 23.1741C25.8109 23.3497 25.5862 23.4375 25.3125 23.4375H4.6875L3.75 25.1372V5.625C3.76937 4.57 4.13562 3.68625 4.84875 2.97375C5.56187 2.26125 6.44562 1.895 7.5 1.875ZM7.03125 23.4375C6.64063 23.4569 6.31344 23.5984 6.04969 23.8622C5.78594 24.1259 5.65406 24.4531 5.65406 24.8438C5.65406 25.2344 5.78594 25.5616 6.04969 25.8253C6.31344 26.0891 6.64063 26.2306 7.03125 26.25H24.375V23.4375H7.03125ZM7.03125 21.5625H26.25V26.25C26.2306 26.7775 26.045 27.2169 25.6931 27.5681C25.3413 27.9194 24.9019 28.105 24.375 28.125H7.03125C6.09375 28.1056 5.3175 27.7881 4.7025 27.1725C4.0875 26.5569 3.77 25.7806 3.75 24.8438C3.76937 23.9062 4.08687 23.13 4.7025 22.515C5.31812 21.9 6.09438 21.5825 7.03125 21.5625ZM11.25 3.75V11.1037L14.0625 8.84812L16.875 11.1037V3.75H11.25V3.75ZM9.375 1.875H18.75V13.0369C18.7306 13.4275 18.55 13.7059 18.2081 13.8722C17.8663 14.0384 17.5391 14.0044 17.2266 13.77L14.0625 11.25L10.8984 13.77C10.5859 14.0044 10.2588 14.0384 9.91688 13.8722C9.575 13.7059 9.39437 13.4275 9.375 13.0369V1.875Z' fill='%2308080A' fill-opacity='0.96'/%3E%3C/svg%3E%0A") )
+}
+.icon-bg6 {
+    @include icon(#00c1848a, url("data:image/svg+xml,%3Csvg width='30' height='30' viewBox='0 0 30 30' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M5.625 21.5625H24.375V3.75H7.5C6.9725 3.76937 6.53312 3.955 6.18187 4.30687C5.83062 4.65875 5.645 5.09813 5.625 5.625V21.5625ZM7.5 1.875H25.3125C25.5862 1.875 25.8109 1.96281 25.9866 2.13844C26.1622 2.31406 26.25 2.53875 26.25 2.8125V22.5C26.25 22.7737 26.1622 22.9984 25.9866 23.1741C25.8109 23.3497 25.5862 23.4375 25.3125 23.4375H4.6875L3.75 25.1372V5.625C3.76937 4.57 4.13562 3.68625 4.84875 2.97375C5.56187 2.26125 6.44562 1.895 7.5 1.875ZM7.03125 23.4375C6.64063 23.4569 6.31344 23.5984 6.04969 23.8622C5.78594 24.1259 5.65406 24.4531 5.65406 24.8438C5.65406 25.2344 5.78594 25.5616 6.04969 25.8253C6.31344 26.0891 6.64063 26.2306 7.03125 26.25H24.375V23.4375H7.03125ZM7.03125 21.5625H26.25V26.25C26.2306 26.7775 26.045 27.2169 25.6931 27.5681C25.3413 27.9194 24.9019 28.105 24.375 28.125H7.03125C6.09375 28.1056 5.3175 27.7881 4.7025 27.1725C4.0875 26.5569 3.77 25.7806 3.75 24.8438C3.76937 23.9062 4.08687 23.13 4.7025 22.515C5.31812 21.9 6.09438 21.5825 7.03125 21.5625ZM11.25 3.75V11.1037L14.0625 8.84812L16.875 11.1037V3.75H11.25V3.75ZM9.375 1.875H18.75V13.0369C18.7306 13.4275 18.55 13.7059 18.2081 13.8722C17.8663 14.0384 17.5391 14.0044 17.2266 13.77L14.0625 11.25L10.8984 13.77C10.5859 14.0044 10.2588 14.0384 9.91688 13.8722C9.575 13.7059 9.39437 13.4275 9.375 13.0369V1.875Z' fill='%2308080A' fill-opacity='0.96'/%3E%3C/svg%3E%0A") )
+}
+// footer
+.icon1-bg1 {
+    @include icon(#e7e7e7b7, url("data:image/svg+xml,%3Csvg width='20' height='20' viewBox='0 0 20 20' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M20 10C20 4.47715 15.5229 0 10 0C4.47715 0 0 4.47715 0 10C0 14.9912 3.65684 19.1283 8.4375 19.8785V12.8906H5.89844V10H8.4375V7.79688C8.4375 5.29063 9.93047 3.90625 12.2146 3.90625C13.3084 3.90625 14.4531 4.10156 14.4531 4.10156V6.5625H13.1922C11.95 6.5625 11.5625 7.3334 11.5625 8.125V10H14.3359L13.8926 12.8906H11.5625V19.8785C16.3432 19.1283 20 14.9912 20 10Z' fill='black'/%3E%3C/svg%3E") )
+}
+
+//blind
+.blind {
+    position: absolute;
+    clip: rect(0,0,0,0);
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+}
+
+//ir
+.ir {
+    display: block;
+    overflow: hidden;
+    font-size: 0;
+    line-height: 0;
+    text-indent: -9999px;
+}
+
+//skip
+#skip {
+    position: relative;
+    z-index: 100000;
+}
+#skip a {
+    background: var(--color_body);
+    color: #fff;
+    position: absolute;
+    padding: 20px 40px;
+    left: -400px;
+    top: 5px;
+}
+#skip a:active,
+#skip a:focus {
+    left: 5px;
+}
+
+$interval: (
+    0:0,
+    10:10px,
+    20:20px,
+    30:30px,
+    40:40px,
+    50:50px,
+    60:60px,
+    70:70px,
+    80:80px,
+    90:90px,
+    
+);
+
+@each $value, $size in $interval {
+    .mb#{$value} {
+        margin-bottom: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mt#{$value} {
+        margin-top: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .mr#{$value} {
+        margin-right: $size !important;
+    }
+}
+@each $value, $size in $interval {
+    .ml#{$value} {
+        margin-left: $size !important;
+    }
+}
