@@ -1,0 +1,144 @@
+@charset "UTF-8";
+
+* {
+    margin: 0 auto;
+    padding: 0;
+}
+body {
+    color: #3333;
+    background-color: #fff;
+}
+ul,
+li,
+p,
+a {
+    text-decoration: none;
+    list-style: none;
+}
+/* header */
+.header {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+}
+.header .logo{
+    width: 20%;
+    /* background-color: #a79292; */
+}
+.header .logo h1 {
+    text-align: center;
+    padding: 25px;
+}
+.header .nav{
+    width: 80%;
+    background-color: #c5aaaa;
+}
+
+/* slider */
+#slider {
+    width: 1200px;
+    height: 300px;
+    background-color: #b89a9a;
+}
+.sliderwrap {
+    position: relative;
+}
+.sliderwrap > div {
+    /* display: inline-block; */
+}
+/* section */
+.section {
+    width: 1200px;
+    height: 200px;
+    display: flex;
+}
+.section .notice{
+    width: 33.3333%;
+    /* background-color: #ad9292; */
+    padding: 30px;
+}
+.section .notice h2 {
+    margin-bottom: 15px;
+}
+.section .notice ul {
+    line-height: 1.5;
+}
+.section .gallery{
+    width: 33.3333%;
+    display: flex;
+    /* background-color: #756363; */
+}
+
+.section .gallery >div>div:hover {
+    opacity: 0.5;
+}
+.section .gallery >div {
+    padding: 30px 0;
+}
+.section .gallery >div h6 {
+    font-size: 15px;
+    text-align: center;
+    padding: 10px;
+    
+}
+.section .gallery .img1{
+    width: 100px;
+    height: 100px;
+    background-image: url(../image/gallery01.jpg);
+    background-size: cover;
+    /* margin-right: 50px; */
+}
+.section .gallery .img2{
+    width: 100px;
+    height: 100px;
+    background-image: url(../image/gallery02.jpg);
+    background-size: cover;
+}
+.section .gallery .img3{
+    width: 100px;
+    height: 100px;
+    background-image: url(../image/gallery03.jpg);
+    background-size: cover;
+}
+.section .sec3{
+    width: 33.3333%;
+    /* background-color: #c0a8a8; */
+    background-image: url(../image/banner.jpg);
+    background-size: cover;
+}
+.section .sec3 .text {
+    font-size: 18px;
+    color: #fff;
+    text-align: center;
+    margin-top: 50px;
+    width: 100px;
+    height: 30px;
+    background-color: #29252574;
+    border-radius: 10px;
+}
+.section .sec3 .text:hover {
+    background-color: #e4d7d774;
+    color: #2b2323;
+}
+
+/* footer */
+.footer {
+    width: 1200px;
+    height: 100px;
+    display: flex;
+}
+.footer .foot1{
+    width: 75%;
+}
+.footer .foot1 .foot1-1{
+    height: 50%;
+    background-color: #8f7b7b;
+}
+.footer .foot1 .foot1-2{
+    height: 50%;
+    background-color: #b9abab;
+}
+.footer .foot2{
+    width: 25%;
+    background-color: #bea8a8;
+}
