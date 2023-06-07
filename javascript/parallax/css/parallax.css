@@ -132,7 +132,7 @@ main {
     padding-bottom: 56.25%;
     /* background-color: #000; */
     position: relative;
-    z-index: -1;
+    /* z-index: -1; */
     overflow: hidden;
 }
 
@@ -147,9 +147,12 @@ main {
     width: 110%;
     height: 110%;
     filter: saturate(0%);
-    transition: filter 1s;
+    transition: all 1s;
 }
-
+.parallax__item__img:hover{
+    filter: saturate(100%);
+    transform: scale(1.025);
+}
 .parallax__item:nth-child(1) .parallax__item__img {
     background-image: url(../img/parallaxEffect02-min.jpg);
 }
@@ -192,6 +195,8 @@ main {
     margin-top: -5vw;
     margin-left: -4vw;
     word-break: keep-all;
+    position: relative;
+    z-index: 1000;
 }
 
 .parallax__item:nth-child(even) .parallax__item__desc {
