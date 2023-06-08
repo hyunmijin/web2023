@@ -1,0 +1,35 @@
+//youtube__wrap
+.youtube__wrap {
+    overflow: hidden;
+}
+.youtube__inner {
+    height: 600px;
+    h3 {
+        font-size: 50px;
+        margin-bottom: 20px;
+    }
+    p {
+        font-size: 24px;
+        margin-bottom: 20px;
+
+    }
+    a {
+        border-radius: 50px;
+        margin-bottom: 100px;
+    }
+}
+.youtube__item {
+    display: flex;
+    // width: 100%;
+    position: absolute;
+    > div {
+        margin-right: 20px;
+        width: 400px;
+        // background-color: #ccc;
+        iframe {
+            width: 100%;
+            border-radius: 5%;
+            height: 220px;
+        }
+    }
+}
