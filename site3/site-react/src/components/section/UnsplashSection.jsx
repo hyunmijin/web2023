@@ -23,7 +23,7 @@ const unsplashitem = [
   },
 ];
 
-function unsplashDesc({ img, title }) {
+function UnsplashDesc({ img, title }) {
   return (
     <div>
       <img src={img} alt={title} />
@@ -38,16 +38,16 @@ function UnsplashSection(props) {
         <div className="unsplash__text">
           <h3>{unsplashTitle.title}</h3>
           <p>{unsplashTitle.desc}</p>
-          <Link to="/" class="button-blue">
+          <Link to="/" className="button-blue">
             {unsplashTitle.link}
           </Link>
         </div>
         <div class="unsplash__item">
           {unsplashitem.map((text, index) => (
-            <unsplashDesc key={index} img={text.img} />
+            <UnsplashDesc key={index} img={text.img} />
           ))}
           ;
-          <div>
+          {/* <div>
             <img
               src="https://tokyomina.com/wp-content/uploads/2018/12/ta11.jpg"
               alt=""
@@ -64,7 +64,7 @@ function UnsplashSection(props) {
               src="https://tokyomina.com/wp-content/uploads/2018/12/ta10.jpg"
               alt=""
             />
-          </div>
+          </div> */}
         </div>
       </div>
     </section>

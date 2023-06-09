@@ -31,7 +31,7 @@ const youtubeitem = [
   },
 ];
 
-function youtubeDesc({ img, title }) {
+function YoutubeDesc({ img, title }) {
   return (
     <div>
       <iframe src={img} alt={title} allowfullscreen></iframe>
@@ -46,13 +46,13 @@ function YoutubeSection(props) {
         <div className="youtube__text">
           <h3>{youtubeTitle.title}</h3>
           <p>{youtubeTitle.desc}</p>
-          <Link to="/" class="button-red">
+          <Link to="/" className="button-red">
             {youtubeTitle.link}
           </Link>
         </div>
         <div className="youtube__item">
           {youtubeitem.map((text, index) => (
-            <youtubeDesc key={index} img={text.img} title={text.title} />
+            <YoutubeDesc key={index} img={text.img} title={text.title} />
           ))}
           ;
           {/* <div>

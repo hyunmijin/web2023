@@ -27,12 +27,12 @@ const movieitem = [
   },
 ];
 
-function movieDesc({ img, title }) {
+function MovieDesc({ img, title }) {
   return (
     <div>
       <img
-        src="https://img.movist.com/?img=/x00/04/97/02_p1.jpg"
-        alt="러빙빈센트"
+        src={img}
+        alt={title}
       />
     </div>
   );
@@ -49,6 +49,10 @@ function MovieSection(props) {
           </Link>
         </div>
         <div class="movie__item">
+        {movieitem.map((text, index) => (
+            <MovieDesc key={index} img={text.img} />
+          ))}
+          ;
           {/* <div>
             <img
               src="https://img.movist.com/?img=/x00/04/97/02_p1.jpg"
