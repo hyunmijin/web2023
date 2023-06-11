@@ -1,0 +1,292 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img_title {
+    font-size: 35px;
+    font-family: "Bebas Neue";
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.img_desc {
+    font-size: 15px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+button {
+    margin-top: 40px;
+    background-color: #000;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.button_inner {
+    width: 96%;
+    height: 90%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+    transition: background-color 0.5s ease-in-out;
+}
+
+.button_inner::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: top 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.button_inner:hover::before {
+    top: 0;
+    background-color: #ffffff;
+}
+
+.button_inner:hover {
+    color: #000000;
+}
+
+
+
+.wrap {
+    width: 100%;
+}
+
+.header img {
+    object-position: 50% 50%;
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(0.8);
+}
+
+/* site__nav */
+
+.site__nav {
+    top: 0;
+    width: 100%;
+    position: fixed;
+    z-index: 2000;
+    background-color: rgb(0, 0, 0);
+    color: #fff;
+    margin: 0;
+    padding-top: 0;
+    text-align: center;
+    transition: all 0.6s;
+    padding-top: 20px;
+}
+
+.site__nav.show {
+    background-color: rgba(0, 0, 0, 0);
+}
+
+.site__nav .nav1 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.site__nav .nav1 ul {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.site__nav .nav1 ul > li {
+    list-style: none;
+    position: relative;
+    text-align: left;
+}
+
+
+.site__nav .nav1 ul >li >ul {
+    position: absolute;
+    left: -20px;
+    top: 30px;
+    background-color: #000;
+    width:220px;
+    text-align: left;
+    /* margin-left: 40px; */
+    /* padding: 10px; */
+    display: none;
+    padding: 10px;
+}
+.site__nav .nav1 a {
+    font-weight: 100;
+    font-size: 20px;
+    color: #fff;
+    text-decoration: none;
+    display: inline-block;
+    line-height: 0.5;
+    left: 0;
+
+    /* background-color: #b0b0b0; */
+}
+.site__nav .nav1 > ul > li > ul > li > a {
+    display: inline-block;
+    padding: 10px;
+    background-color: #000000;
+    width: 100%;
+    box-sizing: border-box;
+}
+.site__nav .nav1 > ul > li > ul > li > a:hover {
+    position: relative;
+}
+
+.site__nav .nav1 > ul > li > ul > li > a:hover::after {
+    content: "";
+    position: absolute;
+    left: 3%;
+    bottom: -2px;
+    width: 0;
+    height: 1px;
+    background-color: #ffffff;
+    animation: slide-in 0.3s linear forwards;
+    transform-origin: left;
+    z-index: 10000;
+    line-height: 1px;
+}
+
+@keyframes slide-in {
+    0% {
+        transform: scaleX(0);
+    }
+    100% {
+        transform: scaleX(1);
+        width: 70%;
+    }
+}
+
+
+
+
+.site__nav .title {
+    width: 80%;
+    font-weight: lighter;
+    font-size: 20px;
+    font-family: "Noto Serif JP";
+    text-transform: uppercase;
+}
+
+.site__nav .nav2 {
+    width: 10%;
+    display: flex;
+    justify-content: center;
+    /* background-color: #ccc; */
+
+    /* 요소들을 수평 가운데로 정렬 */
+    /* align-items: center; */
+    /* 요소들을 수직 가운데로 정렬 */
+}
+
+.site__nav .nav2 h5 {
+    font-weight: 100;
+    font-size: 20px;
+}
+
+.site__nav>div {
+    color: #fff;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px 20px;
+}
+
+
+/* main */
+.main {
+    width: 100%;
+    text-align: center;
+    height: 350px;
+    /* background-color: #ccc; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+}
+
+.main p {
+    font-size: 25px;
+}
+
+.section {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 가운데 정렬 */
+    margin-bottom: 120px;
+}
+
+.section2 {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    /* 가운데 정렬 */
+    margin-bottom: 120px;
+    margin-top: 120px;
+}
+
+.section1 {
+    width: 96%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    /* background-color: #ccc; */
+}
+
+.section1>div {
+    width: 32%;
+    /* 사진 간격 조정 */
+}
+
+.section1 img {
+    width: 100%;
+    height: 600px;
+    object-fit: cover;
+}
+
+.section2 #section1 .title .img_title,
+.section2 #section1 .title .img_desc,
+.section2 #section1 .title button,
+
+#section1 .title .img_title,
+#section1 .title .img_desc,
+#section1 .title button,
+
+.site__nav>div,
+.main .title {
+    opacity: 0;
+    /* 초기에는 투명하게 설정 */
+    transform: translateY(10px);
+    /* 초기 위치를 아래로 이동 */
+    transition: opacity 1s, transform 1s;
+    /* 변화가 일어날 때 1초 동안 애니메이션 효과 적용 */
+
+}
