@@ -7,6 +7,10 @@ $(document).ready(function () {
     const box6 = $(".section2 #section1 .title .img_title");
     const box7 = $(".section2 #section1 .title .img_desc");
     const box8 = $(".section2 #section1 .title button");
+    const box9 = $(".section3 .title");
+    const box10 = $(".section3 .img1");
+    const box11 = $(".section3 .img2");
+    const box12 = $(".section3 .img3");
 
     // 새로고침시 나타나기
     box4.css({
@@ -79,6 +83,37 @@ $(document).ready(function () {
                 transform: 'translateY(10px)',
             });
         }
+
+        if (scrollTop > box9.offset().top - windowHeight) {
+            box9.css({
+                opacity: 1,
+                transform: 'translateY(0)',
+            });
+        } else {
+            box9.css({
+                opacity: 0,
+                transform: 'translateY(10px)',
+            });
+        }
+
+        if (scrollTop + windowHeight > box10.offset().top+100) {
+            box10.addClass('expanded');
+          } else {
+            box10.removeClass('expanded');
+          }
+
+        if (scrollTop + windowHeight > box11.offset().top) {
+            box11.addClass('expanded');
+          } else {
+            box11.removeClass('expanded');
+          }
+
+          if (scrollTop + windowHeight > box12.offset().top+100) {
+            box12.addClass('expanded');
+          } else {
+            box12.removeClass('expanded');
+          }
+        
     });
 });
 

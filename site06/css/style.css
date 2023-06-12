@@ -2,6 +2,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@700&family=Nanum+Myeongjo:wght@400;700;800&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+JP:wght@200;300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@300;400;500;600;700&display=swap');
 
 * {
     margin: 0;
@@ -72,12 +73,11 @@ button {
     color: #000000;
 }
 
-
-
 .wrap {
     width: 100%;
 }
 
+/* header img */
 .header img {
     object-position: 50% 50%;
     height: 500px;
@@ -86,8 +86,23 @@ button {
     filter: brightness(0.8);
 }
 
-/* site__nav */
+.header2 img {
+    height: 500px;
+    width: 100%;
+    object-fit: cover;
+}
 
+.header3 {
+    background-color: #EEEDEB;
+}
+
+.header3 img {
+    height: 750px;
+    width: 100%;
+    object-fit: cover;
+}
+
+/* site__nav */
 .site__nav {
     top: 0;
     width: 100%;
@@ -119,25 +134,26 @@ button {
     align-items: center;
 }
 
-.site__nav .nav1 ul > li {
+.site__nav .nav1 ul>li {
     list-style: none;
     position: relative;
     text-align: left;
 }
 
 
-.site__nav .nav1 ul >li >ul {
+.site__nav .nav1 ul>li>ul {
     position: absolute;
     left: -20px;
     top: 30px;
     background-color: #000;
-    width:220px;
+    width: 220px;
     text-align: left;
     /* margin-left: 40px; */
     /* padding: 10px; */
     display: none;
     padding: 10px;
 }
+
 .site__nav .nav1 a {
     font-weight: 100;
     font-size: 20px;
@@ -149,18 +165,20 @@ button {
 
     /* background-color: #b0b0b0; */
 }
-.site__nav .nav1 > ul > li > ul > li > a {
+
+.site__nav .nav1>ul>li>ul>li>a {
     display: inline-block;
     padding: 10px;
     background-color: #000000;
     width: 100%;
     box-sizing: border-box;
 }
-.site__nav .nav1 > ul > li > ul > li > a:hover {
+
+.site__nav .nav1>ul>li>ul>li>a:hover {
     position: relative;
 }
 
-.site__nav .nav1 > ul > li > ul > li > a:hover::after {
+.site__nav .nav1>ul>li>ul>li>a:hover::after {
     content: "";
     position: absolute;
     left: 3%;
@@ -178,6 +196,7 @@ button {
     0% {
         transform: scaleX(0);
     }
+
     100% {
         transform: scaleX(1);
         width: 70%;
@@ -280,6 +299,8 @@ button {
 #section1 .title .img_desc,
 #section1 .title button,
 
+.section3 .title,
+
 .site__nav>div,
 .main .title {
     opacity: 0;
@@ -288,5 +309,163 @@ button {
     /* 초기 위치를 아래로 이동 */
     transition: opacity 1s, transform 1s;
     /* 변화가 일어날 때 1초 동안 애니메이션 효과 적용 */
+}
 
+
+
+
+/* section3 */
+.section3 {
+    width: 100%;
+    position: relative;
+    background-color: #EEEDEB;
+    height: 950px;
+}
+
+.section3 .title {
+    font-size: 70px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 100px;
+    left: 30px;
+    font-family: "Oswald";
+    line-height: 1;
+}
+
+.section3 .desc {
+    font-size: 12px;
+    position: absolute;
+    width: 500px;
+    bottom: 250px;
+    left: 480px;
+    line-height: 1.5;
+}
+
+.section3 .img1 {
+    position: relative;
+    width: 300px;
+    height: 450px;
+    /* object-fit: cover; */
+    top: 380px;
+    left: 100px;
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.section3 .img1.expanded {
+    position: absolute;
+    height: 450px; /* 예시로 height 값을 변경 */
+  }
+.section3 .img1 img {
+    height: 450px;
+}
+
+.section3 .img2 {
+    position: relative;
+    /* width: 500px; */
+    height: 360px;
+    /* object-fit: cover; */
+    top: 100px;
+    left: 480px;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.8s;
+}
+.section3 .img2.expanded {
+    position: absolute;
+    width: 500px; /* 예시로 height 값을 변경 */
+  }
+
+.section3 .img2 img {
+    width: 500px;
+}
+
+.section3 .img3 {
+    position: relative;
+    width: 360px;
+    height: 360px;
+    /* object-fit: cover; */
+    top: 400px;
+    left: 1050px;
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s;
+}
+.section3 .img3 img {
+    height: 360px;
+}
+.section3 .img3.expanded {
+    position: absolute;
+    height: 360px; /* 예시로 height 값을 변경 */
+  }
+/* section3-1 */
+.section3-1 {
+    width: 100%;
+    position: relative;
+    background-color: #EEEDEB;
+    height: 1200px;
+}
+
+.section3-1 .title {
+    font-size: 55px;
+    text-transform: uppercase;
+    position: absolute;
+    top: 130px;
+    left: 220px;
+    font-family: "Oswald";
+    line-height: 1.3;
+}
+
+.section3-1 .desc {
+    font-size: 12px;
+    position: absolute;
+    width: 500px;
+    bottom: 200px;
+    left: 850px;
+    line-height: 1.5;
+}
+
+.section3-1 .img1 img {
+    position: relative;
+    width: 420px;
+    height: 630px;
+    object-fit: cover;
+    top: 440px;
+    left: 320px;
+}
+
+.section3-1 .img2 img {
+    position: relative;
+    width: 500px;
+    height: 340px;
+    object-fit: cover;
+    top: -300px;
+    left: 850px;
+}
+
+/* section4 */
+.section4 {
+    background-color: #EEEDEB;
+    width: 100%;
+    height: 1180px;
+}
+.section4 .section4__inner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* justify-content: space-between; */
+    /* width: 98%;  */
+}
+.section4 .section4__inner > div p {
+    margin-top: -30px;
+    margin-left: 15px;
+    font-weight: lighter;
+}
+.section4 .section4__inner > div img {
+    width: 330px;
+    height: 500px;
+    object-fit: cover;
+    padding: 18px;
+    margin: 18px 0 18px;
 }
