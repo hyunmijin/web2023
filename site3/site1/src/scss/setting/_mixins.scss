@@ -74,6 +74,11 @@
     }
 }
 
+//보더
+@mixin border($radius) {
+    border-radius: ($radius);
+}
+
 @mixin icon1($bg-color, $icon-image){
     position: relative;    
     padding-top: 70px;

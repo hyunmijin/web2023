@@ -67,7 +67,6 @@ function IntorSection(props) {
               desc={text.desc}
             />
           ))}
-          ;
         </div>
       </div>
     </section>
