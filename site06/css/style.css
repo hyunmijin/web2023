@@ -122,9 +122,8 @@ button {
 }
 
 .site__nav .nav1 {
-    width: 10%;
+    width: 30%;
     display: flex;
-    justify-content: center;
     align-items: center;
 }
 
@@ -207,17 +206,21 @@ button {
 
 
 .site__nav .title {
-    width: 80%;
+    width: 30%;
     font-weight: lighter;
     font-size: 20px;
     font-family: "Noto Serif JP";
     text-transform: uppercase;
 }
-
-.site__nav .nav2 {
-    width: 10%;
+.site__nav .nav2 > div {
+    width: 50%;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
+}
+.site__nav .nav2 {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
     /* background-color: #ccc; */
 
     /* 요소들을 수평 가운데로 정렬 */
@@ -236,8 +239,24 @@ button {
     justify-content: space-between;
     padding: 20px 20px;
 }
-
-
+.site__nav .nav2 .sns{
+    position: absolute;
+    background-image: url(../img/sns.svg);
+    margin-top: 6px;
+    width: 20px;
+    height: 20px;
+    right: 150px;
+    background-size: cover;
+}
+.site__nav .nav2 .cart{
+    position: absolute;
+    background-image: url(../img/cart.svg);
+    width: 40px;
+    height: 40px;
+    right: 50px;
+    top: 16px;
+    background-size: cover;
+}
 /* main */
 .main {
     width: 100%;
