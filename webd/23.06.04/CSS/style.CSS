@@ -38,13 +38,35 @@ a {
 #slider {
     width: 1200px;
     height: 300px;
-    background-color: #b89a9a;
+    /* background-color: #b89a9a; */
 }
 .sliderwrap {
     position: relative;
 }
 .sliderwrap > div {
-    /* display: inline-block; */
+    display: none;
+}
+.sliderwrap > div:first-child {
+    display: block;
+}
+.sliderwrap .slider {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+.sliderwrap .slider img {
+    vertical-align: top;
+    width: 1200px;
+    height: 300px;
+}
+.sliderwrap .slider span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px 20px;
+    color: #fff;
 }
 /* section */
 .section {
