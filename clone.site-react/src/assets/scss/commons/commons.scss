@@ -1,0 +1,69 @@
+@charset "UTF-8";
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img_title {
+    font-size: 35px;
+    font-family: "Bebas Neue";
+    font-weight: 100;
+    text-transform: uppercase;
+}
+
+.img_desc {
+    font-size: 15px;
+    height: 20px;
+    margin-bottom: 10px;
+    font-weight: lighter;
+}
+
+button {
+    margin-top: 40px;
+    background-color: #000;
+    width: 120px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    position: relative;
+}
+
+.button_inner {
+    width: 96%;
+    height: 90%;
+    background-color: #000000;
+    color: #ffffff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    position: relative;
+    overflow: hidden;
+     transition: background-color 0.5s ease-in-out; 
+} 
+
+.button_inner::before {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ffffff;
+    transition: top 0.5s ease-in-out, background-color 0.5s ease-in-out;
+    z-index: 1;
+}
+
+.button_inner:hover::before {
+    top: 0;
+    background-color: #ffffff;
+} 
+
+.button_inner:hover {
+    color: #000000;
+}

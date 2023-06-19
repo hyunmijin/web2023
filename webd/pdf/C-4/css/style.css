@@ -1,0 +1,143 @@
+@charset "UTF-8";
+
+*{
+    margin: 0;
+    padding: 0;
+}
+a, ul, li {
+    text-decoration: none;
+    list-style: none;
+    color: #333;
+}
+
+#wrap {
+    width: 1000px;
+    display: flex;
+    position: relative;
+}
+#header {
+    width: 20%;
+    height: 650px;
+}
+#header .logo {
+    height: 20%;
+    /* background: #987878; */
+}
+#header .logo img{
+    margin-top: 20px;
+}
+#header .nav {
+    height: 80%;
+    background: #9a7070;
+}
+/* nav */
+.nav >ul {
+    text-align: center;
+
+}
+.nav >ul >li{
+    padding: 10px 20px;
+}
+.nav >ul >li >a{
+    display: inline-block;
+    line-height: 2;
+    width: 100%;
+    background-color: #fff;
+}
+.nav >ul >li >a:hover{
+    background-color: #ffffff81;
+}
+.nav >ul >li >ul{
+    position: absolute;
+    left: 180px;
+    top: 140px;
+    z-index: 10;
+    display: none;
+
+    /* display: none; */
+}
+.nav >ul >li >ul >li{}
+.nav >ul >li >ul >li >a{
+    width: 150px;
+    height: 50px;
+    display: inline-block;
+    background-color: #fff;
+
+}
+.nav >ul >li >ul >li >a:hover {
+    background-color: #8068688d;
+}
+#main {
+    width: 80%;
+    height: 650px;
+}
+#slider {
+    width: 100%;
+    height: 350px;
+    background-color: #685454;
+    overflow: hidden;
+}
+/* slider */
+.sliderWrap {
+    width: 400%;
+    height: 350px;
+    display: flex;
+}
+.sliderWrap img {
+    width: 100%;
+    height: 350px;
+    object-position: center;
+    object-fit: cover;
+}
+.sliderWrap .slider{
+    width: 100%;
+    height: 100%;
+    position: relative;
+}
+.sliderWrap .slider span{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffff94;
+    padding: 20px 10px;
+}
+
+
+#contents {
+    width: 100%;
+    height: 200px;
+    background-color: #9e5757;
+}
+#footer {
+    width: 100%;
+    height: 100px;
+    display: flex;
+}
+#footer .footlogo {
+    width: 20%;
+    background-color: #9b8e8e;
+}
+#footer .copyright {
+    width: 60%;
+    background-color: #a73f3f;
+}
+#footer .family {
+    width: 20%;
+    background-color: #9b8e8e;
+}
+
+.popup_view {
+    position: absolute;
+    width: 200px;
+    height: 200px;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: #ffffffb6;
+    text-align: center;
+    display: none;
+}
+.popup_view p {
+    margin-bottom: 50px;
+}
