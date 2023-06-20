@@ -2,55 +2,203 @@
 #intro_title {
   margin: 10vw 0;
 }
+
 #section1 {
   transform: translate(5%, 5%);
   width: 90%;
+
   //   background-color: #ccc;
   h1 {
     font-size: 13vw;
     font-weight: bold;
   }
+
   p {
     font-size: 1.5vw;
     text-align: right;
   }
 }
 
+// // intro_text
+// #intro_text {
+//   overflow: hidden;
+// }
+// .intro_text_inner {
+//   width: 1100vw;
+// }
+// #section2 {
+//   // background-color: #ccc;
+//   h4 {
+//     font-size: 7vw;
+//     font-weight: 100;
+//     line-height: 1.2;
+//   }
+// }
+
 // intro_text
 #intro_text {
   overflow: hidden;
+
+  .intro_text_inner {
+    width: 100%;
+
+    #section2 {
+      h4 {
+        font-size: 7vw;
+        font-weight: 100;
+        line-height: 1.2;
+        white-space: nowrap;
+        display: inline-block;
+        animation: slideRight 1000s linear infinite;
+
+        &.s2 {
+          animation-direction: reverse;
+        }
+      }
+    }
+  }
 }
-.intro_text_inner {
-  width: 1100vw;
-}
-#section2 {
-  background-color: #ccc;
-  h4 {
-    font-size: 7vw;
-    font-weight: 100;
-    line-height: 1.2;
+
+@keyframes slideRight {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(-100%);
   }
 }
 
 // intro_img
 #intro_img {
   width: 80vw;
-  margin: 10vw;
+  margin: 20vw 9.5vw;
   background-color: #ccc;
   position: relative;
   height: 300vh;
 }
+
 .intro_img_inner {
   #section3 {
+
+    // background-color: #ccc;
     .img1 {
-      position: absolute;
-      width: 50vw;
+      img {
+        width: 35vw;
+        position: absolute;
+      }
     }
+
     .img2 {
-      position: absolute;
-      width: 50vw;
-      right: 0;
-      top: 100vh;
+      img {
+        width: 35vw;
+        position: absolute;
+        right: 0;
+        top: 80vh;
+      }
+
+    }
+
+    .img3 {
+      img {
+        position: absolute;
+        bottom: 10%;
+        width: 100%;
+      }
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  #intro_img {
+    height: 120vh;
+    /* 원하는 높이 값으로 수정 */
+  }
+
+  .intro_img_inner {
+    #section3 {
+      .img2 {
+        img {
+          top: 35vh;
+        }
+      }
+
+      .img3 {
+        img {
+          position: absolute;
+          bottom: 10%;
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 700px) {
+  #intro_img {
+    height: 200vh;
+    /* 원하는 높이 값으로 수정 */
+  }
+}
+
+@media (max-width: 600px) {
+  #intro_img {
+    height: 100vh;
+    /* 원하는 높이 값으로 수정 */
+  }
+}
+
+@media (max-width: 500px) {
+  #intro_img {
+    height: 100vh;
+    /* 원하는 높이 값으로 수정 */
+  }
+
+  .intro_img_inner {
+    #section3 {
+      .img2 {
+        img {
+          top: 40vh;
+        }
+      }
+
+      .img3 {
+        img {
+          position: absolute;
+          bottom: 10%;
+          width: 100%;
+
+        }
+
+      }
+
+    }
+  }
+}
+
+@media (max-width: 375px) {
+  #intro_img {
+    height: 100vh;
+    /* 원하는 높이 값으로 수정 */
+  }
+
+  .intro_img_inner {
+    #section3 {
+      .img2 {
+        img {
+          top: 40vh;
+        }
+      }
+
+      .img3 {
+        img {
+          position: absolute;
+          bottom: 10%;
+          width: 100%;
+        }
+
+      }
+
     }
   }
 }

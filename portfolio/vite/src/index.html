@@ -1,91 +1,95 @@
 <!DOCTYPE html>
 <html lang="ko">
-  <head>
-    <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>진현미 포트폴리오</title>
-  </head>
-  <body class="gmarket3">
-    <!-- header -->
-    <header id="header">
-      <div class="header__inner">
-        <div class="nav">
-          <ul>
-            <h3>
-              <a href="#"></a>
-            </h3>
-            <li><a href="#">포트폴리오1</a></li>
-            <li><a href="#">포트폴리오2</a></li>
-            <li><a href="#">포트폴리오3</a></li>
-            <li><a href="#">포트폴리오4</a></li>
-          </ul>
+
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>진현미 포트폴리오</title>
+</head>
+
+<body class="gmarket3">
+  <!-- header -->
+  <header id="header">
+    <div class="header__inner">
+      <div class="nav">
+        <ul>
+          <h3>
+            <a href="#"></a>
+          </h3>
+          <li><a href="#">포트폴리오1</a></li>
+          <li><a href="#">포트폴리오2</a></li>
+          <li><a href="#">포트폴리오3</a></li>
+          <li><a href="#">포트폴리오4</a></li>
+        </ul>
+      </div>
+      <div class="title">
+        <h2><a href="#">PORTFOLIO</a></h2>
+      </div>
+    </div>
+  </header>
+  <!-- //header -->
+
+  <!-- intro_title -->
+  <div id="intro_title">
+    <div class="intro_title_inner center">
+      <section id="section1">
+        <h1>PORTFOLIO</h1>
+        <p>
+          새로운 변화가 끊임없이 일어나는 웹 환경에서<br />
+          프론트앤드 개발자 열정적인 프론트앤드 개발자입니다.
+        </p>
+      </section>
+    </div>
+  </div>
+  <!-- //intro_title -->
+
+  <!-- intro_text -->
+  <div id="intro_text">
+    <div class="intro_text_inner">
+      <section id="section2">
+        <h4 class="sliding_text s1">website * Javascript * react * vue</h4>
+        <h4 class="sliding_text s2">
+          website * Javascript * react * vue * website * Javascript * react *
+          vue
+        </h4>
+        <h4 class="sliding_text s3">
+          website * Javascript * react * vue * website * Javascript 
+        </h4>
+      </section>
+    </div>
+  </div>
+  <!-- //intro_text -->
+
+  <!-- intro_img -->
+  <div id="intro_img">
+    <div class="intro_img_inner">
+      <section id="section3">
+        <div class="img1">
+          <img src="./assets/images/introImg/intro_img01.png" alt="프로필사진" />
         </div>
-        <div class="title">
-          <h2><a href="#">PORTFOLIO</a></h2>
+        <div class="img2">
+          <img src="./assets/images/introImg/intro_img02.png" alt="프로필사진" />
         </div>
-      </div>
-    </header>
-    <!-- //header -->
-
-    <!-- intro_title -->
-    <div id="intro_title">
-      <div class="intro_title_inner center">
-        <section id="section1">
-          <h1>PORTFOLIO</h1>
-          <p>
-            새로운 변화가 끊임없이 일어나는 웹 환경에서<br />
-            프론트앤드 개발자 열정적인 프론트앤드 개발자입니다.
-          </p>
-        </section>
-      </div>
+        <div class="img3">
+          <img src="./assets/images/introImg/intro_img03.png" alt="프로필사진" />
+        </div>
+      </section>
     </div>
-    <!-- //intro_title -->
+  </div>
 
-    <!-- intro_text -->
-    <div id="intro_text">
-      <div class="intro_text_inner">
-        <section id="section2">
-          <h4>website * Javascript * react * vue</h4>
-          <h4>
-            website * Javascript * react * vue * website * Javascript * react *
-            vue
-          </h4>
-          <h4>
-            website * Javascript * react * vue * website * Javascript * react *
-            vue
-          </h4>
-        </section>
-      </div>
-    </div>
-    <!-- //intro_text -->
+  <script>
 
-    <!-- intro_img -->
-    <div id="intro_img">
-      <div class="intro_img_inner">
-        <section id="section3">
-          <div class="img1">
-            <img
-              src="./assets/images/introImg/intro_img01.png"
-              alt="프로필사진"
-            />
-          </div>
-          <div class="img2">
-            <img
-              src="./assets/images/introImg/intro_img02.png"
-              alt="프로필사진"
-            />
-          </div>
-          <div class="img3">
-            <img
-              src="./assets/images/introImg/intro_img01.png"
-              alt="프로필사진"
-            />
-          </div>
-        </section>
-      </div>
-    </div>
+const slidingTextElements = document.querySelectorAll('.sliding_text');
 
-    <script type="module" src="./main.js"></script>
-  </body>
+slidingTextElements.forEach(element => {
+  const textContent = element.textContent;
+  element.innerHTML = `<span>${textContent.repeat(30)}</span>`;
+});
+
+
+  </script>
+  <script type="module" src="./main.js"></script>
+</body>
+
 </html>
