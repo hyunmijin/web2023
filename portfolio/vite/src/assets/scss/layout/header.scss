@@ -1,0 +1,45 @@
+.header__inner {
+  padding: 20px;
+  display: flex;
+  position: relative;
+}
+
+.nav {
+  margin-right: 1%;
+  > ul {
+    > h3 {
+      width: 50px;
+      height: 50px;
+      background-color: #fbec4f;
+      border: 3px solid #000;
+      border-radius: 50%;
+      > a {
+      }
+    }
+    > li {
+      position: absolute;
+      padding: 10px;
+      width: 7%;
+      height: 100%;
+      background-color: #ccc;
+      display: none;
+      > a {
+      }
+    }
+  }
+}
+
+.title {
+  width: 180px;
+  height: 50px;
+  background-color: #fbec4f;
+  border: 3px solid #000;
+  border-radius: 30px;
+  h2 {
+    padding: 8%;
+    text-align: center;
+    a {
+      font-weight: bold;
+    }
+  }
+}
