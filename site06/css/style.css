@@ -212,6 +212,10 @@ button {
     font-family: "Noto Serif JP";
     text-transform: uppercase;
 }
+.site__nav .title h1 a {
+    text-decoration: none;
+    color: #fff;
+}
 .site__nav .nav2 > div {
     width: 50%;
     display: flex;
